@@ -34,6 +34,7 @@ Check out my [<span style="color:green">_Github page_</span>](https://github.com
 `whoami`
 `cat`
 `man`
+`monkey`
 
 ### Check out my [<span style="color:green">_Python quiz_</span>](/home/aditya/vscode/student/_posts/MyQuiz_IPYNB_2_.md) !
 <!-- ## Overview of Hacks, Study and Tangibles
