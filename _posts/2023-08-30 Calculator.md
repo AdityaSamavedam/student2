@@ -5,7 +5,7 @@ layout: post
 title: Calculator
 description: JavaScript calculator
 courses: { compsci: {week: 2} }
-type: hacks
+type: tangibles
 ---
 
 <!-- 
