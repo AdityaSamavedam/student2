@@ -9,3 +9,8 @@ type: tangibles
 ---
 
 ### Week 0 accomplishments:
+- Set Up all the tools required for this course
+- Learnt how to get localhost site running
+- Learnt how to edit index.md and start customizing
+- Learnt how to add links and images to the blog
+- Got comfortable with Vscode and github, learnt how to commit and sync changes
