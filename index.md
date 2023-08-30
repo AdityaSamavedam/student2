@@ -36,9 +36,6 @@ Check out my [<span style="color:green">_Github page_</span>](https://github.com
 `cat`
 `man`
 
-### Check out my [<span style="color:red">_Python quiz_</span>](/home/aditya/vscode/student2/_posts/MyQuiz_IPYNB_2_.md) !
-
-### Check out [<span style="color:orange">My plans</span>](/home/aditya/vscode/student2/compsci.md) !
 <!-- ## Overview of Hacks, Study and Tangibles
 Blogging in GitHub pages is a way to learn and code at the same time. 
 
