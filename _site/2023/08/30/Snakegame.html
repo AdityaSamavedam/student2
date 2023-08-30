@@ -1,14 +1,91 @@
----
-toc: true
-comments: falses
-layout: post
-title: Classic Snake Game
-description: A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers.
-courses: { compsci: {week: 2} }
-type: hacks
----
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<style>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Classic Snake Game | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Classic Snake Game" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers." />
+<meta property="og:description" content="A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers." />
+<link rel="canonical" href="http://localhost:4000/student2/2023/08/30/Snakegame.html" />
+<meta property="og:url" content="http://localhost:4000/student2/2023/08/30/Snakegame.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-08-30T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Classic Snake Game" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-30T00:00:00-07:00","datePublished":"2023-08-30T00:00:00-07:00","description":"A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers.","headline":"Classic Snake Game","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/student2/2023/08/30/Snakegame.html"},"url":"http://localhost:4000/student2/2023/08/30/Snakegame.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=f0c485599b16b771acbd68909a0f7e41decf6966">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">Classic Snake Game
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-08-30T00:00:00-07:00" itemprop="datePublished">
+        Aug 30, 2023
+      </time>
+    </p><h2>Description</h2><p class="page-description">A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers.</p></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <style>
 
     body{
     }
@@ -72,7 +149,6 @@ type: hacks
     }
 </style>
 
-
 <div class="container">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <p class="fs-4">Snake score: <span id="score_value">0</span></p>
@@ -96,19 +172,19 @@ type: hacks
         <div id="setting" class="py-4 text-light">
             <p>Settings Screen, press <span style="background-color: #FFFFFF; color: #000000">space</span> to go back to playing</p>
             <a id="new_game2" class="link-alert">new game</a>
-            <br>
+            <br />
             <p>Speed:
-                <input id="speed1" type="radio" name="speed" value="120" checked/>
+                <input id="speed1" type="radio" name="speed" value="120" checked="" />
                 <label for="speed1">Slow</label>
-                <input id="speed2" type="radio" name="speed" value="75"/>
+                <input id="speed2" type="radio" name="speed" value="75" />
                 <label for="speed2">Normal</label>
-                <input id="speed3" type="radio" name="speed" value="35"/>
+                <input id="speed3" type="radio" name="speed" value="35" />
                 <label for="speed3">Fast</label>
             </p>
             <p>Wall:
-                <input id="wallon" type="radio" name="wall" value="1" checked/>
+                <input id="wallon" type="radio" name="wall" value="1" checked="" />
                 <label for="wallon">On</label>
-                <input id="walloff" type="radio" name="wall" value="0"/>
+                <input id="walloff" type="radio" name="wall" value="0" />
                 <label for="walloff">Off</label>
             </p>
         </div>
@@ -167,7 +243,7 @@ type: hacks
                 case SCREEN_GAME_OVER:
                     screen_snake.style.display = "block";
                     screen_menu.style.display = "none";
-                    
+
                     screen_setting.style.display = "none";
                     screen_game_over.style.display = "block";
                     break;
@@ -373,3 +449,15 @@ type: hacks
         }
     })();
 </script>
+
+
+  </div><a class="u-url" href="/student2/2023/08/30/Snakegame.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
