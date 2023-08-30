@@ -167,7 +167,6 @@ type: hacks
                 case SCREEN_GAME_OVER:
                     screen_snake.style.display = "block";
                     screen_menu.style.display = "none";
-
                     screen_setting.style.display = "none";
                     screen_game_over.style.display = "block";
                     break;
