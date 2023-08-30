@@ -2,9 +2,9 @@
 toc: true
 comments: false
 layout: post
-title: Week 3 Plans
-description: Plans I have for week 3
-courses: { compsci: {week: 3} }
+title: Week 2 Plans
+description: Plans I have for week 2
+courses: { compsci: {week: 2} }
 type: plans
 ---
 
