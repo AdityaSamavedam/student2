@@ -18,7 +18,7 @@ Conway's Game of Life https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
     }
 
     .cell {
-    background-color: royalblue;
+    background-color: black;
     border: 1px solid black;
     }
 </style>
@@ -94,9 +94,9 @@ function updateContainer() {
     arr.forEach((val, c) => {
         let n = r*GRID_SIZE + c;
         if(val === 1) {
-        document.getElementById("cell-"+n).style['background-color'] = 'yellow';
+        document.getElementById("cell-"+n).style['background-color'] = 'green';
         }else {
-        document.getElementById("cell-"+n).style['background-color'] = 'royalblue'
+        document.getElementById("cell-"+n).style['background-color'] = 'black'
         }
     });
     })
