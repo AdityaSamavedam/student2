@@ -13,4 +13,4 @@ type: tangibles
 - Made my own python notebook on a quiz based off of python vocab
 - Learnt how to add md files to lab notebook
 - Learnt how to add ipynb files to lab notebook
-- make clean and make needs to be run if you make a change to ipynb files (for some reason)
+- Learnt Python tricks: emoji, newspaper3k and wikipedia
