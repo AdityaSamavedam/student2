@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-30T00:00:00-07:00","datePublished":"2023-08-30T00:00:00-07:00","description":"Quiz I created based on python vocab","headline":"My Python Quiz","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/08/30/MyQuiz_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/08/30/MyQuiz_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=b6f3e7f2a6808a138a4f6eae550521214cde128b">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=e6280d3ab75ded265dfece8bcfae4135ad3cd50c">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      8 min read
     
 </span></h1>
 
@@ -101,58 +101,6 @@
 <h5 id="getpassgetuser-prints-the-users-name"><code class="language-plaintext highlighter-rouge">getpass.getuser()</code> prints the user’s name.</h5>
 <h5 id="sysexecutable-prints-the-path-to-the-python-interpreter"><code class="language-plaintext highlighter-rouge">sys.executable</code> prints the path to the Python interpreter.</h5>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">getpass</span><span class="p">,</span> <span class="n">sys</span>
-
-<span class="n">qsandas_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">"What command is used to include other functions that were previously developed?"</span> <span class="p">:</span> <span class="s">"import"</span><span class="p">,</span>
-    <span class="s">"What command is used to evaluate correct or incorrect response in this example?"</span> <span class="p">:</span> <span class="s">"if"</span><span class="p">,</span>
-    <span class="s">"Each 'if' command contains an '_________' to determine a true or false condition?"</span> <span class="p">:</span> <span class="s">"expression"</span><span class="p">,</span>
-    <span class="s">"What is the word used to desribe test that cannot change?"</span> <span class="p">:</span> <span class="s">"static"</span>
-<span class="p">}</span>
-
-<span class="n">questions</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">qsandas_dict</span><span class="p">)</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Hello, </span><span class="si">{</span><span class="n">getpass</span><span class="p">.</span><span class="n">getuser</span><span class="p">()</span><span class="si">}</span><span class="s"> running </span><span class="si">{</span><span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You will be asked </span><span class="si">{</span><span class="n">questions</span><span class="si">}</span><span class="s"> questions."</span><span class="p">)</span>
-<span class="n">readyornot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Are you ready to take a test? "</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">readyornot</span> <span class="o">==</span> <span class="s">"yes"</span> <span class="ow">or</span> <span class="n">readyornot</span> <span class="o">==</span> <span class="s">"Yes"</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Awesome! Let's begin."</span><span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">question</span> <span class="ow">in</span> <span class="n">qsandas_dict</span><span class="p">:</span>
-        <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You answered </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
-        
-        <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="n">qsandas_dict</span><span class="p">[</span><span class="n">question</span><span class="p">]:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">"You are correct!"</span><span class="p">)</span>
-            <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-            
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You are incorrect! The answer is </span><span class="si">{</span><span class="n">qsandas_dict</span><span class="p">[</span><span class="n">question</span><span class="p">]</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
-            
-    <span class="n">score</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-    
-    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">getpass</span><span class="p">.</span><span class="n">getuser</span><span class="p">()</span><span class="si">}</span><span class="s"> you scored </span><span class="si">{</span><span class="n">correct</span><span class="si">}</span><span class="s"> / </span><span class="si">{</span><span class="n">questions</span><span class="si">}</span><span class="s">, which is a </span><span class="si">{</span><span class="n">score</span><span class="p">:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">%."</span><span class="p">)</span>
-    
-<span class="k">elif</span> <span class="n">readyornot</span> <span class="o">==</span> <span class="s">"no"</span> <span class="ow">or</span> <span class="n">readyornot</span> <span class="o">==</span> <span class="s">"No"</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"No problem! Come back when you're ready!"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Invalid response. Please try again."</span><span class="p">)</span>
-
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, aditya running /bin/python
-You will be asked 3 questions.
-Awesome! Let's begin.
-You answered monkey.
-You are incorrect! The answer is import.
-You answered if.
-You are correct!
-You answered expression.
-You are correct!
-aditya you scored 2 / 3, which is a 66.67%.
-</code></pre></div></div>
-
 <h5 id="first-lets-start-by-importing-the-sys-and-getpass-libraries">First, let’s start by importing the <code class="language-plaintext highlighter-rouge">sys</code> and <code class="language-plaintext highlighter-rouge">getpass</code> libraries.</h5>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
@@ -166,7 +114,7 @@ aditya you scored 2 / 3, which is a 66.67%.
     <span class="s">"What command is used to include other functions that were previously developed?"</span> <span class="p">:</span> <span class="s">"import"</span><span class="p">,</span>
     <span class="s">"What command is used to evaluate correct or incorrect response in this example?"</span> <span class="p">:</span> <span class="s">"if"</span><span class="p">,</span>
     <span class="s">"Each 'if' command contains an '_________' to determine a true or false condition?"</span> <span class="p">:</span> <span class="s">"expression"</span><span class="p">,</span>
-    <span class="s">"What is the word used to desribe test that cannot change?"</span> <span class="p">:</span> <span class="s">"static"</span>
+    <span class="s">"What is the word used to describe somthing that cannot change?"</span> <span class="p">:</span> <span class="s">"static"</span>
 <span class="p">}</span>
 
 <span class="c1"># number of questions, number of correct answers (this will be incremented later)
@@ -183,7 +131,7 @@ aditya you scored 2 / 3, which is a 66.67%.
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello, aditya running /bin/python
-You will be asked 3 questions.
+You will be asked 4 questions.
 </code></pre></div></div>
 
 <h5 id="if-they-are-ready-to-take-the-test-start-iterating-through-the-dictionary-asking-questions-and-prompting-for-answers-if-they-type-the-correct-answer-say-that-they-are-correct-and-increment-the-variable-containing-the-number-of-correct-answers-if-theyre-wrong-say-that-theyre-incorrect-and-print-out-the-correct-answer-print-out-the-final-score-as-a-percentage">If they are ready to take the test, start iterating through the dictionary, asking questions and prompting for answers. If they type the correct answer, say that they are correct and increment the variable containing the number of correct answers. If they’re wrong, say that they’re incorrect and print out the correct answer. Print out the final score as a percentage.</h5>
@@ -218,6 +166,19 @@ You will be asked 3 questions.
 <span class="k">else</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"Invalid response. Please try again."</span><span class="p">)</span>
 </code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Awesome! Let's begin.
+You answered import.
+You are correct!
+You answered if.
+You are correct!
+You answered expression.
+You are correct!
+You answered static.
+You are correct!
+aditya you scored 4 / 4, which is a 100.00%.
+</code></pre></div></div>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"

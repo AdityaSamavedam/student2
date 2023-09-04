@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-23T00:00:00-07:00","datePublished":"2023-08-23T00:00:00-07:00","description":"Notebook on python tricks","headline":"Python Tricks","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/08/23/python_tricks_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/08/23/python_tricks_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=b6f3e7f2a6808a138a4f6eae550521214cde128b">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=e6280d3ab75ded265dfece8bcfae4135ad3cd50c">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -797,6 +797,7 @@ Average score, short method
 </blockquote>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Welcome to Wikipedia!"</span><span class="p">)</span>
+<span class="n">search_history</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">condition</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
     <span class="n">search_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter a search or type 'quit' to exit: "</span><span class="p">)</span>
@@ -804,31 +805,45 @@ Average score, short method
             <span class="n">result</span> <span class="o">=</span> <span class="n">wikipedia</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">search_input</span><span class="p">)</span>
             <span class="c1"># Get the summary of the first result
 </span>            <span class="n">summary</span> <span class="o">=</span> <span class="n">wikipedia</span><span class="p">.</span><span class="n">summary</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-            <span class="k">print</span><span class="p">(</span><span class="n">search_input</span><span class="p">)</span> 
+            <span class="k">print</span><span class="p">(</span><span class="n">search_input</span><span class="p">)</span>
+            <span class="n">search_history</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">search_input</span><span class="p">)</span>
             <span class="c1"># print(summary) # console display
 </span>            <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">summary</span><span class="p">))</span> <span class="c1"># Jupyter display
 </span>    <span class="k">else</span><span class="p">:</span>
         <span class="n">condition</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Here is your search history: </span><span class="si">{</span><span class="n">search_history</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Would you like to clear your search history? [y/n]"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">"y"</span><span class="p">:</span>
+            <span class="n">search_history</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Search history cleared!"</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">search_history</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">"n"</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Ok, no problem."</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Invalid choice entered."</span><span class="p">)</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"Thank you for visiting Wikipedia! Come back soon!"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Welcome to Wikipedia!
-orangutan
-</code></pre></div></div>
-
-<p>Orangutans are great apes native to the rainforests of Indonesia and Malaysia. They are now found only in parts of Borneo and Sumatra, but during the Pleistocene they ranged throughout Southeast Asia and South China. Classified in the genus Pongo, orangutans were originally considered to be one species. From 1996, they were divided into two species: the Bornean orangutan (P. pygmaeus, with three subspecies) and the Sumatran orangutan (P. abelii). A third species, the Tapanuli orangutan (P. tapanuliensis), was identified definitively in 2017. The orangutans are the only surviving species of the subfamily Ponginae, which diverged genetically from the other hominids (gorillas, chimpanzees, and humans) between 19.3 and 15.7 million years ago.
-The most arboreal of the great apes, orangutans spend most of their time in trees. They have proportionally long arms and short legs, and have reddish-brown hair covering their bodies. Adult males weigh about 75 kg (165 lb), while females reach about 37 kg (82 lb). Dominant adult males develop distinctive cheek pads or flanges and make long calls that attract females and intimidate rivals; younger subordinate males do not and more resemble adult females. Orangutans are the most solitary of the great apes: social bonds occur primarily between mothers and their dependent offspring. Fruit is the most important component of an orangutan’s diet; but they will also eat vegetation, bark, honey, insects and bird eggs. They can live over 30 years, both in the wild and in captivity.
-Orangutans are among the most intelligent primates. They use a variety of sophisticated tools and construct elaborate sleeping nests each night from branches and foliage. The apes’ learning abilities have been studied extensively. There may be distinctive cultures within populations. Orangutans have been featured in literature and art since at least the 18th century, particularly in works that comment on human society. Field studies of the apes were pioneered by primatologist Birutė Galdikas and they have been kept in captive facilities around the world since at least the early 19th century.
-All three orangutan species are considered critically endangered. Human activities have caused severe declines in populations and ranges. Threats to wild orangutan populations include poaching (for bushmeat and retaliation for consuming crops), habitat destruction and deforestation (for palm oil cultivation and logging), and the illegal pet trade. Several conservation and rehabilitation organisations are dedicated to the survival of orangutans in the wild.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chimpanzee
+chimpanzee
 </code></pre></div></div>
 
 <p>The chimpanzee (; Pan troglodytes), also known as simply the chimp, is a species of great ape native to the forest and savannah of tropical Africa. It has four confirmed subspecies and a fifth proposed one. When its close relative the bonobo was more commonly known as the pygmy chimpanzee, this species was often called the common chimpanzee or the robust chimpanzee. The chimpanzee and the bonobo are the only species in the genus Pan. Evidence from fossils and DNA sequencing shows that Pan is a sister taxon to the human lineage and is humans’ closest living relative. The chimpanzee is covered in coarse black hair, but has a bare face, fingers, toes, palms of the hands, and soles of the feet. It is larger and more robust than the bonobo, weighing 40–70 kg (88–154 lb) for males and 27–50 kg (60–110 lb) for females and standing 150 cm (4 ft 11 in).
 The chimpanzee lives in groups that range in size from 15 to 150 members, although individuals travel and forage in much smaller groups during the day. The species lives in a strict male-dominated hierarchy, where disputes are generally settled without the need for violence. Nearly all chimpanzee populations have been recorded using tools, modifying sticks, rocks, grass and leaves and using them for hunting and acquiring honey, termites, ants, nuts and water. The species has also been found creating sharpened sticks to spear small mammals. Its gestation period is eight months. The infant is weaned at about three years old but usually maintains a close relationship with its mother for several years more.
 The chimpanzee is listed on the IUCN Red List as an endangered species. Between 170,000 and 300,000 individuals are estimated across its range. The biggest threats to the chimpanzee are habitat loss, poaching, and disease. Chimpanzees appear in Western popular culture as stereotyped clown-figures and have featured in entertainments such as chimpanzees’ tea parties, circus acts and stage shows. Although many chimpanzees have been kept as pets, their strength, aggressiveness, and unpredictability makes them dangerous in this role. Some hundreds have been kept in laboratories for research, especially in the United States. Many attempts have been made to teach languages such as American Sign Language to chimpanzees, with limited success.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thank you for visiting Wikipedia! Come back soon!
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gorilla
+</code></pre></div></div>
+
+<p>Gorillas are herbivorous,  predominantly ground-dwelling great apes that inhabit the tropical forests of equatorial Africa. The genus Gorilla is divided into two species: the eastern gorilla and the western gorilla, and either four or five subspecies. The DNA of gorillas is highly similar to that of humans, from 95 to 99% depending on what is included, and they are the next closest living relatives to humans after chimpanzees and bonobos.
+Gorillas are the largest living primates, reaching heights between 1.25 and 1.8 metres, weights between 100 and 270 kg, and arm spans up to 2.6 metres, depending on species and sex. They tend to live in troops, with the leader being called a silverback. The Eastern gorilla is distinguished from the Western by darker fur colour and some other minor morphological differences. Gorillas tend to live 35–40 years in the wild. 
+Gorillas’ natural habitats cover tropical or subtropical forest in Sub-Saharan Africa. Although their range covers a small percentage of Sub-Saharan Africa, gorillas cover a wide range of elevations. The mountain gorilla inhabits the Albertine Rift montane cloud forests of the Virunga Volcanoes, ranging in altitude from 2,200 to 4,300 metres (7,200 to 14,100 ft). Lowland gorillas live in dense forests and lowland swamps and marshes as low as sea level, with western lowland gorillas living in Central West African countries and eastern lowland gorillas living in the Democratic Republic of the Congo near its border with Rwanda.
+There are thought to be around 316,000 western gorillas in the wild, and 5,000 eastern gorillas. Both species are classified as Critically Endangered by the IUCN; all subspecies are classified as Critically Endangered with the exception of the mountain gorilla, which is classified as Endangered. There are many threats to their survival, such as poaching, habitat destruction, and disease, which threaten the survival of the species. However, conservation efforts have been successful in some areas where they live.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Here is your search history: ['chimpanzee', 'gorilla']
+Search history cleared!
+[]
+Thank you for visiting Wikipedia! Come back soon!
 </code></pre></div></div>
 
 
