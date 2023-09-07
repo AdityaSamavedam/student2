@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-02T00:00:00-07:00","datePublished":"2023-09-02T00:00:00-07:00","description":"Roulette Game made in Python","headline":"Roulette Game","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/09/02/Roulette_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/09/02/Roulette_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=bf47fb65011f7aa310c8a94e71e257189350439a">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=15e6f49c2b072223aaef4ca0ef1b7a1e1993e64a">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      6 min read
     
 </span></h1>
 
@@ -85,7 +85,115 @@
     </p><h2>Description</h2><p class="page-description">Roulette Game made in Python</p></header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Define the possible outcomes and their corresponding payouts
+</span><span class="n">wheel</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s">'Green'</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">27</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">36</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">29</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">'Red'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">26</span><span class="p">,</span> <span class="s">'Black'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Function to spin the roulette wheel
+</span><span class="k">def</span> <span class="nf">spin_wheel</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">wheel</span><span class="p">)</span>
+
+<span class="c1"># Function to place a bet and calculate the outcome
+</span><span class="k">def</span> <span class="nf">place_bet</span><span class="p">(</span><span class="n">balance</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">bet_amount</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s">"Your current balance is $</span><span class="si">{</span><span class="n">balance</span><span class="si">}</span><span class="s">. Enter your bet amount: $"</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">bet_amount</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">bet_amount</span> <span class="o">&gt;</span> <span class="n">balance</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Invalid bet amount. Please enter a valid amount."</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="n">bet_type</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Choose your bet type (number, color): "</span><span class="p">).</span><span class="n">strip</span><span class="p">().</span><span class="n">lower</span><span class="p">()</span>
+        
+        <span class="k">if</span> <span class="n">bet_type</span> <span class="o">==</span> <span class="s">'number'</span><span class="p">:</span>
+            <span class="n">bet_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter the number you want to bet on (0-36): "</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">bet_number</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">bet_number</span> <span class="o">&gt;</span> <span class="mi">36</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Invalid bet number. Please enter a number between 0 and 36."</span><span class="p">)</span>
+                <span class="k">return</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">spin_wheel</span><span class="p">()</span>
+                <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The ball landed on </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s">, which is </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">!"</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">bet_number</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">bet_amount</span> <span class="o">*</span> <span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="n">bet_amount</span>
+        <span class="k">elif</span> <span class="n">bet_type</span> <span class="o">==</span> <span class="s">'color'</span><span class="p">:</span>
+            <span class="n">bet_color</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Choose a color to bet on (red or black): "</span><span class="p">).</span><span class="n">strip</span><span class="p">().</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">bet_color</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'red'</span><span class="p">,</span> <span class="s">'black'</span><span class="p">]:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">"Invalid bet color. Please choose red or black."</span><span class="p">)</span>
+                <span class="k">return</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">spin_wheel</span><span class="p">()</span>
+                <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The ball landed on </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s">, which is </span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">!"</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">bet_color</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">bet_amount</span> <span class="o">*</span> <span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="n">bet_amount</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Invalid bet type. Please choose 'number' or 'color'."</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Invalid input. Please enter a valid number."</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="c1"># Main game loop
+</span><span class="n">balance</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># Starting balance
+</span><span class="k">while</span> <span class="n">balance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">=== Roulette Game ==="</span><span class="p">)</span>
+    <span class="n">winnings</span> <span class="o">=</span> <span class="n">place_bet</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span>
+    <span class="n">balance</span> <span class="o">+=</span> <span class="n">winnings</span>
+    <span class="k">if</span> <span class="n">winnings</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You won $</span><span class="si">{</span><span class="n">winnings</span><span class="si">}</span><span class="s">!"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You lost $</span><span class="si">{</span><span class="o">-</span><span class="n">winnings</span><span class="si">}</span><span class="s">!"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">balance</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Game over! You're out of money."</span><span class="p">)</span>
+        <span class="k">break</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Thanks for playing!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=== Roulette Game ===
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
