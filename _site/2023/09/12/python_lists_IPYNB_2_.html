@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-12T00:00:00-07:00","datePublished":"2023-09-12T00:00:00-07:00","description":"Notebook on Python Lists","headline":"Python Lists","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/09/12/python_lists_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/09/12/python_lists_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=12f90ecae68e4de6c5daac317403256ae0bd0e95">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=3c033163707f1ba46663ad703ab8f4f3d277e210">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      30 min read
+      34 min read
     
 </span></h1>
 
@@ -419,32 +419,8 @@ Harambe Harambe
   </li>
 </ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
-<span class="k">while</span> <span class="n">b</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">[</span><span class="n">b</span><span class="p">])</span>
-    <span class="n">b</span> <span class="o">-=</span> <span class="mi">1</span>
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
-
-IndexError                                Traceback (most recent call last)
-
-/tmp/ipykernel_29093/3807501404.py in &lt;module&gt;
-      2 b = len(mylist)
-      3 while b &gt;= 0:
-----&gt; 4     print(mylist[b])
-      5     b -= 1
-
-
-IndexError: list index out of range
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
-    <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)):</span>
+    <span class="n">print_data</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">b</span><span class="p">])</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>John Mortensen
@@ -473,8 +449,104 @@ Harambe Harambe
 	 Cars: 2014 Rolls Royce Phantom
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
 </code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Harambe Harambe
+	 Residence: Cincinnati
+	 Birth Day: May 27
+	 Cars: 2014 Rolls Royce Phantom
+
+Aditya Samavedam
+	 Residence: San Diego
+	 Birth Day: August 17
+	 Cars: 2022-Toyota RAV4 XLE
+
+Shane Lopez
+	 Residence: San Diego
+	 Birth Day: February 27
+	 Cars: 2021-Insight
+
+Sunny Naidu
+	 Residence: Temecula
+	 Birth Day: August 2
+	 Cars: 4Runner
+
+John Mortensen
+	 Residence: San Diego
+	 Birth Day: October 21
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_entries</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter the number of entries you want to add: "</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_entries</span><span class="p">):</span>
+    <span class="n">first_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the first name: "</span><span class="p">)</span>
+    <span class="n">last_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the last name"</span><span class="p">)</span>
+    <span class="n">birthday</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the birthday: "</span><span class="p">)</span>
+    <span class="n">residence</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the residence: "</span><span class="p">)</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the email: "</span><span class="p">)</span>
+    <span class="n">num_cars</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"How many cars owned? "</span><span class="p">))</span>
+    <span class="n">car_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_cars</span><span class="p">):</span>
+        <span class="n">car</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the car: "</span><span class="p">)</span>
+        <span class="n">car_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
+    <span class="n">InfoDb</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s">"FirstName"</span><span class="p">:</span>  <span class="n">first_name</span><span class="p">,</span>
+        <span class="s">"LastName"</span><span class="p">:</span> <span class="n">last_name</span><span class="p">,</span>
+        <span class="s">"DOB"</span><span class="p">:</span> <span class="n">birthday</span><span class="p">,</span>
+        <span class="s">"Residence"</span><span class="p">:</span> <span class="n">residence</span><span class="p">,</span>
+        <span class="s">"Email"</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span>
+        <span class="s">"Owns_Cars"</span><span class="p">:</span> <span class="n">car_list</span>
+    <span class="p">})</span>
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)):</span>
+    <span class="n">print_data</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">[</span><span class="n">b</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>John Mortensen
+	 Residence: San Diego
+	 Birth Day: October 21
+	 Cars: 2015-Fusion, 2011-Ranger, 2003-Excursion, 1997-F350, 1969-Cadillac
+
+Sunny Naidu
+	 Residence: Temecula
+	 Birth Day: August 2
+	 Cars: 4Runner
+
+Shane Lopez
+	 Residence: San Diego
+	 Birth Day: February 27
+	 Cars: 2021-Insight
+
+Aditya Samavedam
+	 Residence: San Diego
+	 Birth Day: August 17
+	 Cars: 2022-Toyota RAV4 XLE
+
+Harambe Harambe
+	 Residence: Cincinnati
+	 Birth Day: May 27
+	 Cars: 2014 Rolls Royce Phantom
+
+Monkey Boy
+	 Residence: Nuuk
+	 Birth Day: November 11
+	 Cars: Banana Car, Coconut Car
+
+Vijaya Purohit
+	 Residence: San Diego
+	 Birth Day: November 25
+	 Cars: 2022 Toyota RAV4 XLE
+
+Haha Haha
+	 Residence: Reykjavik
+	 Birth Day: January 1
+	 Cars: 2004 Toyota Camry LE
+</code></pre></div></div>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
