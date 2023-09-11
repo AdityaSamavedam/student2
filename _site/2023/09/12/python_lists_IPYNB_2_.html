@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Lists | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Python Lists" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Notebook on Python Lists" />
+<meta property="og:description" content="Notebook on Python Lists" />
+<link rel="canonical" href="http://localhost:4200/student2/2023/09/12/python_lists_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2023/09/12/python_lists_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-12T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Lists" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-12T00:00:00-07:00","datePublished":"2023-09-12T00:00:00-07:00","description":"Notebook on Python Lists","headline":"Python Lists","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/09/12/python_lists_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/09/12/python_lists_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=59cee1399815deff826628cca83643b613d1c5d9">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">Python Lists
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      22 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-09-12T00:00:00-07:00" itemprop="datePublished">
+        Sep 12, 2023
+      </time>
+    </p><h2>Description</h2><p class="page-description">Notebook on Python Lists</p><ul><li><a href="#variables-and-types">Variables and Types</a></li><li><a href="#list-and-dictionary-purpose">List and Dictionary purpose</a></li><li><a href="#formatted-output-of-listdictionary---for-loop">Formatted output of List/Dictionary - for loop</a></li><li><a href="#alternate-methods-for-iteration---while-loop">Alternate methods for iteration - while loop</a></li><li><a href="#calling-a-function-repeatedly---recursion">Calling a function repeatedly - recursion</a></li></ul></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3 id="variables-and-types">Variables and Types</h3>
+<p>All useful data is a collection of different types of data: letters, words, numbers, tables, etc.</p>
+
+<p>In Python, we use variables to store data, each are given a type at assignment.  Variables have names, types, and data.  Python variables can be of type: String, Integer, Float, List and Dictionary.  The types are important to understand and will impact coding operations, for instance we are required to use str() function in concatenation of different data types. A type of List allows developer to perform iteration.</p>
+
+<ol>
+  <li>Developers often think of variables as primitives or collections.  Look at this example and see if you can see hypothesize the difference between a primitive and a collection.</li>
+  <li>Take a minute and see if you can reference other elements in the list or other keys in the dictionary. Show output.</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Sample of Python Variables
+</span>
+<span class="c1"># variable of type string
+</span><span class="k">print</span><span class="p">(</span><span class="s">"What is the variable name/key?"</span><span class="p">,</span> <span class="s">"value?"</span><span class="p">,</span> <span class="s">"type?"</span><span class="p">,</span> <span class="s">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">"John Doe"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"name"</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is the variable name/key? value? type? primitive or collection, why?
+name John Doe &lt;class 'str'&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># variable of type integer
+</span><span class="k">print</span><span class="p">(</span><span class="s">"What is the variable name/key?"</span><span class="p">,</span> <span class="s">"value?"</span><span class="p">,</span> <span class="s">"type?"</span><span class="p">,</span> <span class="s">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"age"</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is the variable name/key? value? type? primitive or collection, why?
+age 18 &lt;class 'int'&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># variable of type float
+</span><span class="k">print</span><span class="p">(</span><span class="s">"What is the variable name/key?"</span><span class="p">,</span> <span class="s">"value?"</span><span class="p">,</span> <span class="s">"type?"</span><span class="p">,</span> <span class="s">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mf">90.0</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"score"</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is the variable name/key? value? type? primitive or collection, why?
+score 90.0 &lt;class 'float'&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># variable of type list (many values in one variable)
+</span><span class="k">print</span><span class="p">(</span><span class="s">"What is variable name/key?"</span><span class="p">,</span> <span class="s">"value?"</span><span class="p">,</span> <span class="s">"type?"</span><span class="p">,</span> <span class="s">"primitive or collection?"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"What is different about the list output?"</span><span class="p">)</span>
+<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Python"</span><span class="p">,</span> <span class="s">"JavaScript"</span><span class="p">,</span> <span class="s">"Java"</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">),</span> <span class="s">"length"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"- langs[0]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"- langs[1]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"- langs[2]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is variable name/key? value? type? primitive or collection?
+What is different about the list output?
+langs ['Python', 'JavaScript', 'Java'] &lt;class 'list'&gt; length 3
+- langs[0] Python &lt;class 'str'&gt;
+- langs[1] JavaScript &lt;class 'str'&gt;
+- langs[2] Java &lt;class 'str'&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># variable of type dictionary (a group of keys and values)
+</span><span class="k">print</span><span class="p">(</span><span class="s">"What is the variable name/key?"</span><span class="p">,</span> <span class="s">"value?"</span><span class="p">,</span> <span class="s">"type?"</span><span class="p">,</span> <span class="s">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"What is different about the dictionary output?"</span><span class="p">)</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s">"age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+    <span class="s">"score"</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+    <span class="s">"langs"</span><span class="p">:</span> <span class="n">langs</span>
+<span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"person"</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">),</span> <span class="s">"length"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'- person["name"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s">"name"</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'- person["age"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s">"age"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s">"age"</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'- person["score"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s">"score"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s">"score"</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'- person["langs"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s">"langs"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s">"langs"</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<h3 id="list-and-dictionary-purpose">List and Dictionary purpose</h3>
+<p>Our society is being built on information.  <mark>List and Dictionaries are used to collect information</mark>.  Mostly, when information is collected it is formed into patterns.  As that pattern is established you will be able collect many instances of that pattern.</p>
+<ul>
+  <li>A List is used to collect many instances of a pattern</li>
+  <li>A Dictionary is used to organize data patterns.</li>
+  <li>Iteration is often used to process through lists.</li>
+</ul>
+
+<p>To start exploring more deeply into List, Dictionary and Iteration this example will explore constructing a List of people and cars.</p>
+<ul>
+  <li>As we learned above, a List is a data type: class ‘list’</li>
+  <li>A <mark>'list' data type has the method '.append(expression)'</mark> that allows you to add to the list.  A class usually has extra methods to support working with its objects.</li>
+  <li>In the example below,  the expression is appended to the ‘list’ is the data type: class ‘dict’</li>
+  <li>At the end, you see a fairly complicated data structure.  This is a <mark>list of dictionaries</mark>, or a collection of many similar data patterns.  The output looks similar to JavaScript Object Notation (JSON), Jekyll/GitHub pages yml files, FastPages Front Matter. As discussed we will see this key/value patter often, you will be required to understand this data structure and understand the parts.  Just believe it is easy ;) and it will become so.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define an empty List called InfoDb
+</span><span class="n">InfoDb</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># InfoDB is a data structure with expected Keys and Values
+</span>
+<span class="c1"># Append to List a Dictionary of key/values related to a person and cars
+</span><span class="n">InfoDb</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s">"FirstName"</span><span class="p">:</span> <span class="s">"John"</span><span class="p">,</span>
+    <span class="s">"LastName"</span><span class="p">:</span> <span class="s">"Mortensen"</span><span class="p">,</span>
+    <span class="s">"DOB"</span><span class="p">:</span> <span class="s">"October 21"</span><span class="p">,</span>
+    <span class="s">"Residence"</span><span class="p">:</span> <span class="s">"San Diego"</span><span class="p">,</span>
+    <span class="s">"Email"</span><span class="p">:</span> <span class="s">"jmortensen@powayusd.com"</span><span class="p">,</span>
+    <span class="s">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s">"2015-Fusion"</span><span class="p">,</span> <span class="s">"2011-Ranger"</span><span class="p">,</span> <span class="s">"2003-Excursion"</span><span class="p">,</span> <span class="s">"1997-F350"</span><span class="p">,</span> <span class="s">"1969-Cadillac"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values
+</span><span class="n">InfoDb</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s">"FirstName"</span><span class="p">:</span> <span class="s">"Sunny"</span><span class="p">,</span>
+    <span class="s">"LastName"</span><span class="p">:</span> <span class="s">"Naidu"</span><span class="p">,</span>
+    <span class="s">"DOB"</span><span class="p">:</span> <span class="s">"August 2"</span><span class="p">,</span>
+    <span class="s">"Residence"</span><span class="p">:</span> <span class="s">"Temecula"</span><span class="p">,</span>
+    <span class="s">"Email"</span><span class="p">:</span> <span class="s">"snaidu@powayusd.com"</span><span class="p">,</span>
+    <span class="s">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s">"4Runner"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Append to List a 2nd Dictionary of key/values
+</span><span class="n">InfoDb</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+    <span class="s">"FirstName"</span><span class="p">:</span> <span class="s">"Shane"</span><span class="p">,</span>
+    <span class="s">"LastName"</span><span class="p">:</span> <span class="s">"Lopez"</span><span class="p">,</span>
+    <span class="s">"DOB"</span><span class="p">:</span> <span class="s">"February 27"</span><span class="p">,</span>
+    <span class="s">"Residence"</span><span class="p">:</span> <span class="s">"San Diego"</span><span class="p">,</span>
+    <span class="s">"Email"</span><span class="p">:</span> <span class="s">"???@powayusd.com"</span><span class="p">,</span>
+    <span class="s">"Owns_Cars"</span><span class="p">:</span> <span class="p">[</span><span class="s">"2021-Insight"</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Print the data structure
+</span><span class="k">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="formatted-output-of-listdictionary---for-loop">Formatted output of List/Dictionary - for loop</h3>
+<p>Managing data in Lists and Dictionaries is for the convenience of passing the data across the internet, to applications, or preparing it to be stored into a database.  It is a great way to exchange data between programs and programmers.  Exchange of data between programs includes the data type the method/function and the format of the data type.  These concepts are key to learning how to write functions, receive, and return data.  This process is often referred to as an <mark>Application Programming Interface (API)</mark>.</p>
+
+<p>Next, we will take the stored data and output it within our notebook.  There are multiple steps to this process…</p>
+<ul>
+  <li><mark>Preparing a function to format the data</mark>, the print_data() function receives a parameter called “d_rec” short for dictionary record.  It then references different keys within [] square brackets.</li>
+  <li><mark>Preparing a function to iterate through the list</mark>, the for_loop() function uses an enhanced for loop that pull record by record out of InfoDb until the list is empty.  Each time through the loop it call print_data(record), which passes the dictionary record to that function.</li>
+  <li>Finally, you need to <mark>activate your function</mark> with the call to the defined function for_loop().  Functions are defined, not activated until they are called.  By placing for_loop() at the left margin the function is activated.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This jupyter cell has dependencies on one or more cells above
+</span>
+<span class="c1"># print function: given a dictionary of InfoDb content
+</span><span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s">"FirstName"</span><span class="p">],</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"LastName"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Residence:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"Residence"</span><span class="p">])</span> <span class="c1"># \t is a tab indent
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Birth Day:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s">"DOB"</span><span class="p">])</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">,</span> <span class="s">"Cars: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>  <span class="c1"># end="" make sure no return occurs
+</span>    <span class="k">print</span><span class="p">(</span><span class="s">", "</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s">"Owns_Cars"</span><span class="p">]))</span>  <span class="c1"># join allows printing a string list with separator
+</span>    <span class="k">print</span><span class="p">()</span>
+
+
+<span class="c1"># for loop algorithm iterates on length of InfoDb
+</span><span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"For loop output</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span> <span class="c1"># call to function
+</span>
+<span class="n">for_loop</span><span class="p">()</span> <span class="c1"># call to function
+</span></code></pre></div></div>
+
+<h3 id="alternate-methods-for-iteration---while-loop">Alternate methods for iteration - while loop</h3>
+<p>In coding, there are usually many ways to achieve the same result.  Defined are functions illustrating using index to reference records in a list, these methods are called a “while” loop and “recursion”.</p>
+<ul>
+  <li>The while_loop() function contains a while loop, “while i &lt; len(InfoDb):”.  This counts through the elements in the list start at zero, and passes the record to print_data()</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This jupyter cell has dependencies on one or more cells above
+</span>
+<span class="c1"># while loop algorithm contains an initial n and an index incrementing statement (n += 1)
+</span><span class="k">def</span> <span class="nf">while_loop</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"While loop output</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span>
+
+<span class="n">while_loop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="calling-a-function-repeatedly---recursion">Calling a function repeatedly - recursion</h3>
+<p>This final technique achieves looping by calling itself repeatedly.</p>
+<ul>
+  <li>recursive_loop(i) function is primed with the value 0 on its activation with “recursive_loop(0)”</li>
+  <li>the last statement indented inside the if statement “recursive_loop(i + 1)” activates another call to the recursive_loop(i) function, each time i is increasing</li>
+  <li>ultimately the “if i &lt; len(InfoDb):” will evaluate to false and the program ends</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This jupyter cell has dependencies on one or more cells above
+</span>
+<span class="c1"># recursion algorithm loops incrementing on each call (n + 1) until exit condition is met
+</span><span class="k">def</span> <span class="nf">recursive_loop</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">):</span>
+        <span class="n">record</span> <span class="o">=</span> <span class="n">InfoDb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+        <span class="n">recursive_loop</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span>
+    
+<span class="k">print</span><span class="p">(</span><span class="s">"Recursive loop output</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="n">recursive_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="hacks">Hacks</h2>
+<ul>
+  <li>Add a few records to the InfoDb</li>
+  <li>Try to do a for loop with an index, research this as 4th way</li>
+  <li>Pair Share code somethings creative or unique, with loops and data. Hints…
+    <ul>
+      <li>Would it be possible to output data in a reverse order?</li>
+      <li>Are there other methods that can be performed on lists?</li>
+      <li>Could you create new or add to dictionary InfoDB?  Could you do it with input?</li>
+      <li>Make a quiz that stores in a List of Dictionaries.</li>
+    </ul>
+  </li>
+</ul>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2023/09/12/python_lists_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
