@@ -21,7 +21,7 @@ type: hacks
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #FFFFFF;
+        border-color: #00FF00;
     }
     canvas:focus{
         outline: none;
