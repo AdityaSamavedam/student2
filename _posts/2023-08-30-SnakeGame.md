@@ -21,7 +21,7 @@ type: hacks
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #00FF00;
+        border-color: #000000;
     }
     canvas:focus{
         outline: none;
@@ -80,13 +80,13 @@ type: hacks
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
-            <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
+            <p>Welcome to Snake, press <span style="background-color: #00FF00; color: #000000">enter</span> to begin</p>
             <a id="new_game" class="link-alert">new game</a>
             <a id="setting_menu" class="link-alert">settings</a>
         </div>
         <!-- Game Over -->
         <div id="gameover" class="py-4 text-light">
-            <p>Game Over, press <span style="background-color: #FFFFFF; color: #000000">space</span> to try again</p>
+            <p>Game Over, press <span style="background-color: #00FF00; color: #000000">enter</span> to try again</p>
             <a id="new_game1" class="link-alert">new game</a>
             <a id="setting_menu1" class="link-alert">settings</a>
         </div>
@@ -94,7 +94,7 @@ type: hacks
         <canvas id="snake" class="wrap" width="320" height="320" tabindex="1"></canvas>
         <!-- Settings Screen -->
         <div id="setting" class="py-4 text-light">
-            <p>Settings Screen, press <span style="background-color: #FFFFFF; color: #000000">space</span> to go back to playing</p>
+            <p>Settings Screen, press <span style="background-color: #00FF00; color: #000000">enter</span> to go back to playing</p>
             <a id="new_game2" class="link-alert">new game</a>
             <br>
             <p>Speed:
@@ -211,8 +211,8 @@ type: hacks
             }
             // activate window events
             window.addEventListener("keydown", function(evt) {
-                // spacebar detected
-                if(evt.code === "Space" && SCREEN !== SCREEN_SNAKE)
+                // enter detected
+                if(evt.code === "Enter" && SCREEN !== SCREEN_SNAKE)
                     newGame();
             }, true);
         }
@@ -272,7 +272,7 @@ type: hacks
             }
             // Repaint canvas
             ctx.beginPath();
-            ctx.fillStyle = "royalblue";
+            ctx.fillStyle = "black";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Paint snake
             for(let i = 0; i < snake.length; i++){
@@ -311,19 +311,19 @@ type: hacks
         let changeDir = function(key){
             // test key and switch direction
             switch(key) {
-                case 37:    // left arrow
+                case 65:    // a key
                     if (snake_dir !== 1)    // not right
                         snake_next_dir = 3; // then switch left
                     break;
-                case 38:    // up arrow
+                case 87:    // w key
                     if (snake_dir !== 2)    // not down
                         snake_next_dir = 0; // then switch up
                     break;
-                case 39:    // right arrow
+                case 68:    // d key
                     if (snake_dir !== 3)    // not left
                         snake_next_dir = 1; // then switch right
                     break;
-                case 40:    // down arrow
+                case 83:    // s key
                     if (snake_dir !== 0)    // not up
                         snake_next_dir = 2; // then switch down
                     break;
@@ -332,7 +332,7 @@ type: hacks
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
-            ctx.fillStyle = "#FFFFFF";
+            ctx.fillStyle = "#00FF00";
             ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
         }
         /* Random food placement */
@@ -368,7 +368,7 @@ type: hacks
         let setWall = function(wall_value){
             wall = wall_value;
             if(wall === 0){screen_snake.style.borderColor = "#606060";}
-            if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
+            if(wall === 1){screen_snake.style.borderColor = "#00FF00";}
         }
     })();
 </script>
