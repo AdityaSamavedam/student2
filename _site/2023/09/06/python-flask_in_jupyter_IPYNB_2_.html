@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-06T00:00:00-07:00","datePublished":"2023-09-06T00:00:00-07:00","description":"Notebook on Python Flask in Jupyter","headline":"Python Flask in Jupyter","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/09/06/python-flask_in_jupyter_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/09/06/python-flask_in_jupyter_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=ba18901379dbf3f0fda184a3040f4907bf9ed6dd">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=b84ebcf0b6afe538576c1d069e715f0ee89e127d">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      23 min read
     
 </span></h1>
 
@@ -116,8 +116,8 @@ Flask is a micro web framework written in Python. It’s designed to be minimal 
 
 <p>Note: Jupyter magic commmand <code class="language-plaintext highlighter-rouge">%%python --bg</code> that follows runs the server in background.  This enables us to continue interacting with the subsequent Notebook cells.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">python</span> <span class="o">--</span><span class="n">bg</span>
-
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># %%python --bg
+</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span>
 <span class="kn">from</span> <span class="nn">flask_cors</span> <span class="kn">import</span> <span class="n">CORS</span>
 
@@ -164,7 +164,7 @@ Flask is a micro web framework written in Python. It’s designed to be minimal 
         &lt;title&gt;Hellox&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;h2&gt;Hello, World!&lt;/h2&gt;
+        &lt;h2&gt;Hello, Aditya!&lt;/h2&gt;
     &lt;/body&gt;
     &lt;/html&gt;
     """</span>
@@ -174,6 +174,16 @@ Flask is a micro web framework written in Python. It’s designed to be minimal 
     <span class="c1"># starts flask server on default port, http://127.0.0.1:5001
 </span>    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">5001</span><span class="p">)</span>
 
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> * Serving Flask app '__main__'
+ * Debug mode: off
+
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [19/Sep/2023 21:26:25] "GET / HTTP/1.1" 200 -
 </code></pre></div></div>
 
 <h3 id="show-pythonflask-process">Show Python/Flask process</h3>
@@ -195,6 +205,167 @@ Flask is a micro web framework written in Python. It’s designed to be minimal 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://127.0.0.1:5001/api/data'</span><span class="p">)</span>
 <span class="n">res</span><span class="p">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+
+ConnectionRefusedError                    Traceback (most recent call last)
+
+~/.local/lib/python3.10/site-packages/urllib3/connection.py in _new_conn(self)
+    202         try:
+--&gt; 203             sock = connection.create_connection(
+    204                 (self._dns_host, self.port),
+
+
+~/.local/lib/python3.10/site-packages/urllib3/util/connection.py in create_connection(address, timeout, source_address, socket_options)
+     84         try:
+---&gt; 85             raise err
+     86         finally:
+
+
+~/.local/lib/python3.10/site-packages/urllib3/util/connection.py in create_connection(address, timeout, source_address, socket_options)
+     72                 sock.bind(source_address)
+---&gt; 73             sock.connect(sa)
+     74             # Break explicitly a reference cycle
+
+
+ConnectionRefusedError: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+NewConnectionError                        Traceback (most recent call last)
+
+~/.local/lib/python3.10/site-packages/urllib3/connectionpool.py in urlopen(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)
+    789             # Make the request on the HTTPConnection object
+--&gt; 790             response = self._make_request(
+    791                 conn,
+
+
+~/.local/lib/python3.10/site-packages/urllib3/connectionpool.py in _make_request(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)
+    495         try:
+--&gt; 496             conn.request(
+    497                 method,
+
+
+~/.local/lib/python3.10/site-packages/urllib3/connection.py in request(self, method, url, body, headers, chunked, preload_content, decode_content, enforce_content_length)
+    394             self.putheader(header, value)
+--&gt; 395         self.endheaders()
+    396 
+
+
+/usr/lib/python3.10/http/client.py in endheaders(self, message_body, encode_chunked)
+   1277             raise CannotSendHeader()
+-&gt; 1278         self._send_output(message_body, encode_chunked=encode_chunked)
+   1279 
+
+
+/usr/lib/python3.10/http/client.py in _send_output(self, message_body, encode_chunked)
+   1037         del self._buffer[:]
+-&gt; 1038         self.send(msg)
+   1039 
+
+
+/usr/lib/python3.10/http/client.py in send(self, data)
+    975             if self.auto_open:
+--&gt; 976                 self.connect()
+    977             else:
+
+
+~/.local/lib/python3.10/site-packages/urllib3/connection.py in connect(self)
+    242     def connect(self) -&gt; None:
+--&gt; 243         self.sock = self._new_conn()
+    244         if self._tunnel_host:
+
+
+~/.local/lib/python3.10/site-packages/urllib3/connection.py in _new_conn(self)
+    217         except OSError as e:
+--&gt; 218             raise NewConnectionError(
+    219                 self, f"Failed to establish a new connection: {e}"
+
+
+NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x7f42f8b05d80&gt;: Failed to establish a new connection: [Errno 111] Connection refused
+
+
+The above exception was the direct cause of the following exception:
+
+
+MaxRetryError                             Traceback (most recent call last)
+
+~/.local/lib/python3.10/site-packages/requests/adapters.py in send(self, request, stream, timeout, verify, cert, proxies)
+    485         try:
+--&gt; 486             resp = conn.urlopen(
+    487                 method=request.method,
+
+
+~/.local/lib/python3.10/site-packages/urllib3/connectionpool.py in urlopen(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)
+    843 
+--&gt; 844             retries = retries.increment(
+    845                 method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+
+
+~/.local/lib/python3.10/site-packages/urllib3/util/retry.py in increment(self, method, url, response, error, _pool, _stacktrace)
+    514             reason = error or ResponseError(cause)
+--&gt; 515             raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    516 
+
+
+MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5001): Max retries exceeded with url: /api/data (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f42f8b05d80&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+
+During handling of the above exception, another exception occurred:
+
+
+ConnectionError                           Traceback (most recent call last)
+
+/tmp/ipykernel_92726/2595936190.py in &lt;module&gt;
+      1 import requests
+----&gt; 2 res = requests.get('http://127.0.0.1:5001/api/data')
+      3 res.json()
+
+
+~/.local/lib/python3.10/site-packages/requests/api.py in get(url, params, **kwargs)
+     71     """
+     72 
+---&gt; 73     return request("get", url, params=params, **kwargs)
+     74 
+     75 
+
+
+~/.local/lib/python3.10/site-packages/requests/api.py in request(method, url, **kwargs)
+     57     # cases, and look like a memory leak in others.
+     58     with sessions.Session() as session:
+---&gt; 59         return session.request(method=method, url=url, **kwargs)
+     60 
+     61 
+
+
+~/.local/lib/python3.10/site-packages/requests/sessions.py in request(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)
+    587         }
+    588         send_kwargs.update(settings)
+--&gt; 589         resp = self.send(prep, **send_kwargs)
+    590 
+    591         return resp
+
+
+~/.local/lib/python3.10/site-packages/requests/sessions.py in send(self, request, **kwargs)
+    701 
+    702         # Send the request
+--&gt; 703         r = adapter.send(request, **kwargs)
+    704 
+    705         # Total elapsed time of the request (approximately)
+
+
+~/.local/lib/python3.10/site-packages/requests/adapters.py in send(self, request, stream, timeout, verify, cert, proxies)
+    517                 raise SSLError(e, request=request)
+    518 
+--&gt; 519             raise ConnectionError(e, request=request)
+    520 
+    521         except ClosedPoolError as e:
+
+
+ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5001): Max retries exceeded with url: /api/data (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f42f8b05d80&gt;: Failed to establish a new connection: [Errno 111] Connection refused'))
 </code></pre></div></div>
 
 <h3 id="access-api-with-javascript">Access API with JavaScript</h3>
@@ -275,6 +446,62 @@ Flask is a micro web framework written in Python. It’s designed to be minimal 
 
 <span class="n">lsof</span> <span class="o">-</span><span class="n">i</span> <span class="p">:</span><span class="mi">5001</span> <span class="o">|</span> <span class="n">awk</span> <span class="s">'/Python/ {print $2}'</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">kill</span> <span class="o">-</span><span class="mi">9</span>
 
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage:
+ kill [options] &lt;pid&gt; [...]
+
+Options:
+ &lt;pid&gt; [...]            send signal to every &lt;pid&gt; listed
+ -&lt;signal&gt;, -s, --signal &lt;signal&gt;
+                        specify the &lt;signal&gt; to be sent
+ -q, --queue &lt;value&gt;    integer value to be sent with the signal
+ -l, --list=[&lt;signal&gt;]  list all signal names, or convert one to a name
+ -L, --table            list all signal names in a nice table
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see kill(1).
+
+
+
+---------------------------------------------------------------------------
+
+CalledProcessError                        Traceback (most recent call last)
+
+/tmp/ipykernel_92726/1062927812.py in &lt;module&gt;
+----&gt; 1 get_ipython().run_cell_magic('script', 'bash', "\nlsof -i :5001 | awk '/Python/ {print $2}' | xargs kill -9\n")
+
+
+/usr/lib/python3/dist-packages/IPython/core/interactiveshell.py in run_cell_magic(self, magic_name, line, cell)
+   2417             with self.builtin_trap:
+   2418                 args = (magic_arg_s, cell)
+-&gt; 2419                 result = fn(*args, **kwargs)
+   2420             return result
+   2421 
+
+
+&lt;decorator-gen-103&gt; in shebang(self, line, cell)
+
+
+/usr/lib/python3/dist-packages/IPython/core/magic.py in &lt;lambda&gt;(f, *a, **k)
+    185     # but it's overkill for just that one bit of state.
+    186     def magic_deco(arg):
+--&gt; 187         call = lambda f, *a, **k: f(*a, **k)
+    188 
+    189         if callable(arg):
+
+
+/usr/lib/python3/dist-packages/IPython/core/magics/script.py in shebang(self, line, cell)
+    243             sys.stderr.flush()
+    244         if args.raise_error and p.returncode!=0:
+--&gt; 245             raise CalledProcessError(p.returncode, cell, output=out, stderr=err)
+    246 
+    247     def _run_script(self, p, cell, to_close):
+
+
+CalledProcessError: Command 'b"\nlsof -i :5001 | awk '/Python/ {print $2}' | xargs kill -9\n"' returned non-zero exit status 123.
 </code></pre></div></div>
 
 <h2 id="hacks">Hacks</h2>

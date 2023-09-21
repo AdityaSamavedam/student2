@@ -1,12 +1,14 @@
 ---
 toc: true
-comments: false
+comments: true
 layout: post
 title: Classic Snake Game
 description: A pretty advanced use of JavaScript building classic snake game using menu controls, key events, snake simulation and timers.
-courses: { compsci: {week: 2} }
+type: hacks
+courses: {compsci: {week: 2}}
 type: hacks
 ---
+
 
 <style>
 
@@ -21,7 +23,7 @@ type: hacks
         display: none;
         border-style: solid;
         border-width: 10px;
-        border-color: #000000;
+        border-color: #FFFFFF;
     }
     canvas:focus{
         outline: none;
@@ -80,13 +82,13 @@ type: hacks
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
-            <p>Welcome to Snake, press <span style="background-color: #00FF00; color: #000000">enter</span> to begin</p>
+            <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin, WASD to control</p>
             <a id="new_game" class="link-alert">new game</a>
             <a id="setting_menu" class="link-alert">settings</a>
         </div>
         <!-- Game Over -->
         <div id="gameover" class="py-4 text-light">
-            <p>Game Over, press <span style="background-color: #00FF00; color: #000000">enter</span> to try again</p>
+            <p>Game Over, press <span style="background-color: #FFFFFF; color: #000000">space</span> to try again</p>
             <a id="new_game1" class="link-alert">new game</a>
             <a id="setting_menu1" class="link-alert">settings</a>
         </div>
@@ -94,7 +96,7 @@ type: hacks
         <canvas id="snake" class="wrap" width="320" height="320" tabindex="1"></canvas>
         <!-- Settings Screen -->
         <div id="setting" class="py-4 text-light">
-            <p>Settings Screen, press <span style="background-color: #00FF00; color: #000000">enter</span> to go back to playing</p>
+            <p>Settings Screen, press <span style="background-color: #FFFFFF; color: #000000">space</span> to go back to playing</p>
             <a id="new_game2" class="link-alert">new game</a>
             <br>
             <p>Speed:
@@ -211,8 +213,8 @@ type: hacks
             }
             // activate window events
             window.addEventListener("keydown", function(evt) {
-                // enter detected
-                if(evt.code === "Enter" && SCREEN !== SCREEN_SNAKE)
+                // spacebar detected
+                if(evt.code === "Space" && SCREEN !== SCREEN_SNAKE)
                     newGame();
             }, true);
         }
@@ -272,14 +274,21 @@ type: hacks
             }
             // Repaint canvas
             ctx.beginPath();
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "royalblue";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
             // Paint snake
             for(let i = 0; i < snake.length; i++){
-                activeDot(snake[i].x, snake[i].y);
-            }
+                if (i === 0) {
+                     activeDot(snake[i].x, snake[i].y, true); // Head of the snake (Green)
+                } else {
+                    activeDot(snake[i].x, snake[i].y, true); // Body of the snake (Green)
+                    }
+                }
+                
             // Paint food
-            activeDot(food.x, food.y);
+            activeDot(food.x, food.y, false); // Food (Red)
+
             // Debug
             //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;
             // Recursive call after speed delay, déjà vu
@@ -308,33 +317,44 @@ type: hacks
         }
         /* Key Inputs and Actions */
         /////////////////////////////////////////////////////////////
-        let changeDir = function(key){
-            // test key and switch direction
-            switch(key) {
-                case 65:    // a key
-                    if (snake_dir !== 1)    // not right
-                        snake_next_dir = 3; // then switch left
-                    break;
-                case 87:    // w key
-                    if (snake_dir !== 2)    // not down
-                        snake_next_dir = 0; // then switch up
-                    break;
-                case 68:    // d key
-                    if (snake_dir !== 3)    // not left
-                        snake_next_dir = 1; // then switch right
-                    break;
-                case 83:    // s key
-                    if (snake_dir !== 0)    // not up
-                        snake_next_dir = 2; // then switch down
-                    break;
-            }
-        }
+       let changeDir = function(key){
+    // test key and switch direction
+    switch(key) {
+        case 65:    // 'A' key
+        case 37:    // Left arrow key
+            if (snake_dir !== 1)    // not right
+                snake_next_dir = 3; // then switch left
+            break;
+        case 87:    // 'W' key
+        case 38:    // Up arrow key
+            if (snake_dir !== 2)    // not down
+                snake_next_dir = 0; // then switch up
+            break;
+        case 68:    // 'D' key
+        case 39:    // Right arrow key
+            if (snake_dir !== 3)    // not left
+                snake_next_dir = 1; // then switch right
+            break;
+        case 83:    // 'S' key
+        case 40:    // Down arrow key
+            if (snake_dir !== 0)    // not up
+                snake_next_dir = 2; // then switch down
+            break;
+    }
+}
+
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
-        let activeDot = function(x, y){
-            ctx.fillStyle = "#00FF00";
-            ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
-        }
+   let activeDot = function(x, y, isSnake) {
+    ctx.fillStyle = isSnake ? "#00FF00" : "#FF0000";
+    ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+
+    if (isSnake) {
+        ctx.strokeStyle = "#000000"; // Black color for snake's lines
+        ctx.strokeRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+    }
+}
+
         /* Random food placement */
         /////////////////////////////////////////////////////////////
         let addFood = function(){
@@ -368,7 +388,7 @@ type: hacks
         let setWall = function(wall_value){
             wall = wall_value;
             if(wall === 0){screen_snake.style.borderColor = "#606060";}
-            if(wall === 1){screen_snake.style.borderColor = "#00FF00";}
+            if(wall === 1){screen_snake.style.borderColor = "#FFFFFF";}
         }
     })();
 </script>
