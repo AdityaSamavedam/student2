@@ -11,18 +11,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A Tech Talk on how to use javascript" />
 <meta property="og:description" content="A Tech Talk on how to use javascript" />
-<link rel="canonical" href="http://localhost:4000/student2/basics/javascript" />
-<meta property="og:url" content="http://localhost:4000/student2/basics/javascript" />
+<link rel="canonical" href="http://localhost:4200/student2/basics/javascript" />
+<meta property="og:url" content="http://localhost:4200/student2/basics/javascript" />
 <meta property="og:site_name" content="CompSci Blogs" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-08-29T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Basics of Javascript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rohan Juneja"},"dateModified":"2023-08-29T00:00:00-07:00","datePublished":"2023-08-29T00:00:00-07:00","description":"A Tech Talk on how to use javascript","headline":"Basics of Javascript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/student2/basics/javascript"},"url":"http://localhost:4000/student2/basics/javascript"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rohan Juneja"},"dateModified":"2023-08-29T00:00:00-07:00","datePublished":"2023-08-29T00:00:00-07:00","description":"A Tech Talk on how to use javascript","headline":"Basics of Javascript","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/basics/javascript"},"url":"http://localhost:4200/student2/basics/javascript"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=764ce7a3f9a8ec9828d4f7a56f16c861260cd190">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=2d5d4f4d53c24ffa9ef27e4539adb17374a1c60a">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -76,7 +76,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      17 min read
     
 </span></h1>
 
@@ -269,7 +269,7 @@ console.log("name1 == name2", name1 == name2)
 
 // changing the value of name1 and repeat compare
 console.log("String Comparison after change")
-name1 = "John"
+name1 = "John"  // reassign
 console.log("name1", name1)
 console.log("name2", name2)
 console.log("name1 == name2", name1 == name2)
@@ -458,7 +458,21 @@ if (age1 > age2) {
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%%</span><span class="n">js</span>
+
 <span class="o">//</span> <span class="n">put</span> <span class="n">your</span> <span class="n">javascript</span> <span class="n">code</span> <span class="n">here</span>
+
+<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s">"Enter the value of a: "</span><span class="p">)</span>
+<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="s">"Enter the value of b: "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">"a is greater"</span><span class="p">)</span>
+
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">"b is greater"</span><span class="p">)</span>
+
+<span class="p">}</span> <span class="k">else</span>  <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">"both are equal"</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;IPython.core.display.Javascript object&gt;
