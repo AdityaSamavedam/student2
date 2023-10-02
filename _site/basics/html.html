@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rohan Juneja"},"dateModified":"2023-08-28T00:00:00-07:00","datePublished":"2023-08-28T00:00:00-07:00","description":"An introduction to basic HTML, and resources to learn more.","headline":"Basics of HTML Guide","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/basics/html"},"url":"http://localhost:4200/student2/basics/html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=c36c55b9d67c467da602d6bb5ddd8a10305785aa">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=6a74083f5c86e5823d47bec5fb72c50ed50eed71">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -240,11 +240,12 @@
 <span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Hello</span> <span class="n">my</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Aditya</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s">"helloButton"</span><span class="o">&gt;</span><span class="n">Click</span> <span class="n">this</span> <span class="n">to</span> <span class="n">say</span> <span class="n">hello</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span> <span class="nb">id</span><span class="o">=</span><span class="s">"message"</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
         <span class="n">var</span> <span class="n">button</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"helloButton"</span><span class="p">);</span>
         <span class="n">var</span> <span class="n">messageElement</span> <span class="o">=</span> <span class="n">document</span><span class="p">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s">"message"</span><span class="p">);</span>
         <span class="n">button</span><span class="p">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s">"click"</span><span class="p">,</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">var</span> <span class="n">message</span> <span class="o">=</span> <span class="s">"Hello, World!"</span><span class="p">;</span>
+        <span class="n">var</span> <span class="n">message</span> <span class="o">=</span> <span class="s">"Hello, nice to meet you!"</span><span class="p">;</span>
         <span class="n">messageElement</span><span class="p">.</span><span class="n">innerText</span> <span class="o">=</span> <span class="n">message</span><span class="p">;</span>
     <span class="p">});</span>
     <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
@@ -261,6 +262,7 @@
 <div>
     <p>Hello my name is Aditya.</p>
     <button id="helloButton">Click this to say hello</button>
+    <p id="message"></p>
     <script>
         var button = document.getElementById("helloButton");
         var messageElement = document.getElementById("message");
@@ -280,7 +282,15 @@
 
 </div>
 
-  </div><a class="u-url" href="/student2/basics/html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/basics/html" hidden></a>
 </article>
 
     </section>
