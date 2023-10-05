@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Abstraction HW | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Data Abstraction HW" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="HW given by Team Teach" />
+<meta property="og:description" content="HW given by Team Teach" />
+<link rel="canonical" href="http://localhost:4200/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-03T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Abstraction HW" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-03T00:00:00-07:00","datePublished":"2023-10-03T00:00:00-07:00","description":"HW given by Team Teach","headline":"Data Abstraction HW","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=8acaa043bec45156e2325bb76d617ab99ad4a9db">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">Data Abstraction HW
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      21 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-10-03T00:00:00-07:00" itemprop="datePublished">
+        Oct 3, 2023
+      </time>
+    </p><h2>Description</h2><p class="page-description">HW given by Team Teach</p><ul><li><a href="#problem-1">Problem 1</a></li><li><a href="#problem-2">Problem 2</a></li><li><a href="#add-more-regions">add more regions</a></li><li><a href="#problem-final">problem final</a></li></ul></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3 id="problem-1">Problem 1</h3>
+<ul>
+  <li>Two airplanes are in a race, your job is to make a plane name list, append the name value to the participents  then make a variable that pulls the distance covered for each plane. in the end, in the curly brackets print the name of the plane, add more variables with curly brackets.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define a list of airplane race participants
+</span><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Billium Bang"</span><span class="p">,</span> <span class="s">"plane"</span><span class="p">:</span> <span class="s">"Red Rocket"</span><span class="p">,</span> <span class="s">"distance_covered"</span><span class="p">:</span> <span class="mi">1200</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Bushawn Bal"</span><span class="p">,</span> <span class="s">"plane"</span><span class="p">:</span> <span class="s">"The Biggest Bird"</span><span class="p">,</span> <span class="s">"distance_covered"</span><span class="p">:</span> <span class="mi">1500</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate the total distance covered by each pilot during the race
+</span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    
+    <span class="c1">#your code here
+</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
+
+<span class="c1"># Determine the winner
+</span><span class="n">winner</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s">"distance_covered"</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The winner of the airplane race is </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s"> in the '</span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'plane'</span><span class="p">]</span><span class="si">}</span><span class="s">' with a distance of </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'distance_covered'</span><span class="p">]</span><span class="si">}</span><span class="s"> miles!"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="problem-2">Problem 2</h3>
+<ul>
+  <li>Add more participants , in the loop, add a tricks variable that gets data from participants list
+  score = tricks * 10  # Each trick is worth 10 points
+  add a score and add it to a score in the list ex list[score] = score</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define a list of dog show participants
+</span><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Fido"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Golden Retriever"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="c1"># Add more dog participants here
+</span><span class="p">]</span>
+
+<span class="c1"># Calculate the scores for each dog based on the number of tricks they can perform
+</span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="c1">#your code here
+</span>    <span class="n">score</span> <span class="o">=</span> <span class="n">tricks</span> <span class="o">*</span> <span class="mi">10</span>  <span class="c1"># Each trick is worth 10 points
+</span>    <span class="c1">#your code here
+</span>
+<span class="c1"># Determine the winning dog
+</span><span class="n">winner</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s">"score"</span><span class="p">])</span>
+
+<span class="c1"># Display the dog show results
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Dog Show Results:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> your code here!"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The winner of the dog show is </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s"> points!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>this problem, were making a bank account, you just have to know what to do to add all of the functions to change the variables</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define a class representing a Bank Account
+</span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">account_holder</span><span class="p">,</span> <span class="n">balance</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">account_holder</span> <span class="o">=</span> <span class="n">account_holder</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">balance</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#your code
+</span>            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Deposited $</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s">. New balance: $</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Invalid deposit amount."</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="p">:</span>
+            <span class="c1"># your code
+</span>            <span class="k">print</span> <span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
+                
+    <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"your Code..."</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s">"your code..."</span>
+
+
+<span class="c1"># Create two bank accounts Alex with 1000$ initially, and Noah with 5$ initially:
+</span><span class="n">alexAccount</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="s">"Alex"</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">noahAccount</span> <span class="o">=</span> <span class="n">null</span>
+
+<span class="c1"># Perform some transactions, withdraw all money of Alex , and give it all to Noah. now that noah has a lot of money, he goes on a spending spree, he must withdraw all of his money
+# EX!!!! account1.deposit(500)
+#
+#your code !
+#
+#
+#  Display account information
+</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Alex Account"</span><span class="p">,</span> <span class="n">alexAccount</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Noah Account"</span><span class="p">,</span> <span class="n">noahAccount</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="add-more-regions">add more regions</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Define a list of regions, each represented as a dictionary
+</span><span class="n">regions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="s">"Region A"</span><span class="p">,</span>
+        <span class="s">"GDP_growth"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span>  <span class="c1"># Random GDP growth rate between 0.5% and 3.0%
+</span>        <span class="s">"unemployment_rate"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>  <span class="c1"># Random unemployment rate between 3.0% and 10.0%
+</span>        <span class="s">"investment_score"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>  <span class="c1"># Random investment score between 50 and 100
+</span>        <span class="s">"education_index"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>  <span class="c1"># Random education index between 0.5 and 1.0
+</span>        <span class="s">"infrastructure_quality"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>  <span class="c1"># Random infrastructure quality between 3.0 and 8.0 (scale of 1-10)
+</span>    <span class="p">},</span>
+    <span class="c1"># Define more regions
+</span><span class="p">]</span>
+
+<span class="c1"># Define weights for each economic indicator
+</span><span class="n">weights</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"GDP_growth"</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span>
+    <span class="s">"unemployment_rate"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="s">"investment_score"</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span>
+    <span class="s">"education_index"</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s">"infrastructure_quality"</span><span class="p">:</span> <span class="mf">0.2</span>
+<span class="p">}</span>
+
+<span class="c1"># Function to calculate a score for each region based on economic indicators and weights
+</span><span class="k">def</span> <span class="nf">calculate_score</span><span class="p">(</span><span class="n">region</span><span class="p">):</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">indicator</span><span class="p">,</span> <span class="n">weight</span> <span class="ow">in</span> <span class="n">weights</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">score</span> <span class="o">+=</span> <span class="n">region</span><span class="p">[</span><span class="n">indicator</span><span class="p">]</span> <span class="o">*</span> <span class="n">weight</span>
+    <span class="k">return</span> <span class="n">score</span>
+
+<span class="c1"># Find the region with the highest economic growth potential
+</span><span class="n">best_region</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">regions</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">calculate_score</span><span class="p">)</span>
+
+<span class="c1"># Display information about the winning region
+</span><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The region with the highest economic growth potential is </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s">:"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- GDP Growth Rate: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'GDP_growth'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">%"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Unemployment Rate: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'unemployment_rate'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">%"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Investment Score: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'investment_score'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Education Index: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'education_index'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Infrastructure Quality: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'infrastructure_quality'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="problem-final">problem final</h3>
+
+<ul>
+  <li>make an empty list and dictionary</li>
+  <li>add data in all of the given simple loops, so that this problem runs its print functions without error</li>
+  <li>this one is hard, try very hard, a heartfelt atempt, like all of the code done with minor issues is still full credit</li>
+</ul>
+
+<p>try to understand this problem, it has lots of data abstractions</p>
+
+<p>data is given on the bottem and a function is calling it IMPORTANT!!!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">simulate_data_structure</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="c1"># Dictionary to store city data must be blank
+</span>     <span class="c1"># List to store city statistics also blank
+</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">person</span><span class="p">[]</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="n">person</span><span class="p">[]</span>
+        <span class="n">city</span> <span class="o">=</span> <span class="n">person</span><span class="p">[]</span>
+
+        <span class="c1"># 1. Create a dictionary of city data
+</span>        <span class="k">if</span> <span class="n">city</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">city_data</span><span class="p">:</span>
+            <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"names"</span><span class="p">:</span> <span class="p">[],</span> <span class="s">"total_age"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"total_people"</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span> <span class="c1"># reduces err
+</span>
+        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"names"</span><span class="p">]</span><span class="c1"># Add the name to the city's list
+</span>        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"total_age"</span><span class="p">]</span> <span class="c1"># Add the age to the city's total age hint , use +=
+</span>        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"total_people"</span><span class="p">]</span>  <span class="c1"># Increment the total people count hint , use +=
+</span>
+    <span class="k">for</span> <span class="n">city</span><span class="p">,</span> <span class="n">city_info</span> <span class="ow">in</span> <span class="n">city_data</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="c1"># 2. Calculate the average age for each city
+</span>        <span class="n">average_age</span> <span class="o">=</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"what goes in here?"</span><span class="p">]</span> <span class="o">/</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"what goes in here?"</span><span class="p">]</span>
+        <span class="n">city_info</span><span class="p">[</span><span class="s">"average_age"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_age</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Round to 2 decimal places
+</span>
+        <span class="c1"># 3. Create a dictionary for city statistics
+</span>        <span class="n">city_stats</span><span class="p">.</span> <span class="c1">#your code after the dot, what happens here, how do u apend a dictionary???
+</span>
+    <span class="c1"># Add the city statistics under the "Statistics" key
+</span>    <span class="n">city_data</span><span class="p">[</span><span class="s">"Statistics"</span><span class="p">]</span> <span class="o">=</span> <span class="n">city_stats</span>
+
+    <span class="k">return</span> <span class="n">city_data</span>
+
+
+<span class="c1"># Example data
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Alice"</span><span class="p">,</span> <span class="s">"age"</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s">"city"</span><span class="p">:</span> <span class="s">"New York"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Bob"</span><span class="p">,</span> <span class="s">"age"</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s">"city"</span><span class="p">:</span> <span class="s">"Los Angeles"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Charlie"</span><span class="p">,</span> <span class="s">"age"</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="s">"city"</span><span class="p">:</span> <span class="s">"New York"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"David"</span><span class="p">,</span> <span class="s">"age"</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="s">"city"</span><span class="p">:</span> <span class="s">"Los Angeles"</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Eve"</span><span class="p">,</span> <span class="s">"age"</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span> <span class="s">"city"</span><span class="p">:</span> <span class="s">"Chicago"</span><span class="p">},</span>
+<span class="p">]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">simulate_data_structure</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ingredients</span> <span class="o">=</span> <span class="p">[</span><span class="s">"butter"</span><span class="p">,</span> <span class="s">"white sugar"</span><span class="p">,</span> <span class="s">"light brown sugar"</span><span class="p">,</span> <span class="s">"vanilla extract"</span><span class="p">,</span> <span class="s">"eggs"</span><span class="p">,</span> <span class="s">"flour"</span><span class="p">,</span> <span class="s">"chocolate chips"</span><span class="p">,</span> <span class="s">"baking soda"</span><span class="p">,</span> <span class="s">"salt"</span><span class="p">,</span> <span class="s">"baking powder"</span><span class="p">]</span>
+<span class="c1"># Print this list
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+
+<span class="c1"># Create a list called bowl
+# Your list must include:
+# "flour"
+# "baking soda"
+# "salt"
+# "baking powder"
+# When creating this list, make sure to remove these items from the "ingredients" list!
+# Print your list
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Create a list called cream
+# Include:
+# "butter"
+# "white sugar"
+# "light brown sugar"
+# "vanilla extract"
+# "eggs"
+# When creating this list, make sure to remove these items from the "ingredients" list!
+# Print your list
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Create a list called "dough"
+# Combine the bowl list and cream list together
+# Print your list
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Append chocolate chips to the dough list and remove it from the ingredients list
+# Print the list
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Create a string that says "Now roll the dough into balls and place them on cookie sheets!"
+# Print it
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Create an int called temperature and set it to 375
+# Print "Place in a &lt;&lt;your integer goes here&gt;&gt; F oven for 8-10 minutes and remove just before they start to turn brown."
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Create an int called "cool down" using pascal case and set it to 2
+# Print "Let them sit on the baking pan for &lt;&lt;your integer goes here&gt;&gt; minutes before removing to cooling rack."
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># Create 5 string (use whatever casing you feel)
+# First string should be "Enjoy"
+# Second string should be "your"
+# Third string should be "CHOCOLATE"
+# Fourth string should be "CHIP"
+# Fifth string should be "COOKIES!!!"
+# Using ONE print statement, print ALL of these variables (with a space between each)
+</span>
+<span class="c1"># &lt;&lt; CODE &gt;&gt;
+</span>
+<span class="c1"># JSON CHALLENGE
+# can your do the whole project by using a JSON list?
+# can you convert it to a python dictionary and do all these steps?
+</span>
+<span class="c1"># Yes this is a real cookie recipe. You can find it below if you wanna make them! :)
+# https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/
+</span>
+</code></pre></div></div>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
