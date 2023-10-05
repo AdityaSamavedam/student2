@@ -2,7 +2,7 @@
 toc: true
 comments: false
 layout: post
-title: monke program
+title: Wk 6 Plan
 description: random monke program
 courses: { compsci: {week: 6} }
 type: tangibles
