@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-03T00:00:00-07:00","datePublished":"2023-10-03T00:00:00-07:00","description":"HW given by Team Teach","headline":"Data Abstraction HW","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/10/03/HomeworkProblems_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=8acaa043bec45156e2325bb76d617ab99ad4a9db">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=561d79dec20d20e4ec90a7e79f6b08021a6fa466">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      21 min read
+      35 min read
     
 </span></h1>
 
@@ -90,23 +90,45 @@
   <li>Two airplanes are in a race, your job is to make a plane name list, append the name value to the participents  then make a variable that pulls the distance covered for each plane. in the end, in the curly brackets print the name of the plane, add more variables with curly brackets.</li>
 </ul>
 
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Billium Bang"</span><span class="p">,</span> <span class="s">"plane"</span><span class="p">:</span> <span class="s">"Red Rocket"</span><span class="p">,</span> <span class="s">"distance_covered"</span><span class="p">:</span> <span class="mi">1200</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Bushawn Bal"</span><span class="p">,</span> <span class="s">"plane"</span><span class="p">:</span> <span class="s">"The Biggest Bird"</span><span class="p">,</span> <span class="s">"distance_covered"</span><span class="p">:</span> <span class="mi">1500</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="n">total_distance</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Calculate the total distance covered by each pilot during the race
+</span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="c1">#your code here
+</span>    <span class="n">distance</span> <span class="o">=</span> <span class="n">participant</span><span class="p">[</span><span class="s">"distance_covered"</span><span class="p">]</span>
+    <span class="n">total_distance</span> <span class="o">+=</span> <span class="n">distance</span>
+<span class="k">print</span><span class="p">(</span><span class="n">total_distance</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2700
+</code></pre></div></div>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define a list of airplane race participants
 </span><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Billium Bang"</span><span class="p">,</span> <span class="s">"plane"</span><span class="p">:</span> <span class="s">"Red Rocket"</span><span class="p">,</span> <span class="s">"distance_covered"</span><span class="p">:</span> <span class="mi">1200</span><span class="p">},</span>
     <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Bushawn Bal"</span><span class="p">,</span> <span class="s">"plane"</span><span class="p">:</span> <span class="s">"The Biggest Bird"</span><span class="p">,</span> <span class="s">"distance_covered"</span><span class="p">:</span> <span class="mi">1500</span><span class="p">}</span>
 <span class="p">]</span>
-
+<span class="n">total_distance</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="c1"># Calculate the total distance covered by each pilot during the race
 </span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
     
     <span class="c1">#your code here
-</span>
-    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
+</span>    <span class="n">distance</span> <span class="o">=</span> <span class="n">participant</span><span class="p">[</span><span class="s">"distance_covered"</span><span class="p">]</span>
+    <span class="n">total_distance</span> <span class="o">+=</span> <span class="n">distance</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">total_distance</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
 
 <span class="c1"># Determine the winner
 </span><span class="n">winner</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s">"distance_covered"</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The winner of the airplane race is </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s"> in the '</span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'plane'</span><span class="p">]</span><span class="si">}</span><span class="s">' with a distance of </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'distance_covered'</span><span class="p">]</span><span class="si">}</span><span class="s"> miles!"</span><span class="p">)</span>
 
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> what happens, print here, use 1200 to insert variables
+ what happens, print here, use 1500 to insert variables
+The winner of the airplane race is Bushawn Bal in the 'The Biggest Bird' with a distance of 1500 miles!
 </code></pre></div></div>
 
 <h3 id="problem-2">Problem 2</h3>
@@ -120,13 +142,45 @@
 </span><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Fido"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Golden Retriever"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
     <span class="c1"># Add more dog participants here
-</span><span class="p">]</span>
+</span>    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Tony"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"German Shepherd"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Luna"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Labrador Retriever"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Charlie"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Pomeranian"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Stanley"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Siberian Husky"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+<span class="p">]</span>
 
 <span class="c1"># Calculate the scores for each dog based on the number of tricks they can perform
 </span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
     <span class="c1">#your code here
-</span>    <span class="n">score</span> <span class="o">=</span> <span class="n">tricks</span> <span class="o">*</span> <span class="mi">10</span>  <span class="c1"># Each trick is worth 10 points
-</span>    <span class="c1">#your code here
+</span>    <span class="n">score</span> <span class="o">=</span> <span class="n">participant</span><span class="p">[</span><span class="s">"tricks"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>  <span class="c1"># Each trick is worth 10 points
+</span>    <span class="n">participant</span><span class="p">[</span><span class="s">"score"</span><span class="p">]</span> <span class="o">=</span> <span class="n">score</span>
+    <span class="c1">#your code here
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{'name': 'Fido', 'breed': 'Golden Retriever', 'tricks': 4, 'score': 40}
+{'name': 'Tony', 'breed': 'German Shepherd', 'tricks': 5, 'score': 50}
+{'name': 'Luna', 'breed': 'Labrador Retriever', 'tricks': 3, 'score': 30}
+{'name': 'Charlie', 'breed': 'Pomeranian', 'tricks': 4, 'score': 40}
+{'name': 'Stanley', 'breed': 'Siberian Husky', 'tricks': 8, 'score': 80}
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define a list of dog show participants
+</span><span class="n">participants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Fido"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Golden Retriever"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="c1"># Add more dog participants here
+</span>    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Tony"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"German Shepherd"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Luna"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Labrador Retriever"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Charlie"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Pomeranian"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Stanley"</span><span class="p">,</span> <span class="s">"breed"</span><span class="p">:</span> <span class="s">"Siberian Husky"</span><span class="p">,</span> <span class="s">"tricks"</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate the scores for each dog based on the number of tricks they can perform
+</span><span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
+    <span class="c1">#your code here
+</span>    <span class="n">score</span> <span class="o">=</span> <span class="n">participant</span><span class="p">[</span><span class="s">"tricks"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>  <span class="c1"># Each trick is worth 10 points
+</span>    <span class="n">participant</span><span class="p">[</span><span class="s">"score"</span><span class="p">]</span> <span class="o">=</span> <span class="n">score</span>
+    <span class="c1">#your code here
 </span>
 <span class="c1"># Determine the winning dog
 </span><span class="n">winner</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">participants</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s">"score"</span><span class="p">])</span>
@@ -134,9 +188,17 @@
 <span class="c1"># Display the dog show results
 </span><span class="k">print</span><span class="p">(</span><span class="s">"Dog Show Results:"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">participant</span> <span class="ow">in</span> <span class="n">participants</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> your code here!"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">participant</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'name'</span><span class="p">)</span><span class="si">}</span><span class="s">, a </span><span class="si">{</span><span class="n">participant</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'breed'</span><span class="p">)</span><span class="si">}</span><span class="s">, scored </span><span class="si">{</span><span class="n">participant</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'score'</span><span class="p">)</span><span class="si">}</span><span class="s"> points."</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The winner of the dog show is </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s"> who scored </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'score'</span><span class="p">]</span><span class="si">}</span><span class="s"> points!"</span><span class="p">)</span>
+</code></pre></div></div>
 
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The winner of the dog show is </span><span class="si">{</span><span class="n">winner</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span><span class="si">}</span><span class="s"> points!"</span><span class="p">)</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dog Show Results:
+Fido, a Golden Retriever, scored 40 points.
+Tony, a German Shepherd, scored 50 points.
+Luna, a Labrador Retriever, scored 30 points.
+Charlie, a Pomeranian, scored 40 points.
+Stanley, a Siberian Husky, scored 80 points.
+The winner of the dog show is Stanley who scored 80 points!
 </code></pre></div></div>
 
 <p>this problem, were making a bank account, you just have to know what to do to add all of the functions to change the variables</p>
@@ -150,39 +212,66 @@
     <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">amount</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1">#your code
-</span>            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Deposited $</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s">. New balance: $</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</span>            <span class="bp">self</span><span class="p">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">amount</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Deposited $</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s">. New balance: $</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">print</span><span class="p">(</span><span class="s">"Invalid deposit amount."</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">withdraw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
         <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">amount</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="p">:</span>
             <span class="c1"># your code
-</span>            <span class="k">print</span> <span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
+</span>            <span class="bp">self</span><span class="p">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">amount</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="n">null</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">" what happens, print here, use </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="si">}</span><span class="s"> to insert variables"</span><span class="p">)</span>
                 
     <span class="k">def</span> <span class="nf">get_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">"your Code..."</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">balance</span>
 
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">"your code..."</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s">"currently has $</span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">balance</span><span class="si">}</span><span class="s"> in their account."</span>
 
 
 <span class="c1"># Create two bank accounts Alex with 1000$ initially, and Noah with 5$ initially:
 </span><span class="n">alexAccount</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="s">"Alex"</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">noahAccount</span> <span class="o">=</span> <span class="n">null</span>
+<span class="n">noahAccount</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">(</span><span class="s">"Noah"</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># Perform some transactions, withdraw all money of Alex , and give it all to Noah. now that noah has a lot of money, he goes on a spending spree, he must withdraw all of his money
 # EX!!!! account1.deposit(500)
 #
-#your code !
-#
-#
-#  Display account information
-</span>
+# your code !
+</span><span class="n">alexAccount</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">alexAccount</span><span class="p">.</span><span class="n">get_balance</span><span class="p">()</span>
+<span class="n">noahAccount</span><span class="p">.</span><span class="n">withdraw</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">noahAccount</span><span class="p">.</span><span class="n">get_balance</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">transfer_money</span><span class="p">():</span>
+    <span class="n">amt</span> <span class="o">=</span> <span class="n">alexAccount</span><span class="p">.</span><span class="n">get_balance</span><span class="p">()</span>
+    <span class="n">alexAccount</span><span class="p">.</span><span class="n">withdraw</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+    <span class="n">noahAccount</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Transfered $</span><span class="si">{</span><span class="n">amt</span><span class="si">}</span><span class="s"> from Alex to Noah!"</span><span class="p">)</span>
+
+<span class="n">transfer_money</span><span class="p">()</span>
+
 <span class="k">print</span><span class="p">(</span><span class="s">"Alex Account"</span><span class="p">,</span> <span class="n">alexAccount</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"Noah Account"</span><span class="p">,</span> <span class="n">noahAccount</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">shopping_spree</span><span class="p">(</span><span class="n">acc_name</span><span class="p">):</span>
+    <span class="n">acc_name</span><span class="p">.</span><span class="n">withdraw</span><span class="p">(</span><span class="n">acc_name</span><span class="p">.</span><span class="n">get_balance</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">acc_name</span><span class="p">.</span><span class="n">account_holder</span><span class="si">}</span><span class="s"> has $0 in their account."</span><span class="p">)</span>
+
+<span class="n">shopping_spree</span><span class="p">(</span><span class="n">noahAccount</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Deposited $200. New balance: $1200
+ what happens, print here, use 4 to insert variables
+ what happens, print here, use 0 to insert variables
+Deposited $1200. New balance: $1204
+Transfered $1200 from Alex to Noah!
+Alex Account currently has $0 in their account.
+Noah Account currently has $1204 in their account.
+ what happens, print here, use 0 to insert variables
+Noah has $0 in their account.
 </code></pre></div></div>
 
 <h3 id="add-more-regions">add more regions</h3>
@@ -200,7 +289,23 @@
 </span>        <span class="s">"infrastructure_quality"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>  <span class="c1"># Random infrastructure quality between 3.0 and 8.0 (scale of 1-10)
 </span>    <span class="p">},</span>
     <span class="c1"># Define more regions
-</span><span class="p">]</span>
+</span>    <span class="p">{</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="s">"Region B"</span><span class="p">,</span>
+        <span class="s">"GDP_growth"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span>  <span class="c1"># Random GDP growth rate between 0.5% and 3.0%
+</span>        <span class="s">"unemployment_rate"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>  <span class="c1"># Random unemployment rate between 3.0% and 10.0%
+</span>        <span class="s">"investment_score"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>  <span class="c1"># Random investment score between 50 and 100
+</span>        <span class="s">"education_index"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>  <span class="c1"># Random education index between 0.5 and 1.0
+</span>        <span class="s">"infrastructure_quality"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>  <span class="c1"># Random infrastructure quality between 3.0 and 8.0 (scale of 1-10)
+</span>    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s">"name"</span><span class="p">:</span> <span class="s">"Region C"</span><span class="p">,</span>
+        <span class="s">"GDP_growth"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span>  <span class="c1"># Random GDP growth rate between 0.5% and 3.0%
+</span>        <span class="s">"unemployment_rate"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">),</span>  <span class="c1"># Random unemployment rate between 3.0% and 10.0%
+</span>        <span class="s">"investment_score"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>  <span class="c1"># Random investment score between 50 and 100
+</span>        <span class="s">"education_index"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>  <span class="c1"># Random education index between 0.5 and 1.0
+</span>        <span class="s">"infrastructure_quality"</span><span class="p">:</span> <span class="n">random</span><span class="p">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span>  <span class="c1"># Random infrastructure quality between 3.0 and 8.0 (scale of 1-10)
+</span>    <span class="p">}</span>
+<span class="p">]</span>
 
 <span class="c1"># Define weights for each economic indicator
 </span><span class="n">weights</span> <span class="o">=</span> <span class="p">{</span>
@@ -228,7 +333,14 @@
 <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Investment Score: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'investment_score'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Education Index: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'education_index'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"- Infrastructure Quality: </span><span class="si">{</span><span class="n">best_region</span><span class="p">[</span><span class="s">'infrastructure_quality'</span><span class="p">]:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The region with the highest economic growth potential is Region B:
+- GDP Growth Rate: 1.99%
+- Unemployment Rate: 9.41%
+- Investment Score: 84.21
+- Education Index: 0.68
+- Infrastructure Quality: 5.77
 </code></pre></div></div>
 
 <h3 id="problem-final">problem final</h3>
@@ -244,30 +356,31 @@
 <p>data is given on the bottem and a function is calling it IMPORTANT!!!</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">simulate_data_structure</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="c1"># Dictionary to store city data must be blank
-</span>     <span class="c1"># List to store city statistics also blank
+    <span class="n">city_data</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Dictionary to store city data
+</span>    <span class="n">city_stats</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Dictionary to store city statistics
 </span>
     <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">person</span><span class="p">[]</span>
-        <span class="n">age</span> <span class="o">=</span> <span class="n">person</span><span class="p">[]</span>
-        <span class="n">city</span> <span class="o">=</span> <span class="n">person</span><span class="p">[]</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">person</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="n">person</span><span class="p">[</span><span class="s">"age"</span><span class="p">]</span>
+        <span class="n">city</span> <span class="o">=</span> <span class="n">person</span><span class="p">[</span><span class="s">"city"</span><span class="p">]</span>
 
         <span class="c1"># 1. Create a dictionary of city data
 </span>        <span class="k">if</span> <span class="n">city</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">city_data</span><span class="p">:</span>
-            <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"names"</span><span class="p">:</span> <span class="p">[],</span> <span class="s">"total_age"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"total_people"</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span> <span class="c1"># reduces err
-</span>
-        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"names"</span><span class="p">]</span><span class="c1"># Add the name to the city's list
-</span>        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"total_age"</span><span class="p">]</span> <span class="c1"># Add the age to the city's total age hint , use +=
-</span>        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"total_people"</span><span class="p">]</span>  <span class="c1"># Increment the total people count hint , use +=
+            <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"names"</span><span class="p">:</span> <span class="p">[],</span> <span class="s">"total_age"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">"total_people"</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"names"</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># Add the name to the city's list
+</span>        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"total_age"</span><span class="p">]</span> <span class="o">+=</span> <span class="n">age</span>  <span class="c1"># Add the age to the city's total age
+</span>        <span class="n">city_data</span><span class="p">[</span><span class="n">city</span><span class="p">][</span><span class="s">"total_people"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment the total people count
 </span>
     <span class="k">for</span> <span class="n">city</span><span class="p">,</span> <span class="n">city_info</span> <span class="ow">in</span> <span class="n">city_data</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
         <span class="c1"># 2. Calculate the average age for each city
-</span>        <span class="n">average_age</span> <span class="o">=</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"what goes in here?"</span><span class="p">]</span> <span class="o">/</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"what goes in here?"</span><span class="p">]</span>
+</span>        <span class="n">average_age</span> <span class="o">=</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"total_age"</span><span class="p">]</span> <span class="o">/</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"total_people"</span><span class="p">]</span>
         <span class="n">city_info</span><span class="p">[</span><span class="s">"average_age"</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">average_age</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Round to 2 decimal places
 </span>
         <span class="c1"># 3. Create a dictionary for city statistics
-</span>        <span class="n">city_stats</span><span class="p">.</span> <span class="c1">#your code after the dot, what happens here, how do u apend a dictionary???
-</span>
+</span>        <span class="n">city_stats</span><span class="p">[</span><span class="n">city</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"average_age"</span><span class="p">:</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"average_age"</span><span class="p">],</span>
+                            <span class="s">"total_people"</span><span class="p">:</span> <span class="n">city_info</span><span class="p">[</span><span class="s">"total_people"</span><span class="p">]}</span>
+
     <span class="c1"># Add the city statistics under the "Statistics" key
 </span>    <span class="n">city_data</span><span class="p">[</span><span class="s">"Statistics"</span><span class="p">]</span> <span class="o">=</span> <span class="n">city_stats</span>
 
@@ -285,14 +398,16 @@
 
 <span class="n">result</span> <span class="o">=</span> <span class="n">simulate_data_structure</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{'New York': {'names': ['Alice', 'Charlie'], 'total_age': 47, 'total_people': 2, 'average_age': 23.5}, 'Los Angeles': {'names': ['Bob', 'David'], 'total_age': 65, 'total_people': 2, 'average_age': 32.5}, 'Chicago': {'names': ['Eve'], 'total_age': 28, 'total_people': 1, 'average_age': 28.0}, 'Statistics': {'New York': {'average_age': 23.5, 'total_people': 2}, 'Los Angeles': {'average_age': 32.5, 'total_people': 2}, 'Chicago': {'average_age': 28.0, 'total_people': 1}}}
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ingredients</span> <span class="o">=</span> <span class="p">[</span><span class="s">"butter"</span><span class="p">,</span> <span class="s">"white sugar"</span><span class="p">,</span> <span class="s">"light brown sugar"</span><span class="p">,</span> <span class="s">"vanilla extract"</span><span class="p">,</span> <span class="s">"eggs"</span><span class="p">,</span> <span class="s">"flour"</span><span class="p">,</span> <span class="s">"chocolate chips"</span><span class="p">,</span> <span class="s">"baking soda"</span><span class="p">,</span> <span class="s">"salt"</span><span class="p">,</span> <span class="s">"baking powder"</span><span class="p">]</span>
 <span class="c1"># Print this list
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="k">print</span><span class="p">(</span><span class="n">ingredients</span><span class="p">)</span>
 
 <span class="c1"># Create a list called bowl
 # Your list must include:
@@ -304,7 +419,13 @@
 # Print your list
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="n">bowl</span> <span class="o">=</span> <span class="p">[</span><span class="s">"flour"</span><span class="p">,</span> <span class="s">"baking soda"</span><span class="p">,</span> <span class="s">"salt"</span><span class="p">,</span> <span class="s">"baking powder"</span><span class="p">]</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"flour"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"baking soda"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"salt"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"baking powder"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">bowl</span><span class="p">)</span>
+
 <span class="c1"># Create a list called cream
 # Include:
 # "butter"
@@ -316,33 +437,48 @@
 # Print your list
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="n">cream</span> <span class="o">=</span> <span class="p">[</span><span class="s">"butter"</span><span class="p">,</span> <span class="s">"white sugar"</span><span class="p">,</span> <span class="s">"light brown sugar"</span><span class="p">,</span> <span class="s">"vanilla extract"</span><span class="p">,</span> <span class="s">"eggs"</span><span class="p">]</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"butter"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"white sugar"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"light brown sugar"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"vanilla extract"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"eggs"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">cream</span><span class="p">)</span>
+
 <span class="c1"># Create a list called "dough"
 # Combine the bowl list and cream list together
 # Print your list
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="n">dough</span> <span class="o">=</span> <span class="n">bowl</span> <span class="o">+</span> <span class="n">cream</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dough</span><span class="p">)</span>
+
 <span class="c1"># Append chocolate chips to the dough list and remove it from the ingredients list
 # Print the list
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="n">dough</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"chocolate chips"</span><span class="p">)</span>
+<span class="n">ingredients</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s">"chocolate chips"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dough</span><span class="p">)</span>
+
 <span class="c1"># Create a string that says "Now roll the dough into balls and place them on cookie sheets!"
 # Print it
-</span>
-<span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+# &lt;&lt; CODE &gt;&gt;
+</span><span class="n">myString</span> <span class="o">=</span> <span class="s">"Now roll the dough into balls and place them on cookie sheets!"</span>
+
 <span class="c1"># Create an int called temperature and set it to 375
 # Print "Place in a &lt;&lt;your integer goes here&gt;&gt; F oven for 8-10 minutes and remove just before they start to turn brown."
-</span>
-<span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+# &lt;&lt; CODE &gt;&gt;
+</span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">375</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Place in a </span><span class="si">{</span><span class="n">temperature</span><span class="si">}</span><span class="s"> F oven for 8-10 minutes and remove just before they start to turn brown."</span><span class="p">)</span>
+
 <span class="c1"># Create an int called "cool down" using pascal case and set it to 2
 # Print "Let them sit on the baking pan for &lt;&lt;your integer goes here&gt;&gt; minutes before removing to cooling rack."
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="n">CoolDown</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Let them sit on the baking pan for </span><span class="si">{</span><span class="n">CoolDown</span><span class="si">}</span><span class="s"> minutes before removing to cooling rack."</span><span class="p">)</span>
+
 <span class="c1"># Create 5 string (use whatever casing you feel)
 # First string should be "Enjoy"
 # Second string should be "your"
@@ -352,15 +488,31 @@
 # Using ONE print statement, print ALL of these variables (with a space between each)
 </span>
 <span class="c1"># &lt;&lt; CODE &gt;&gt;
-</span>
+</span><span class="n">string1</span> <span class="o">=</span> <span class="s">"Enjoy"</span>
+<span class="n">string2</span> <span class="o">=</span> <span class="s">"your"</span>
+<span class="n">string3</span> <span class="o">=</span> <span class="s">"CHOCOLATE"</span>
+<span class="n">string4</span> <span class="o">=</span> <span class="s">"CHIP"</span>
+<span class="n">string5</span> <span class="o">=</span> <span class="s">"COOKIES!!!"</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">string1</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">string2</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">string3</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">string4</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">string5</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
 <span class="c1"># JSON CHALLENGE
 # can your do the whole project by using a JSON list?
 # can you convert it to a python dictionary and do all these steps?
 </span>
 <span class="c1"># Yes this is a real cookie recipe. You can find it below if you wanna make them! :)
 # https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/
-</span>
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['butter', 'white sugar', 'light brown sugar', 'vanilla extract', 'eggs', 'flour', 'chocolate chips', 'baking soda', 'salt', 'baking powder']
+['flour', 'baking soda', 'salt', 'baking powder']
+['butter', 'white sugar', 'light brown sugar', 'vanilla extract', 'eggs']
+['flour', 'baking soda', 'salt', 'baking powder', 'butter', 'white sugar', 'light brown sugar', 'vanilla extract', 'eggs']
+['flour', 'baking soda', 'salt', 'baking powder', 'butter', 'white sugar', 'light brown sugar', 'vanilla extract', 'eggs', 'chocolate chips']
+Place in a 375 F oven for 8-10 minutes and remove just before they start to turn brown.
+Let them sit on the baking pan for 2 minutes before removing to cooling rack.
+Enjoy your CHOCOLATE CHIP COOKIES!!!
 </code></pre></div></div>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
