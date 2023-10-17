@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-09T00:00:00-07:00","datePublished":"2023-10-09T00:00:00-07:00","description":"Team LEIA","headline":"Boolean, If Lesson","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/10/09/boolean-if_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/10/09/boolean-if_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=001b0a8acc2d82c263aef562847a68bea88bba4a">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=7a38bc316430831e2ebb7814e6437db3cb3856f7">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,14 +75,14 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      15 min read
+      23 min read
     
 </span></h1>
 
     <p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-10-09T00:00:00-07:00" itemprop="datePublished">
         Oct 9, 2023
       </time>
-    </p><h2>Description</h2><p class="page-description">Team LEIA</p></header>
+    </p><h2>Description</h2><p class="page-description">Team LEIA</p><ul><li><a href="#boolean">Boolean</a><ul><li><a href="#conditional-if-statements"><mark>Conditional ("if") statements</mark></a></li></ul></li><li><a href="#hack-1">Hack 1</a><ul><li><a href="#relational-operators"><mark><b>Relational operators:</b></mark></a></li></ul></li><li><a href="#hack-2">Hack 2</a><ul><li><a href="#logical-operators"><mark><b>Logical operators:</b></mark></a></li><li><a href="#relational-and-logical-operators"><mark><b>Relational and logical operators:</b></mark></a></li></ul></li><li><a href="#hack-3">Hack 3</a><ul><li><a href="#homework"><b>Homework</b></a><ul><li><a href="#criteria-for-above-90">Criteria for above 90%:</a></li></ul></li></ul></li></ul></header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="boolean">Boolean</h1>
@@ -147,7 +147,18 @@
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## YOUR CODE HERE
-</span></code></pre></div></div>
+</span><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter your age:"</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are an adult."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are a minor."</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Invalid age entered."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter your age:15
+You are a minor.
+</code></pre></div></div>
 
 <h2 id="relational-operators"><mark><b>Relational operators:</b></mark></h2>
 <ul>
@@ -188,7 +199,15 @@
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## YOUR CODE HERE
-</span></code></pre></div></div>
+</span><span class="n">is_raining</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">if</span> <span class="n">is_raining</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Bring an unbrella!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The weather is clear."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The weather is clear.
+</code></pre></div></div>
 
 <h2 id="logical-operators"><mark><b>Logical operators:</b></mark></h2>
 <p>Used to evaluate multiple conditions to produce a single Boolean value.</p>
@@ -228,7 +247,23 @@
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## YOUR CODE HERE
-</span></code></pre></div></div>
+</span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The value of a is : </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"The value of b is : </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s"> is greater than </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s"> is less than </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s"> is the same as </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The value of a is : 43
+The value of b is : 88
+43 is less than 88.
+</code></pre></div></div>
 
 <h2 id="homework"><b>Homework</b></h2>
 
@@ -266,31 +301,95 @@
 </span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your name: "</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">'Hello, '</span> <span class="o">+</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s">" running "</span> <span class="o">+</span> <span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"You will be asked "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s">" questions."</span><span class="p">)</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Are you ready to take a test?"</span><span class="p">)</span>
+<span class="n">readyornot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Are you ready to take a test? "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">readyornot</span> <span class="o">==</span> <span class="s">"Yes"</span> <span class="ow">or</span> <span class="n">readyornot</span> <span class="o">==</span> <span class="s">"yes"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Alright, let's get started!"</span><span class="p">)</span>
 
 <span class="c1"># Question 1: Boolean Basics 
 # Ask a question about Boolean values and check the response
 # Provide feedback based on the correctness of the response
-</span>
+</span>    <span class="n">answer1</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s">"Question 1. Is 'True' a valid boolean value? "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer1</span> <span class="o">==</span> <span class="s">"Yes"</span> <span class="ow">or</span> <span class="n">answer1</span> <span class="o">==</span> <span class="s">"yes"</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer1</span><span class="si">}</span><span class="s"> is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer1</span><span class="si">}</span><span class="s"> is incorrect! The correct answer is 'yes'."</span><span class="p">)</span>
+    
 <span class="c1"># Question 2: Boolean Expressions
 # Ask a question about Boolean expressions and their importance in programming
 # Provide feedback based on the correctness of the response
 </span>
+    <span class="n">answer2</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s">"Question 2. Let word = 'monkey' and I want to check if the letter q exists. What will be the output? "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer2</span> <span class="o">==</span> <span class="s">"False"</span> <span class="ow">or</span> <span class="n">answer2</span> <span class="o">==</span> <span class="s">"false"</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer2</span><span class="si">}</span><span class="s"> is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer2</span><span class="si">}</span><span class="s"> is incorrect! The correct answer is 'False'."</span><span class="p">)</span>
+        
 <span class="c1"># Question 3: Conditional Statements
 # Ask a question about the purpose of conditional (if-else) statements in programming
 # Provide feedback based on the correctness of the response
 </span>
+    <span class="n">answer3</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s">"Question 3. Which statement is executed when a condition fails? "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer3</span> <span class="o">==</span> <span class="s">"else"</span> <span class="ow">or</span> <span class="n">answer3</span> <span class="o">==</span> <span class="s">"Else"</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer3</span><span class="si">}</span><span class="s"> is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer3</span><span class="si">}</span><span class="s"> is incorrect! The correct answer is 'else'."</span><span class="p">)</span>
+    
 <span class="c1"># Question 4: Relational Operators
 # Ask a question about common relational operators in programming and provide examples
 # Provide feedback based on the correctness of the response
-</span>
+</span>    <span class="n">answer4</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s">"Question 4. What relational operator is used to check if a number is greater than or equal to another number?"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer4</span> <span class="o">==</span> <span class="s">"&lt;="</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer4</span><span class="si">}</span><span class="s"> is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer4</span><span class="si">}</span><span class="s"> is incorrect! The correct answer is '&lt;='."</span><span class="p">)</span>
 <span class="c1"># Question 5: Logical Operators
 # Ask a question about the use of logical operators in programming and provide examples
 # Provide feedback based on the correctness of the response
-</span>
+</span>    <span class="n">answer5</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s">"Question 5. What logical operator is used to check if either condition is true? "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer5</span> <span class="o">==</span> <span class="s">"Or"</span> <span class="ow">or</span> <span class="n">answer5</span> <span class="o">==</span> <span class="s">"or"</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer5</span><span class="si">}</span><span class="s"> is correct!"</span><span class="p">)</span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">answer5</span><span class="si">}</span><span class="s"> is incorrect! The correct answer is 'or'."</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Bye, see you another time!"</span><span class="p">)</span>
+
 <span class="c1"># Display the final score
 # Calculate the percentage of correct answers and provide feedback
-</span><span class="k">print</span><span class="p">(</span><span class="n">user_name</span> <span class="o">+</span> <span class="s">", you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
+</span><span class="n">score</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">questions</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
+<span class="k">print</span><span class="p">(</span><span class="n">user_name</span> <span class="o">+</span> <span class="s">", you scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span> <span class="s">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s">" which is a "</span> <span class="o">+</span> <span class="s">"{:.2f}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">score</span><span class="p">)</span> <span class="o">+</span> <span class="s">"%."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter your name: aditya
+Hello, aditya running /usr/bin/python3
+You will be asked 5 questions.
+Are you ready to take a test? yes
+Alright, let's get started!
+Question: Question 1. Is 'True' a valid boolean value? 
+yes
+yes is correct!
+Question: Question 2. Let word = 'monkey' and I want to check if the letter q exists. What will be the output? 
+false
+false is correct!
+Question: Question 3. Which statement is executed when a condition fails? 
+else
+else is correct!
+Question: Question 4. What relational operator is used to check if a number is greater than or equal to another number?
+&lt;=
+&lt;= is correct!
+Question: Question 5. What logical operator is used to check if either condition is true? 
+or
+or is correct!
+aditya, you scored 5/5 which is a 100.00%.
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 </code></pre></div></div>
 
   </div><!-- from https://github.com/utterance/utterances -->

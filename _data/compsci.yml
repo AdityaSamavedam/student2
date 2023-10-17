@@ -1,11 +1,16 @@
 # CSP course meta data
 Unit1:
-  title: Build a Lab Notebook
-  description:  Install Tools.  Design lab notebook.  Learn GitHub Pages. Work with Pair (pair name). 
+  title: Tools and Software Development Processes
+  description:  By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Python, Markdown, HTML, and JavaScript. Students will establish foundation using essential tools and software development processes to support their coding journey.
   start: 0
   end: 3
 Unit2:
-  title: Learn Language
-  description: Learn (JavaScript|Python|Java).  Start Agile development process.
+  title: Web Development Layers
+  description: During Weeks 4-7, students will delve into the layers used in Web Development. They will learn about the key components that make up websites, including the Frontend, Backend, and Data layers. The main focus of this Sprint is to empower students to explore the development and deployment of a simple website. Throughout this period, there will be several lectures that provide ideas and concepts on how to build different components of a website, including sending and receiving data from a backend server.
   start: 4
-  end: 9
+  end: 10
+Unit3:
+  title: Web Application, Data, and N@tM
+  description: Student teams need to build their own Website and individuals need to blog their learnings. The team Website should include interests, but also requires the use of Python Flask and JavaScript programming. By the end of the Sprint, students will be ready to start many of the technical coding aspects of Web Development; having established a Deployed Website, Frontend, and Backend. In November, the Trimester will end by presenting team project at the Electives Department "Night at the Museum" (N@tM).
+  start: 8
+  end: 12
