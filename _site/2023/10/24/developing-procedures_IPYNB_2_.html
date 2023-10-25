@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-24T00:00:00-07:00","datePublished":"2023-10-24T00:00:00-07:00","description":"College Board 3.12 and 3.13","headline":"Developing Procedures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/10/24/developing-procedures_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/10/24/developing-procedures_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=aa8139c371d2224cef335ad936a2217ccff67a28">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=a0df80249066bebdc05f70e28e24307e73eda91e">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      22 min read
     
 </span></h1>
 
@@ -291,24 +291,81 @@ Final Price: $493.00
 <h3 id="question-2">Question 2</h3>
 <p>Create your own robot problem! Include a picture with a square grid to represent the map and triangle to represent the robot. Add a flag to a square to represent the end-point and a shaded-in block to represent a detour. Write a procedure in pseudo-code to move the robot from the start, past the detour, and to the end point.</p>
 
-<p>Add your image here by adding the link between the “” and removing the comment formatting:
-<img src="images/Maze.png" alt="mymazeimage" />
-<!-- <img src="images/Maze.png"> --></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s">"/home/aditya/vscode/student2/images/Maze.png"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="output_20_0.png" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># your code here
-</span></code></pre></div></div>
+</span><span class="n">PROCEDURE</span> <span class="n">TurnRight</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="c1"># turn left function
+</span><span class="p">{</span> 
+    <span class="n">REPEAT</span> <span class="n">number</span> <span class="n">TIMES</span>
+    <span class="p">{</span>
+        <span class="n">ROTATE_RIGHT</span><span class="p">()</span> <span class="c1"># for number of times specified, repeat loop
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">PROCEDURE</span> <span class="n">TurnLeft</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="c1"># turn right function
+</span><span class="p">{</span> 
+    <span class="n">REPEAT</span> <span class="n">number</span> <span class="n">TIMES</span>
+    <span class="p">{</span>
+        <span class="n">ROTATE_LEFT</span><span class="p">()</span> <span class="c1"># for number of times specified, repeat loop
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">PROCEDURE</span> <span class="n">MoveForward</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="c1"># move forward function
+</span><span class="p">{</span> 
+    <span class="n">REPEAT</span> <span class="n">number</span> <span class="n">TIMES</span>
+    <span class="p">{</span>
+        <span class="n">ROTATE_RIGHT</span><span class="p">()</span> <span class="c1"># for number of times specified, repeat loop
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Main pseudocode to reach the flag:
+</span><span class="n">TurnRight</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">MoveForward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">TurnLeft</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">MoveForward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">TurnRight</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">MoveForward</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">TurnRight</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">MoveForward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">TurnLeft</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">MoveForward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h3 id="question-3">Question 3</h3>
 <p>Create a program that asks for user input of an integer <em>n</em>, and return an array that contains all the prime numbers up to the number <em>n</em> (inclusive). Remember to use multiple different functions to better organize the code and increase efficiency.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-  <span class="c1"># your code here
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># no number less than 2 is prime
+</span>        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># loop from 2 to the integer square root of the number
+</span>        <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span> <span class="c1"># return True if none of these conditions are satisfied
 </span>
+<span class="k">def</span> <span class="nf">primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># store the prime numbers in a list
+</span>    <span class="n">num</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># smallest prime number is 2
+</span>    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+            <span class="n">primes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="c1"># add to primes list if is_prime is True
+</span>        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increment num by 1 each time
+</span>    <span class="k">return</span> <span class="n">primes</span>
+
 <span class="c1"># tests
 </span><span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">(</span><span class="mi">35</span><span class="p">))</span>
 </code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[2, 3, 5, 7, 11]
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149]
+</code></pre></div></div>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
