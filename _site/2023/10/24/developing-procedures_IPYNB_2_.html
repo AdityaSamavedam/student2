@@ -10,18 +10,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="College Board 3.12 and 3.13" />
 <meta property="og:description" content="College Board 3.12 and 3.13" />
-<link rel="canonical" href="http://localhost:4200/student2/2023/10/24/developing-procedures_IPYNB_2_.html" />
-<meta property="og:url" content="http://localhost:4200/student2/2023/10/24/developing-procedures_IPYNB_2_.html" />
+<link rel="canonical" href="http://localhost:4000/student2/2023/10/24/developing-procedures_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4000/student2/2023/10/24/developing-procedures_IPYNB_2_.html" />
 <meta property="og:site_name" content="CompSci Blogs" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-10-24T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Developing Procedures" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-24T00:00:00-07:00","datePublished":"2023-10-24T00:00:00-07:00","description":"College Board 3.12 and 3.13","headline":"Developing Procedures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/10/24/developing-procedures_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/10/24/developing-procedures_IPYNB_2_.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-24T00:00:00-07:00","datePublished":"2023-10-24T00:00:00-07:00","description":"College Board 3.12 and 3.13","headline":"Developing Procedures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/student2/2023/10/24/developing-procedures_IPYNB_2_.html"},"url":"http://localhost:4000/student2/2023/10/24/developing-procedures_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=a0df80249066bebdc05f70e28e24307e73eda91e">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=abcb8f242f863280323537f7ac7f1b75804b9511">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -221,8 +221,40 @@ width: 89
 </blockquote>
 
 <blockquote>
-  <p>Your code here:</p>
+  <p>Your code here:
+PROCEDURE TurnRight (number) # turn left function
+{ 
+    REPEAT number TIMES
+    {
+        ROTATE_RIGHT() # for number of times specified, repeat loop
+    }
+}</p>
 </blockquote>
+
+<p>PROCEDURE TurnLeft (number) # turn right function
+{ 
+    REPEAT number TIMES
+    {
+        ROTATE_LEFT() # for number of times specified, repeat loop
+    }
+}</p>
+
+<p>PROCEDURE MoveForward (number) # move forward function
+{ 
+    REPEAT number TIMES
+    {
+        ROTATE_RIGHT() # for number of times specified, repeat loop
+    }
+}</p>
+
+<p>TurnLeft (2)
+MoveForward (1)
+TurnRight (1)
+MoveForward (1)
+TurnRight (1)
+MoveForward (2)
+TurnRight (1)
+MoveForward (1)</p>
 
 <h2 id="procedure-return-values">Procedure Return Values</h2>
 <p>When a procedure is run, it executes a series of calculations or commands and at some point and needs to provide a useful result. The return statement is what allows us to return a useful value back to the calling code. The returns statement can return various types of values such as booleans, integers, strings, etc.</p>
@@ -347,13 +379,12 @@ Final Price: $493.00
     <span class="k">return</span> <span class="bp">True</span> <span class="c1"># return True if none of these conditions are satisfied
 </span>
 <span class="k">def</span> <span class="nf">primes</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># store the prime numbers in a list
-</span>    <span class="n">num</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># smallest prime number is 2
-</span>    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-            <span class="n">primes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="c1"># add to primes list if is_prime is True
-</span>        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increment num by 1 each time
-</span>    <span class="k">return</span> <span class="n">primes</span>
+    <span class="n">primes_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># store the prime numbers in a list
+</span>    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> <span class="c1"># iterate from 2 to n
+</span>        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+            <span class="n">primes_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="c1"># add to primes list if is_prime is True
+</span>    <span class="k">return</span> <span class="n">primes_list</span>
+
 
 <span class="c1"># tests
 </span><span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
@@ -361,9 +392,9 @@ Final Price: $493.00
 <span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">(</span><span class="mi">35</span><span class="p">))</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[2, 3, 5, 7, 11]
-[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
-[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[2, 3, 5]
+[2, 3, 5, 7, 11]
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
 </code></pre></div></div>
 
 
