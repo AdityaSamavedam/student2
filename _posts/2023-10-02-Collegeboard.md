@@ -2,8 +2,8 @@
 toc: true
 comments: false
 layout: post
-title: Week 12 Plans
-description: Plans for week 12
+title: Collegeboard MC
+description: Words I had to look up and quiz corrections
 courses: { compsci: {week: 12} }
 type: tangibles
 ---
@@ -27,3 +27,17 @@ undecidable problem - one that should give a "yes" or "no" answer, but yet no al
 symmetric encryption - a type of encryption where only one key (a secret key) is used to both encrypt and decrypt electronic data.
 
 crowdsourcing - collecting services, ideas or content through the contributions of a large group of people
+
+Quiz corrections:
+
+Question 46:
+The answer is D because it is impossible to create an algorithm to solve an undecidable problem for all programs and inputs.
+
+Question 50:
+The answer is B, as when the variable is being iterated through the entire list sequentially, which means that it should be a linear search.
+
+Question 58:
+The answer is A because some problems cannot be solved in a reasonable amount of time.
+
+Question 64:
+The answer is B and C. D is wrong because cloud storage sites allow users to share files easily, which could lead to increased concerns about copyrighted materials being illegally distributed online.
