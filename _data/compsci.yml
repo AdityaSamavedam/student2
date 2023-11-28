@@ -14,6 +14,11 @@ Unit3:
   description: Student teams need to build their own Website and individuals need to blog their learnings. The team Website should include interests, but also requires the use of Python Flask and JavaScript programming. By the end of the Sprint, students will be ready to start many of the technical coding aspects of Web Development; having established a Deployed Website, Frontend, and Backend. In November, the Trimester will end by presenting team project at the Electives Department "Night at the Museum" (N@tM).
   start: 8
   end: 12
+Unit3:
+  title: Web Application, Data, and N@tM
+  description: Student teams need to build their own Website and individuals need to blog their learnings. The team Website should include interests, but also requires the use of Python Flask and JavaScript programming. By the end of the Sprint, students will be ready to start many of the technical coding aspects of Web Development; having established a Deployed Website, Frontend, and Backend. In November, the Trimester will end by presenting team project at the Electives Department "Night at the Museum" (N@tM).
+  start: 8
+  end: 12
 Unit4:
   title: Warm-up Data Abstraction Project, Create Performance Task (CPT) kickoff
   description: Trimester 2 will begin with a Mini-project. Great projects begin with frontend style. This project will be using SASS, JavaScript, managing user events and representing Algorithms. Tech talks during this period will be preparing for College Board Create Performance Task.
