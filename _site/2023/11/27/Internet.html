@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      26 min read
+      32 min read
     
 </span></h1>
 
@@ -218,6 +218,8 @@ Ex. ARP, DNS, FTP, UDP, PPP, SAP</p>
   <li>Give another example of a protocol from that layer</li>
 </ul>
 
+<p>SSL</p>
+
 <h4 id="tcpip-model">TCP/IP Model</h4>
 <ul>
   <li>Another method of classifying protocols</li>
@@ -273,10 +275,28 @@ Ex. ARP, DNS, FTP, UDP, PPP, SAP</p>
   <p>Popcorn Hack</p>
   <ul>
     <li>List 4 more websites you use often and their IPs</li>
-    <li>What’s a subdomain of your passion project backend from last time?</li>
-    <li>What’s the domain of your current binary CPT project?</li>
   </ul>
 </blockquote>
+
+<p>google.com : 142.251.40.206
+<br />
+youtube.com : 142.250.81.238
+<br />
+wikipedia.org : 208.80.154.224
+<br />
+amazon.com : 205.251.242.103</p>
+
+<ul>
+  <li>What’s a subdomain of your passion project backend from last time?</li>
+</ul>
+
+<p>adityasamavedam</p>
+
+<ul>
+  <li>What’s the domain of your current binary CPT project?</li>
+</ul>
+
+<p>frontendbinarytri2</p>
 
 <h2 id="http-vs-https---hypertext-transfer-protocol">HTTP vs HTTPS - HyperText Transfer Protocol</h2>
 <p>HTTP (Hypertext Transfer Protocol) and HTTPS (Hypertext Transfer Protocol Secure) are both protocols used for transferring data over the web. The key difference lies in the security aspect.</p>
@@ -364,9 +384,16 @@ Packets are a unit of information that are sent over the network. They contain u
   <p>Popcorn Hack</p>
   <ul>
     <li>When do we use UDP? While it seems terrible, try to think of some use cases!</li>
-    <li>When might we use TCP?</li>
   </ul>
 </blockquote>
+
+<p>Real time websites such as twitch.tv</p>
+
+<ul>
+  <li>When might we use TCP?</li>
+</ul>
+
+<p>Web browsing such as google.com and bing.com</p>
 
 <h1 id="homework-questions">Homework Questions</h1>
 <p>Please answer all of these questions on your personal blog and <strong>explain</strong>. Don’t just give an answer. Homework is due Sunday night at 6 pm</p>
@@ -380,7 +407,27 @@ Packets are a unit of information that are sent over the network. They contain u
       <li>23.23.23.23</li>
       <li>134.492.100.0</li>
       <li>255.256.55.255</li>
-      <li>2.93.255.19</li>
+      <li>2.93.255.19
+<br />
+<br />
+1.1.1.1.1: No because all IPv4 addresses have four numbers ranging from from 0 to 255. This one has 5 numbers.
+<br />
+<br />
+23.23.23.23: Yes because all IPv4 addresses have four numbers ranging from 0 to 255. 23 is between 0 and 255, and there are four 23s.
+<br />
+<br />
+134.492.100.0: No because all IPv4 addresses have four numbers ranging from from 0 to 255. 492 is not between 0 and 255.
+<br />
+<br />
+255.256.55.255: No because all IPv4 addresses have four numbers ranging from 0 to 255. 256 is not between 0 and 255.
+<br />
+<br />
+2.93.255.19
+<br />
+<br />
+Yes because all IPv4 addresses have four numbers ranging from 0 to 255. 2, 93, 255 and 19 are all between 0 and 255, and there are four 23s.
+<br />
+<br /></li>
     </ul>
   </li>
   <li>If Dian Du is at home on his home network and sends a message to every computer on the network, what is this an example of? Explain.
@@ -388,7 +435,10 @@ Packets are a unit of information that are sent over the network. They contain u
     <ul>
       <li>Multicast</li>
       <li>Unicast</li>
-      <li>Broadcast</li>
+      <li>Broadcast
+<br />
+<br />
+Dian Du is sending a message from himself to every computer, which means that it cannot be a unicast, as unicast means that you are only sending to one computer. It is not a multicast, because there is only one network, and multicast means that you are sending to several computers on various networks. Hence, this should be a <strong>broadcast</strong>, as all the computers are on the same network.</li>
     </ul>
   </li>
 </ol>
@@ -400,7 +450,22 @@ Packets are a unit of information that are sent over the network. They contain u
       <li>ASCII (see above for information)</li>
       <li>FTP (facilitates transfer of files over the internet)</li>
       <li>TLS (see HTTPS section)</li>
-      <li>USB (permits data exchange between electronics)</li>
+      <li>USB (permits data exchange between electronics)
+<br />
+<br />
+<br />
+ASCII: It is on the presentation layer. The presentation layer is responsible for translation of computer data to human-readable data. ASCII is a form of character encoding, hence it should be on the presentation layer.
+<br />
+<br />
+FTP: It is on the transport layer. The transport layer is responsible for transportation of data. FTP facilitates transfer of files over the internet, which allows the users to share files with each other, hence it should be on the transport layer.
+<br />
+<br />
+TLS: It is on the transport layer. The transport layer is responsible for transportation of data. Transport Layer Security is a form of encryption that ensures that the data exchanged between the user and website is encrypted, hence it should be on the transport layer.
+<br />
+<br />
+USB: It is on the transport layer. The transport layer is responsible for transportation of data. The Universal Serial Bus is used to transport data physically and it is tangible, so it’s also on the transport layer.
+<br />
+<br /></li>
     </ul>
   </li>
   <li>Telnet is a internet protocol which allows remote access to other computers over a local network or the internet. What layer of the OSI model would this protocol be located on? What is the function of this layer?</li>
