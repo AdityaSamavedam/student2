@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>5.3 Computing Bias | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="5.3 Computing Bias" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Computing Bias Lesson" />
+<meta property="og:description" content="Computing Bias Lesson" />
+<link rel="canonical" href="http://localhost:4200/student2/2023/12/17/teamteach_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2023/12/17/teamteach_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-17T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="5.3 Computing Bias" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-17T00:00:00-08:00","datePublished":"2023-12-17T00:00:00-08:00","description":"Computing Bias Lesson","headline":"5.3 Computing Bias","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2023/12/17/teamteach_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2023/12/17/teamteach_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=f0fd3210c171a662b16dfb716671c5759c76ccb9">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">5.3 Computing Bias
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-12-17T00:00:00-08:00" itemprop="datePublished">
+        Dec 17, 2023
+      </time>
+    </p><h2>Description</h2><p class="page-description">Computing Bias Lesson</p><ul><li><a href="#big-idea-53-computing-bias--tanay">Big Idea 5.3 Computing Bias- Tanay</a><ul><li><a href="#types-of-computing-bias---tarun">Types of Computing Bias - Tarun</a></li><li><a href="#explicit-data-vs-implicit-data----pranavi">Explicit data vs Implicit data:  - Pranavi</a></li><li><a href="#popcorn-hack">Popcorn Hack:</a></li><li><a href="#intentional-bias-vs-unintentional-bias---tanvi">Intentional Bias vs Unintentional Bias - Tanvi</a></li><li><a href="#popcorn-hack-1">Popcorn Hack:</a></li><li><a href="#mitigation-strategies---shubhay">Mitigation Strategies - Shubhay</a></li><li><a href="#homework">Homework:</a></li></ul></li></ul></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="big-idea-53-computing-bias--tanay">Big Idea 5.3 Computing Bias- Tanay</h1>
+
+<p>Overview/Definition: Computing Biasses are the numerous Biasses in application that are based on human prefrences.</p>
+
+<ul>
+  <li>Computing innovations can reflect existing human biases because of biases written into the algorithms or biases in the data used by the innovation</li>
+  <li>Programmers should take action to reduce bias in algorithms used for computing innovations as a way of combating existing human biases</li>
+  <li>Biases can be embedded at all levels of software development</li>
+</ul>
+
+<h2 id="types-of-computing-bias---tarun">Types of Computing Bias - Tarun</h2>
+
+<ul>
+  <li>Data Bias: The data does not accurently represent the values of the real world
+  ex. If data is taken from a sample size that doesn’t reflect the actual population
+      - If you wanted data to represent the population in America but your sample that is being surveyed is from a Texas. The population in Texas does not accurately reflect the entire population of America.</li>
+  <li>Human Bias: Those who make programs may be influenced by their own biases 
+  ex. If a development team are experts in using a certain language and their algorithm demonstrates that language, they will feel that people who specialize in that language are qualified and better. This is essentially bringing in their personal biases and applying to a larger amount of people.</li>
+</ul>
+
+<h2 id="explicit-data-vs-implicit-data----pranavi">Explicit data vs Implicit data:  - Pranavi</h2>
+
+<p>Explicit data:</p>
+<ul>
+  <li>takes the data that you give</li>
+  <li>When watching a video, and it asks “are you enjoying this?”, and you respond with either a thumbs up or down, you are giving them explicit data</li>
+</ul>
+
+<p>Implicit data:</p>
+<ul>
+  <li>When you watch or search up certain things, data can be deduced on what is the “norm” for the person</li>
+</ul>
+
+<p>Example: Netflix</p>
+<ul>
+  <li>When browsing through Netflix, they show Netflix exclusives, they do this because they want your subscriptions</li>
+  <li>showing the netflix exclusives is the bias in this scenario</li>
+</ul>
+
+<p><img src="attachment:Screenshot 2023-12-12 at 1.22.41 PM.png" alt="Screenshot 2023-12-12 at 1.22.41 PM.png" /></p>
+
+<h2 id="popcorn-hack">Popcorn Hack:</h2>
+
+<p>In what other applications could have intential bias?</p>
+
+<p>Dating applications like tinder will use your data to match with others.</p>
+
+<h2 id="intentional-bias-vs-unintentional-bias---tanvi">Intentional Bias vs Unintentional Bias - Tanvi</h2>
+
+<p>Example 1: Hypothetical Loan company</p>
+<ul>
+  <li>Suppose a software was created to assist loan officers, and certain trends of successful loans were taken</li>
+  <li>If people are rejected of those who don’t fit in their trends of either age, gender, race, etc.</li>
+  <li>This software is biased in the way that it only chooses candidates who will have higher chances in successful loans</li>
+</ul>
+
+<p>Example 2: Candy Crush vs Call of Duty</p>
+<ul>
+  <li>Call of Duty is geared towards the teenage boy demographic, 18-24, with more grunge type of music</li>
+  <li>Candy Crush is more visually appearing to younger audience as it includes pictures of candies and playful music</li>
+  <li>This is biased as the games include aspects and characteristics that will seem appealing to a specific audience</li>
+</ul>
+
+<p><img src="attachment:Screenshot 2023-12-12 at 1.23.36 PM.png" alt="Screenshot 2023-12-12 at 1.23.36 PM.png" /></p>
+
+<p><img src="attachment:Screenshot 2023-12-12 at 1.23.42 PM.png" alt="Screenshot 2023-12-12 at 1.23.42 PM.png" /></p>
+
+<h2 id="popcorn-hack-1">Popcorn Hack:</h2>
+<p>How is their unintentional bias in apps such as TikTok or Instagram or otehr social media apps?</p>
+
+<h2 id="mitigation-strategies---shubhay">Mitigation Strategies - Shubhay</h2>
+
+<ul>
+  <li>Utilize data from various sources</li>
+  <li>Pre-Processing: A way to check the inputs for bias before it is being used as data</li>
+  <li>In-processing: This algorithm changes the data during analysis of the data to keep the data consistent</li>
+  <li>Post-Processing: # step check to make sure the model is fair and accurate
+    <ul>
+      <li>Input Correction: This strategy makes adjustments to the data to make the data more comparable</li>
+      <li>Classifier Correction: polishing and adjusting the algorithm after it has been trained to reduce the biases</li>
+      <li>Output Correction: The predictions made by the model is modified to eliminate biases</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="homework">Homework:</h2>
+
+<ol>
+  <li>Is bias enhancing or intentionally excluding?</li>
+  <li>Is bias intentionally harmful/hateful?</li>
+  <li>During software development are your receiving feedback from a wide variety of people?</li>
+  <li>What are the different biases you can find in an application such as Youtube Kids?</li>
+</ol>
+
+<p>Answer in complete sentences, due Sunday 11:59 pm</p>
+
+<ol>
+  <li>
+    <p>Bias can either enhance or intentionally exclude depending on its nature and context. 
+ An example where bias can enhance is in personalized recommendations for online shopping. If an e-commerce platform tailors product suggestions based on a user’s past preferences and buying history, it introduces a form of bias that enhances the user experience by offering more relevant and appealing recommendations.
+ In hiring, intentional bias can exclude certain groups by setting unnecessary job requirements that favor one demographic over the other. For example, asking for qualifications that aren’t essential but are easier for a specific group to meet can limit diversity in the pool of candidates.</p>
+  </li>
+  <li>
+    <p>Intentional bias is harmful when it reflects prejudice or discrimination against certain individuals or groups. This involves promoting negative stereotypes and treating people unequally based on factors like race or gender.</p>
+  </li>
+  <li>
+    <p>Yes, during software development, we are receiving feedback from a wide variety of people. It is indeed important to gather feedback from a wide variety of people, because it helps identify potential biases and enhance inclusivity. Examples of people we receive feedback are peers, beta testers, end-users, bosses, etc.</p>
+  </li>
+  <li>
+    <p>YouTube Kids favors content that is more suitable for kids under 12 years of age, like nursery rhymes, ABCs, fun facts, etc. The content is biased to suit the younger audience, and it involves less blood, violence, and gore. At the same time, YouTube Kids really limits the variety of content because it prioritizes younger kids.</p>
+  </li>
+</ol>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2023/12/17/teamteach_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
