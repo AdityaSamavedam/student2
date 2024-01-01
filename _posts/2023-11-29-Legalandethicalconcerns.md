@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Student Teach - Legal and Ethical Concerns of Technology 
 description: A lesson on the legal and ethical concerns of technology! By Aditi, Eshika, Cindy, Avanthika, Nupur 
-type: ccc
-courses: { csp: {week: 13} }
+type: hacks
+courses: { compsci: {week: 17} }
 ---
 # <span style="color:cadetblue">LEGAL AND ETHICAL CONCERNS OF TECHNOLOGY</span> 
 
@@ -50,6 +50,8 @@ Academic Papers/Essay, Work Presentations
 
 # <span style="color:cadetblue">Popcorn Hack #2</span>
 If a person copies and earns $2,500 from plagiarized work what legal repercussions could they face? Would they face fines or prison sentences, and for how long?
+
+The person may face $250,000 in fines and up to 10 years in jail.
 
 ## <span style="color:pink">Copyright and Intellectual Property</span>
 
@@ -143,3 +145,22 @@ Data Privacy and Security:
 # <span style="color:cadetblue">Extra Credit</span>
 
 Explain the significance of choosing an appropriate license for personal and team GitHub repositories, especially for the CPT project. How does this relate to the broader themes of legal and ethical concerns in computing?
+
+My Answers:
+
+1. Creative Commons Zero v1.0 Universal: It is dedicated to the public, hence all the creator's/creators' rights have been waived off to the work worldwide under copyright law. All users are allowed to modify, distribute and perform the work for any purpose, even commercially.
+<br>
+   Open Source MIT License: This is also dedicated to the public, and allows all users to modify and distribute the software, as long as they follow the copyright rules described in the license.
+   <br>
+   Open Source GPL License: It is a copyleft open source license, meaning that it allows users to copy, distrubute and modify it without having to seek permission from the creator, however any of its derivative work must also be distributed under the GPL.
+   <br>
+   <br>
+2. Qualcomm: Qualcomm contributes to open source projects in mobile and wireless tech like Android and Linux. They integrate open source into their Snapdragon processors for mobile devices. Qualcomm makes money from proprietary hardware and tech that complements open source software.
+<br>  
+   Red Hat: Red Hat is a major contributor to open source projects, especially the Linux kernel. They build their business on open source, notably with Red Hat Enterprise Linux. Red Hat sells subscriptions, providing support and tools for their open source products, making open source more accessible to businesses with a reliable support structure.
+<br>
+<br>
+3. Businesses heavily relying on open source software need to generate income to sustain operations, provide support, and fund ongoing development. They often use a dual-licensing model, offering a free, open source version alongside a commercial version with additional features and support. By selling commercial licenses, support, and related services, these businesses can thrive while adhering to the principles of open source licensing.
+<br>
+<br>
+Extra Credit: Choosing an appropriate license for personal and team GitHub repositories is crucial for the CPT project and aligns with broader legal and ethical concerns in computing. A well-defined license clarifies how others can use, modify, and distribute the project, fostering collaboration and preventing legal issues. Ethically, it ensures transparency and respect for intellectual property rights. By selecting licenses like the MIT or GPL, developers contribute to a culture of responsible and ethical software development, promoting innovation while respecting legal boundaries.
