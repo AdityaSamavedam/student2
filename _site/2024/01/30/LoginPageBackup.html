@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Login Page Backup | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Login Page Backup" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Spot Check Individual Login Page" />
+<meta property="og:description" content="Spot Check Individual Login Page" />
+<link rel="canonical" href="http://localhost:4200/student2/2024/01/30/LoginPageBackup.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2024/01/30/LoginPageBackup.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-30T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Login Page Backup" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-30T00:00:00-08:00","datePublished":"2024-01-30T00:00:00-08:00","description":"Spot Check Individual Login Page","headline":"Login Page Backup","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/01/30/LoginPageBackup.html"},"url":"http://localhost:4200/student2/2024/01/30/LoginPageBackup.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=483cf113594f906d68d2789e0083a741f5b5191b">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">Login Page Backup
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-01-30T00:00:00-08:00" itemprop="datePublished">
+        Jan 30, 2024
+      </time>
+    </p><h2>Description</h2><p class="page-description">Spot Check Individual Login Page</p><ul><li>Login</li></ul></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1>Login</h1>
+
+<style>
+    form {
+        max-width: 300px; 
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); 
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: box-shadow 0.3s ease; 
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); 
+        transition: box-shadow 0.3s ease; 
+    }
+
+    button:hover {
+        box-shadow: 0 0 15px rgba(0, 128, 0, 1);
+    }
+</style>
+
+<form action="javascript:login_user()">
+    <!-- ... -->
+</form>
+
+<script type="module">
+</script>
+
+<form action="javascript:login_user()">
+    <p><label>
+        User ID:
+        <input type="text" name="uid" id="uid" required="" />
+    </label></p>
+    <p><label>
+        Password:
+        <input type="password" name="password" id="password" required="" />
+    </label></p>
+    <p>
+        <button>Login</button>
+    </p>
+    <p id="loginStatus" name="loginStatus">null</p>
+</form>
+
+<script type="module">
+
+    function login_user(){
+        const url ='http://127.0.0.1:8086/api/users/authenticate';
+
+        const body = {
+            uid: document.getElementById("uid").value,
+            password: document.getElementById("password").value,
+        };
+
+        const authOptions = {
+            mode: 'cors', 
+            credentials: 'include', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST',
+            cache: 'no-cache',
+            body: JSON.stringify(body)
+        };
+
+        fetch(url, authOptions)
+        .then(response => {
+            if (!response.ok) {
+                const errorMsg = 'Login error: ' + response.status;
+                console.log(errorMsg);
+                if (response.status == 500) {
+                    document.getElementById("loginStatus").innerHTML = "incorrect username or password";
+                    return;
+                }
+            }
+
+          
+            window.location.href = "http://127.0.0.1:4200/student2/2024/02/06/DataTable.html"
+            ;
+        })
+       
+        .catch(err => {
+            window.location.href = "http://127.0.0.1:4200/student/2024/01/31/401error.html"
+            console.error(err);
+        });
+    }
+
+   
+    window.login_user = login_user;
+</script>
+
+
+  </div><a class="u-url" href="/student2/2024/01/30/LoginPageBackup.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>

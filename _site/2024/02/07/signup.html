@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Signup Page | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Signup Page" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Sign Up for new user" />
+<meta property="og:description" content="Sign Up for new user" />
+<link rel="canonical" href="http://localhost:4200/student2/2024/02/07/signup.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2024/02/07/signup.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-07T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Signup Page" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-02-07T00:00:00-08:00","datePublished":"2024-02-07T00:00:00-08:00","description":"Sign Up for new user","headline":"Signup Page","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/02/07/signup.html"},"url":"http://localhost:4200/student2/2024/02/07/signup.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=483cf113594f906d68d2789e0083a741f5b5191b">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">Signup Page
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-02-07T00:00:00-08:00" itemprop="datePublished">
+        Feb 7, 2024
+      </time>
+    </p><h2>Description</h2><p class="page-description">Sign Up for new user</p><ul><li>Sign Up</li></ul></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1>Sign Up</h1>
+
+<form action="javascript:create_user()">
+    <p><label>
+        User ID:
+        <input type="text" name="uid" id="uid" required="" />
+    </label></p>
+    <p><label>
+        Password:
+        <input type="password" name="password" id="password" required="" />
+    </label></p>
+    <p><label>
+        Full Name:
+        <input type="text" name="Name" id="Name" required="" />
+    </label></p>
+    <!-- <p><label>
+        Type:
+        <input type="text" name="Type" id="Type" required="" />
+    </label></p> -->
+    <p>
+        <button>Create User</button>
+    </p>
+</form>
+
+<script type="module">
+
+    function create_user(){
+        const url ='http://127.0.0.1:8086/api/users/';
+
+        const body = {
+            uid: document.getElementById("uid").value,
+            password: document.getElementById("password").value,
+            name: document.getElementById("Name").value,
+            // type: document.getElementById("Type").value
+        };
+
+        const authOptions = {
+            mode: 'cors', 
+            credentials: 'include', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'POST', 
+            cache: 'no-cache', 
+            body: JSON.stringify(body)
+        };
+
+       
+        fetch(url, authOptions)
+        .then(response => {
+            
+            if (!response.ok) {
+                const errorMsg = 'Login error: ' + response.status;
+                console.log(errorMsg);
+                return;
+            }
+            
+            window.location.href = "http://127.0.0.1:4200/student2/2024/01/30/LoginPageBackup.html";
+        })
+      
+        .catch(err => {
+            console.error(err);
+        });
+    }
+
+   
+    window.create_user = create_user;
+</script>
+
+
+  </div><a class="u-url" href="/student2/2024/02/07/signup.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
