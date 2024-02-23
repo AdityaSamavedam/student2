@@ -99,7 +99,7 @@ type: tangibles
             if (!response.ok) {
                 const errorMsg = 'Login error: ' + response.status;
                 console.log(errorMsg);
-                if (response.status == 500) {
+                if (response.status == 400) {
                     document.getElementById("loginStatus").innerHTML = "incorrect username or password";
                     return;
                 }

@@ -1,3 +1,74 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    #result {
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    #actionButtons {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 12px);
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
 
 <h1>Data</h1>
 
@@ -5,7 +76,9 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>ID</th>
+            <th>UID</th>
+            <th>DOB</th>
+            <th>Favorite Sport</th>
         </tr>
     </thead>
     <tbody id="result">
@@ -33,7 +106,7 @@
             // check for response errors and display
             if (response.status !== 200) {
                 const errorMsg = 'Database response error: ' + response.status;
-                window.location.href = "http://127.0.0.1:4200/student/2024/01/31/403error.html";
+                window.location.href = "http://127.0.0.1:4200/student2/2024/01/31/403error.html";
                 console.log(errorMsg);
                 const tr = document.createElement("tr");
                 const td = document.createElement("td");
@@ -49,20 +122,26 @@
                     // tr and td build out for each row
                     const tr = document.createElement("tr");
                     const name = document.createElement("td");
-                    const id = document.createElement("td");
+                    const uid = document.createElement("td");
+                    const dob = document.createElement("td");
+                    const favoritesport = document.createElement("td");
                     // data is specific to the API
                     name.innerHTML = row.name;
-                    id.innerHTML = row.uid;
+                    uid.innerHTML = row.uid;
+                    dob.innerHTML = row.dob;
+                    favoritesport.innerHTML = row.favoritesport;
                     // this builds td's into tr
                     tr.appendChild(name);
-                    tr.appendChild(id);
+                    tr.appendChild(uid);
+                    tr.appendChild(dob);
+                    tr.appendChild(favoritesport);
                     // append the row to table
                     resultContainer.appendChild(tr);
                 }
             })
             // catch fetch errors (i.e., ACCESS to server blocked)
             .catch(err => {
-                window.location.href = "http://127.0.0.1:4200/student/2024/01/30/403error.html"
+                window.location.href = "http://127.0.0.1:4200/student2/2024/01/30/403error.html"
                 console.error(err);
                 const tr = document.createElement("tr");
                 const td = document.createElement("td");
