@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ML, Titanic Data | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="ML, Titanic Data" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploring the Titanic dataset with machine learning." />
+<meta property="og:description" content="Exploring the Titanic dataset with machine learning." />
+<link rel="canonical" href="http://localhost:4200/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-05T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ML, Titanic Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-05T00:00:00-08:00","datePublished":"2024-03-05T00:00:00-08:00","description":"Exploring the Titanic dataset with machine learning.","headline":"ML, Titanic Data","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=47438351e8bedd7b07cc96d4293cb629e254222f">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">ML, Titanic Data
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      32 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-03-05T00:00:00-08:00" itemprop="datePublished">
+        Mar 5, 2024
+      </time>
+    </p><h2>Description</h2><p class="page-description">Exploring the Titanic dataset with machine learning.</p><ul><li><a href="#introduction-to-pandas-and-ml">Introduction to Pandas and ML</a><ul><li><a href="#titanic-libraries">Titanic Libraries</a></li><li><a href="#titanic-data">Titanic Data</a></li><li><a href="#clean-titanic-data">Clean Titanic Data</a></li><li><a href="#train-titanic-data">Train Titanic Data</a><ul><li><a href="#median-values">Median Values</a></li><li><a href="#perished-meanaverage">Perished Mean/Average</a></li><li><a href="#survived-meanaverage">Survived Mean/Average</a></li><li><a href="#survived-max-and-min-stats">Survived Max and Min Stats</a></li></ul></li></ul></li><li><a href="#machine-learning-visit-tutorials-point">Machine Learning <a href="https://www.tutorialspoint.com/scikit_learn/scikit_learn_introduction.htm#:~:text=Scikit%2Dlearn%20(Sklearn)%20is,a%20consistence%20interface%20in%20Python">Visit Tutorials Point</a></a><ul><li><a href="#predicting-survival">Predicting Survival</a></li></ul></li></ul></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="introduction-to-pandas-and-ml">Introduction to Pandas and ML</h2>
+<blockquote>
+  <p>Here is how Mort started on this assignment by asking ChatGPT  … Regarding Python Pandas, what are some data sets that would be good for learning Pandas?</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>There are many data sets that are suitable for learning pandas, depending on your interests and the skills you want to develop.</p>
+
+    <p>Here are some suggestions…</p>
+
+    <ul>
+      <li>
+        <p>Titanic Dataset: This is a classic dataset for data analysis and machine learning, and is often used as an introduction to pandas. The dataset contains information about passengers on the Titanic, including their demographics, ticket class, and survival status.</p>
+      </li>
+      <li>
+        <p>Iris Dataset: This is another classic dataset that is often used in machine learning and data analysis courses. The dataset contains information about iris flowers, including their sepal length, sepal width, petal length, and petal width.</p>
+      </li>
+      <li>
+        <p>NBA Player Stats: This dataset contains information about NBA players, including their stats for various games, their positions, and their salaries. It is a great dataset for learning how to clean and manipulate data using pandas.</p>
+      </li>
+      <li>
+        <p>Housing Prices Dataset: This dataset contains information about housing prices in a particular city or region, including variables such as the number of bedrooms, square footage, and price. It is a great dataset for learning how to manipulate and analyze numerical data using pandas.</p>
+      </li>
+      <li>
+        <p>COVID-19 Dataset: This dataset contains information about the COVID-19 pandemic, including the number of cases, deaths, and recoveries in various countries and regions. It is a great dataset for learning how to manipulate and analyze time-series data using pandas.</p>
+      </li>
+      <li>
+        <p>World Bank Dataset: This dataset contains information about economic indicators from various countries, such as GDP, population, and poverty rates. It is a great dataset for learning how to manipulate and analyze large datasets using pandas.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>These are just a few examples of the many datasets that are suitable for learning pandas. The best dataset for you will depend on your interests and the specific skills you want to develop.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Follow up question, “where can I find Titanic data set?”</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>The Titanic dataset is a popular dataset for data analysis and machine learning, and it can be found on various websites and data repositories. Here are a few places where you can find the Titanic dataset…</p>
+
+    <ul>
+      <li>
+        <p>Kaggle: The Titanic dataset is available on Kaggle, which is a popular platform for data scientists and machine learning enthusiasts. You can download the dataset from the Kaggle website after creating an account.</p>
+      </li>
+      <li>
+        <p>UCI Machine Learning Repository: The Titanic dataset is also available on the UCI Machine Learning Repository, which is a collection of datasets that are commonly used for machine learning research. You can download the dataset from the UCI Machine Learning Repository website.</p>
+      </li>
+      <li>
+        <p>Seaborn library: If you have the Seaborn library installed in your Python environment, you can load the Titanic dataset directly from the library using the following code:</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="titanic-libraries">Titanic Libraries</h3>
+<p>Using the Titanic dataset will require importing data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+    <span class="n">titanic_data</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s">'titanic'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Uncomment the following lines to install the required packages
+# !pip install seaborn
+# !pip install pandas
+# !pip install scikit-learn
+</span></code></pre></div></div>
+
+<h3 id="titanic-data">Titanic Data</h3>
+<blockquote>
+  <p>Look at a sample of data.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+<span class="c1"># Load the titanic dataset
+</span><span class="n">titanic_data</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s">'titanic'</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Titanic Data"</span><span class="p">)</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span> <span class="c1"># titanic data set
+</span><span class="n">display</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">[[</span><span class="s">'survived'</span><span class="p">,</span><span class="s">'pclass'</span><span class="p">,</span> <span class="s">'sex'</span><span class="p">,</span> <span class="s">'age'</span><span class="p">,</span> <span class="s">'sibsp'</span><span class="p">,</span> <span class="s">'parch'</span><span class="p">,</span> <span class="s">'class'</span><span class="p">,</span> <span class="s">'fare'</span><span class="p">,</span> <span class="s">'embark_town'</span><span class="p">,</span> <span class="s">'alone'</span><span class="p">]])</span> <span class="c1"># look at selected columns
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Titanic Data
+Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
+       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
+       'alive', 'alone'],
+      dtype='object')
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>survived</th>
+      <th>pclass</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>sibsp</th>
+      <th>parch</th>
+      <th>class</th>
+      <th>fare</th>
+      <th>embark_town</th>
+      <th>alone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Third</td>
+      <td>7.2500</td>
+      <td>Southampton</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>First</td>
+      <td>71.2833</td>
+      <td>Cherbourg</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>3</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Third</td>
+      <td>7.9250</td>
+      <td>Southampton</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>First</td>
+      <td>53.1000</td>
+      <td>Southampton</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Third</td>
+      <td>8.0500</td>
+      <td>Southampton</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>886</th>
+      <td>0</td>
+      <td>2</td>
+      <td>male</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Second</td>
+      <td>13.0000</td>
+      <td>Southampton</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>887</th>
+      <td>1</td>
+      <td>1</td>
+      <td>female</td>
+      <td>19.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>First</td>
+      <td>30.0000</td>
+      <td>Southampton</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>0</td>
+      <td>3</td>
+      <td>female</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>2</td>
+      <td>Third</td>
+      <td>23.4500</td>
+      <td>Southampton</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>889</th>
+      <td>1</td>
+      <td>1</td>
+      <td>male</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>First</td>
+      <td>30.0000</td>
+      <td>Cherbourg</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>0</td>
+      <td>3</td>
+      <td>male</td>
+      <td>32.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Third</td>
+      <td>7.7500</td>
+      <td>Queenstown</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 10 columns</p>
+</div>
+
+<h3 id="clean-titanic-data">Clean Titanic Data</h3>
+<p>This is called ‘Cleaning’ data.</p>
+
+<p>Most analysis, like Machine Learning require data to be in standardized format…</p>
+<ul>
+  <li>All data needs to be numeric</li>
+  <li>Some data is removed, as it is not useable in study</li>
+  <li>Sex and alone is changed to binary</li>
+  <li>The embark data is split into multiple columns</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="c1"># Preprocess the data
+</span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+
+<span class="n">td</span> <span class="o">=</span> <span class="n">titanic_data</span>
+<span class="n">td</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'alive'</span><span class="p">,</span> <span class="s">'who'</span><span class="p">,</span> <span class="s">'adult_male'</span><span class="p">,</span> <span class="s">'class'</span><span class="p">,</span> <span class="s">'embark_town'</span><span class="p">,</span> <span class="s">'deck'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">td</span><span class="p">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># drop rows with at least one missing value, after dropping unuseful columns
+</span><span class="n">td</span><span class="p">[</span><span class="s">'sex'</span><span class="p">]</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="s">'sex'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s">'male'</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">td</span><span class="p">[</span><span class="s">'alone'</span><span class="p">]</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="s">'alone'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">True</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Encode categorical variables
+</span><span class="n">enc</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s">'ignore'</span><span class="p">)</span>
+<span class="n">enc</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">td</span><span class="p">[[</span><span class="s">'embarked'</span><span class="p">]])</span>
+<span class="n">onehot</span> <span class="o">=</span> <span class="n">enc</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">td</span><span class="p">[[</span><span class="s">'embarked'</span><span class="p">]]).</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s">'embarked_'</span> <span class="o">+</span> <span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">enc</span><span class="p">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">td</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">onehot</span><span class="p">)</span>
+<span class="n">td</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'embarked'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">td</span><span class="p">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># drop rows with at least one missing value, after preparing the data
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">td</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'alone',
+       'embarked_C', 'embarked_Q', 'embarked_S'],
+      dtype='object')
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>survived</th>
+      <th>pclass</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>sibsp</th>
+      <th>parch</th>
+      <th>fare</th>
+      <th>alone</th>
+      <th>embarked_C</th>
+      <th>embarked_Q</th>
+      <th>embarked_S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>7.2500</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>71.2833</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>53.1000</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.0500</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>705</th>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>39.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>26.0000</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>706</th>
+      <td>1</td>
+      <td>2</td>
+      <td>0</td>
+      <td>45.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>13.5000</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>707</th>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>42.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>26.2875</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>708</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>22.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>151.5500</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>710</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>24.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>49.5042</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>564 rows × 11 columns</p>
+</div>
+
+<h3 id="train-titanic-data">Train Titanic Data</h3>
+<p>The result of ‘Training’ data is making it easier to analyze or make conclusions.</p>
+
+<p>What conclusions can you make using min, max, means statistics bout the following…</p>
+<ul>
+  <li>Given that 1-male and 0-femaale, what gender is more likely to suvive?</li>
+  <li>Can you make an conclusions on fare?</li>
+  <li>Can you make any conclusions on being alone?</li>
+</ul>
+
+<h4 id="median-values">Median Values</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">.</span><span class="n">median</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>survived       0.0
+pclass         2.0
+sex            1.0
+age           28.0
+sibsp          0.0
+parch          0.0
+fare          16.1
+alone          1.0
+embarked_C     0.0
+embarked_Q     0.0
+embarked_S     1.0
+dtype: float64
+</code></pre></div></div>
+
+<h4 id="perished-meanaverage">Perished Mean/Average</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">titanic_data</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"survived == 0"</span><span class="p">).</span><span class="n">mean</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>survived       0.000000
+pclass         2.464072
+sex            0.844311
+age           31.073353
+sibsp          0.562874
+parch          0.398204
+fare          24.835902
+alone          0.616766
+embarked_C     0.185629
+embarked_Q     0.038922
+embarked_S     0.775449
+dtype: float64
+</code></pre></div></div>
+
+<h4 id="survived-meanaverage">Survived Mean/Average</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"survived == 1"</span><span class="p">).</span><span class="n">mean</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>survived       1.000000
+pclass         1.878261
+sex            0.326087
+age           28.481522
+sibsp          0.504348
+parch          0.508696
+fare          50.188806
+alone          0.456522
+embarked_C     0.152174
+embarked_Q     0.034783
+embarked_S     0.813043
+dtype: float64
+</code></pre></div></div>
+
+<h4 id="survived-max-and-min-stats">Survived Max and Min Stats</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"maximums for survivors"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"survived == 1"</span><span class="p">).</span><span class="nb">max</span><span class="p">())</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"minimums for survivors"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">td</span><span class="p">.</span><span class="n">query</span><span class="p">(</span><span class="s">"survived == 1"</span><span class="p">).</span><span class="nb">min</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>maximums for survivors
+survived        1.0000
+pclass          3.0000
+sex             1.0000
+age            80.0000
+sibsp           4.0000
+parch           5.0000
+fare          512.3292
+alone           1.0000
+embarked_C      1.0000
+embarked_Q      1.0000
+embarked_S      1.0000
+dtype: float64
+
+minimums for survivors
+survived      1.00
+pclass        1.00
+sex           0.00
+age           0.75
+sibsp         0.00
+parch         0.00
+fare          0.00
+alone         0.00
+embarked_C    0.00
+embarked_Q    0.00
+embarked_S    0.00
+dtype: float64
+</code></pre></div></div>
+
+<h2 id="machine-learning-visit-tutorials-point">Machine Learning <a href="https://www.tutorialspoint.com/scikit_learn/scikit_learn_introduction.htm#:~:text=Scikit%2Dlearn%20(Sklearn)%20is,a%20consistence%20interface%20in%20Python">Visit Tutorials Point</a></h2>
+<blockquote>
+  <p>Scikit-learn (SciPy Toolkit) is the most useful and robust library for machine learning in Python. It provides a selection of efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction via a consistence interface in Python.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Description from ChatGPT…  The Titanic dataset is a popular dataset for data analysis and machine learning.</p>
+  </li>
+  <li>In the context of machine learning, accuracy refers to the percentage of correctly classified instances in a set of predictions. In this case, the testing data is a subset of the original Titanic dataset that the decision tree model has not seen during training.
+    <ul>
+      <li>After training the decision tree model on the training data, we can evaluate its performance on the testing data by making predictions on the testing data and comparing them to the actual outcomes. The accuracy of the decision tree classifier on the testing data tells us how well the model generalizes to new data that it hasn’t seen before.</li>
+      <li>For example, if the accuracy of the decision tree classifier on the testing data is 0.8 (or 80%), this means that 80% of the predictions made by the model on the testing data were correct.</li>
+      <li>Chance of survival could be done using various machine learning techniques, including decision trees, logistic regression, or support vector machines, among others.</li>
+    </ul>
+  </li>
+  <li>Code Below prepares data for further analysis and provides an Accuracy.
+    <ul>
+      <li>
+        <p><a href="https://scikit-learn.org/stable/modules/tree.html#tree">Decision Trees</a>, prediction by a piecewise constant approximation.</p>
+      </li>
+      <li>
+        <p><a href="https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression">Logistic Regression</a>, the probabilities describing the possible outcomes.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># Split arrays or matrices into random train and test subsets.
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">td</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="s">'survived'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">td</span><span class="p">[</span><span class="s">'survived'</span><span class="p">]</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Train a decision tree classifier
+</span><span class="n">dt</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">dt</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Test the model
+</span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">dt</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'DecisionTreeClassifier Accuracy: {:.2%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">))</span>  
+
+<span class="c1"># Train a logistic regression model
+</span><span class="n">logreg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+<span class="n">logreg</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Test the model
+</span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">logreg</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'LogisticRegression Accuracy: {:.2%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">))</span>  
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DecisionTreeClassifier Accuracy: 74.71%
+LogisticRegression Accuracy: 78.82%
+
+
+/opt/homebrew/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+</code></pre></div></div>
+
+<h3 id="predicting-survival">Predicting Survival</h3>
+<p>The better prediction model appears to be logistic regression.  So, now we are ready to play the game… “Would I have survived the Titanic?”.</p>
+
+<p>Insert your own data in the code.  Look at your analysis and consider how you would travel today.</p>
+<ul>
+  <li>Data description:
+    <ul>
+      <li>pclass - Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)</li>
+      <li>name - Name</li>
+      <li>sex - male or female</li>
+      <li>age - number of year</li>
+      <li>sibsp - number of Siblings/Spouses Aboard</li>
+      <li>parch - number of Parents/Children Aboard</li>
+      <li>fare - passenger fare 0 to 512</li>
+      <li>embarked - Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)</li>
+      <li>alone - boolean True or False</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1"># Define a new passenger
+</span><span class="n">passenger</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'John Mortensen'</span><span class="p">],</span>
+    <span class="s">'pclass'</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="c1"># 2nd class picked as it was median, bargains are my preference, but I don't want to have poor accomodations
+</span>    <span class="s">'sex'</span><span class="p">:</span> <span class="p">[</span><span class="s">'male'</span><span class="p">],</span>
+    <span class="s">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">],</span>
+    <span class="s">'sibsp'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1"># I usually travel with my wife
+</span>    <span class="s">'parch'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1"># currenly I have 1 child at home
+</span>    <span class="s">'fare'</span><span class="p">:</span> <span class="p">[</span><span class="mf">16.00</span><span class="p">],</span> <span class="c1"># median fare picked assuming it is 2nd class
+</span>    <span class="s">'embarked'</span><span class="p">:</span> <span class="p">[</span><span class="s">'S'</span><span class="p">],</span> <span class="c1"># majority of passengers embarked in Southampton
+</span>    <span class="s">'alone'</span><span class="p">:</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="c1"># travelling with family (spouse and child))
+</span><span class="p">})</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">passenger</span><span class="p">)</span>
+<span class="n">new_passenger</span> <span class="o">=</span> <span class="n">passenger</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Preprocess the new passenger data
+</span><span class="n">new_passenger</span><span class="p">[</span><span class="s">'sex'</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_passenger</span><span class="p">[</span><span class="s">'sex'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s">'male'</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">new_passenger</span><span class="p">[</span><span class="s">'alone'</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_passenger</span><span class="p">[</span><span class="s">'alone'</span><span class="p">].</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">True</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Encode 'embarked' variable
+</span><span class="n">onehot</span> <span class="o">=</span> <span class="n">enc</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">new_passenger</span><span class="p">[[</span><span class="s">'embarked'</span><span class="p">]]).</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s">'embarked_'</span> <span class="o">+</span> <span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">enc</span><span class="p">.</span><span class="n">categories_</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">new_passenger</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">onehot</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">new_passenger</span><span class="p">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">new_passenger</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'name'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">new_passenger</span><span class="p">.</span><span class="n">drop</span><span class="p">([</span><span class="s">'embarked'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">new_passenger</span><span class="p">)</span>
+
+<span class="c1"># Predict the survival probability for the new passenger
+</span><span class="n">dead_proba</span><span class="p">,</span> <span class="n">alive_proba</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">logreg</span><span class="p">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">new_passenger</span><span class="p">))</span>
+
+<span class="c1"># Print the survival probability
+</span><span class="k">print</span><span class="p">(</span><span class="s">'Death probability: {:.2%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">dead_proba</span><span class="p">))</span>  
+<span class="k">print</span><span class="p">(</span><span class="s">'Survival probability: {:.2%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">alive_proba</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>pclass</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>sibsp</th>
+      <th>parch</th>
+      <th>fare</th>
+      <th>embarked</th>
+      <th>alone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>John Mortensen</td>
+      <td>2</td>
+      <td>male</td>
+      <td>64</td>
+      <td>1</td>
+      <td>1</td>
+      <td>16.0</td>
+      <td>S</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>pclass</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>sibsp</th>
+      <th>parch</th>
+      <th>fare</th>
+      <th>alone</th>
+      <th>embarked_C</th>
+      <th>embarked_Q</th>
+      <th>embarked_S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>1</td>
+      <td>64</td>
+      <td>1</td>
+      <td>1</td>
+      <td>16.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Death probability: 90.60%
+Survival probability: 9.40%
+</code></pre></div></div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
