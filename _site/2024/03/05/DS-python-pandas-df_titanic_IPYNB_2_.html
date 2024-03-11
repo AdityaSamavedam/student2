@@ -21,7 +21,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-05T00:00:00-08:00","datePublished":"2024-03-05T00:00:00-08:00","description":"Exploring the Titanic dataset with machine learning.","headline":"ML, Titanic Data","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2024/03/05/DS-python-pandas-df_titanic_IPYNB_2_.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=47438351e8bedd7b07cc96d4293cb629e254222f">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=6f459ee7f01dfad92c28bcd68c3a6c1474f3c926">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,7 +75,7 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      32 min read
+      35 min read
     
 </span></h1>
 
@@ -152,10 +152,34 @@
 </code></pre></div></div>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Uncomment the following lines to install the required packages
-# !pip install seaborn
-# !pip install pandas
-# !pip install scikit-learn
-</span></code></pre></div></div>
+</span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">seaborn</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: seaborn in /home/aditya/.local/lib/python3.10/site-packages (0.13.2)
+Requirement already satisfied: numpy!=1.24.0,&gt;=1.20 in /home/aditya/.local/lib/python3.10/site-packages (from seaborn) (1.26.1)
+Requirement already satisfied: matplotlib!=3.6.1,&gt;=3.4 in /usr/lib/python3/dist-packages (from seaborn) (3.5.1)
+Requirement already satisfied: pandas&gt;=1.2 in /home/aditya/.local/lib/python3.10/site-packages (from seaborn) (2.1.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/lib/python3/dist-packages (from pandas&gt;=1.2-&gt;seaborn) (2022.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/aditya/.local/lib/python3.10/site-packages (from pandas&gt;=1.2-&gt;seaborn) (2.8.2)
+Requirement already satisfied: tzdata&gt;=2022.1 in /home/aditya/.local/lib/python3.10/site-packages (from pandas&gt;=1.2-&gt;seaborn) (2023.3)
+Requirement already satisfied: six&gt;=1.5 in /usr/lib/python3/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.2-&gt;seaborn) (1.16.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in /home/aditya/.local/lib/python3.10/site-packages (2.1.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/lib/python3/dist-packages (from pandas) (2022.1)
+Requirement already satisfied: tzdata&gt;=2022.1 in /home/aditya/.local/lib/python3.10/site-packages (from pandas) (2023.3)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /home/aditya/.local/lib/python3.10/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.22.4 in /home/aditya/.local/lib/python3.10/site-packages (from pandas) (1.26.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/lib/python3/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: scikit-learn in /home/aditya/.local/lib/python3.10/site-packages (1.3.2)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /home/aditya/.local/lib/python3.10/site-packages (from scikit-learn) (3.2.0)
+Requirement already satisfied: scipy&gt;=1.5.0 in /usr/lib/python3/dist-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: joblib&gt;=1.1.1 in /home/aditya/.local/lib/python3.10/site-packages (from scikit-learn) (1.3.2)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.17.3 in /home/aditya/.local/lib/python3.10/site-packages (from scikit-learn) (1.26.1)
+</code></pre></div></div>
 
 <h3 id="titanic-data">Titanic Data</h3>
 <blockquote>
@@ -752,11 +776,11 @@ dtype: float64
 <span class="k">print</span><span class="p">(</span><span class="s">'LogisticRegression Accuracy: {:.2%}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">))</span>  
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DecisionTreeClassifier Accuracy: 74.71%
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DecisionTreeClassifier Accuracy: 75.88%
 LogisticRegression Accuracy: 78.82%
 
 
-/opt/homebrew/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+/home/aditya/.local/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
 STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
 
 Increase the number of iterations (max_iter) or scale the data as shown in:
@@ -790,13 +814,13 @@ Please also refer to the documentation for alternative solver options:
 
 <span class="c1"># Define a new passenger
 </span><span class="n">passenger</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'John Mortensen'</span><span class="p">],</span>
-    <span class="s">'pclass'</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="c1"># 2nd class picked as it was median, bargains are my preference, but I don't want to have poor accomodations
+    <span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Aditya Samavedam'</span><span class="p">],</span>
+    <span class="s">'pclass'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1"># 2nd class picked as it was median, bargains are my preference, but I don't want to have poor accomodations
 </span>    <span class="s">'sex'</span><span class="p">:</span> <span class="p">[</span><span class="s">'male'</span><span class="p">],</span>
-    <span class="s">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">],</span>
+    <span class="s">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
     <span class="s">'sibsp'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1"># I usually travel with my wife
-</span>    <span class="s">'parch'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="c1"># currenly I have 1 child at home
-</span>    <span class="s">'fare'</span><span class="p">:</span> <span class="p">[</span><span class="mf">16.00</span><span class="p">],</span> <span class="c1"># median fare picked assuming it is 2nd class
+</span>    <span class="s">'parch'</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="c1"># currenly I have 1 child at home
+</span>    <span class="s">'fare'</span><span class="p">:</span> <span class="p">[</span><span class="mf">9.00</span><span class="p">],</span> <span class="c1"># median fare picked assuming it is 2nd class
 </span>    <span class="s">'embarked'</span><span class="p">:</span> <span class="p">[</span><span class="s">'S'</span><span class="p">],</span> <span class="c1"># majority of passengers embarked in Southampton
 </span>    <span class="s">'alone'</span><span class="p">:</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="c1"># travelling with family (spouse and child))
 </span><span class="p">})</span>
@@ -857,13 +881,13 @@ Please also refer to the documentation for alternative solver options:
   <tbody>
     <tr>
       <th>0</th>
-      <td>John Mortensen</td>
-      <td>2</td>
+      <td>Aditya Samavedam</td>
+      <td>1</td>
       <td>male</td>
-      <td>64</td>
+      <td>15</td>
       <td>1</td>
-      <td>1</td>
-      <td>16.0</td>
+      <td>2</td>
+      <td>9.0</td>
       <td>S</td>
       <td>False</td>
     </tr>
@@ -904,12 +928,12 @@ Please also refer to the documentation for alternative solver options:
   <tbody>
     <tr>
       <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>15</td>
+      <td>1</td>
       <td>2</td>
-      <td>1</td>
-      <td>64</td>
-      <td>1</td>
-      <td>1</td>
-      <td>16.0</td>
+      <td>9.0</td>
       <td>0</td>
       <td>0.0</td>
       <td>0.0</td>
@@ -919,8 +943,8 @@ Please also refer to the documentation for alternative solver options:
 </table>
 </div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Death probability: 90.60%
-Survival probability: 9.40%
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Death probability: 41.95%
+Survival probability: 58.05%
 </code></pre></div></div>
 
 
