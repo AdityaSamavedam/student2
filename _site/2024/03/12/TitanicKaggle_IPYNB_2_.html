@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Titanic Kaggle | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Titanic Kaggle" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ML Project" />
+<meta property="og:description" content="ML Project" />
+<link rel="canonical" href="http://localhost:4200/student2/2024/03/12/TitanicKaggle_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2024/03/12/TitanicKaggle_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-12T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Titanic Kaggle" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-12T00:00:00-07:00","datePublished":"2024-03-12T00:00:00-07:00","description":"ML Project","headline":"Titanic Kaggle","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/03/12/TitanicKaggle_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2024/03/12/TitanicKaggle_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=196597cc7de3715ec36ae3628f85bb01fd97d3b5">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">Titanic Kaggle
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-03-12T00:00:00-07:00" itemprop="datePublished">
+        Mar 12, 2024
+      </time>
+    </p><h2>Description</h2><p class="page-description">ML Project</p></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">titanicdf</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"/home/aditya/vscode/student2/tested.csv"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">titanicdf</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     PassengerId  Survived  Pclass  \
+0            892         0       3   
+1            893         1       3   
+2            894         0       2   
+3            895         0       3   
+4            896         1       3   
+..           ...       ...     ...   
+413         1305         0       3   
+414         1306         1       1   
+415         1307         0       3   
+416         1308         0       3   
+417         1309         0       3   
+
+                                             Name     Sex   Age  SibSp  Parch  \
+0                                Kelly, Mr. James    male  34.5      0      0   
+1                Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   
+2                       Myles, Mr. Thomas Francis    male  62.0      0      0   
+3                                Wirz, Mr. Albert    male  27.0      0      0   
+4    Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1   
+..                                            ...     ...   ...    ...    ...   
+413                            Spector, Mr. Woolf    male   NaN      0      0   
+414                  Oliva y Ocana, Dona. Fermina  female  39.0      0      0   
+415                  Saether, Mr. Simon Sivertsen    male  38.5      0      0   
+416                           Ware, Mr. Frederick    male   NaN      0      0   
+417                      Peter, Master. Michael J    male   NaN      1      1   
+
+                 Ticket      Fare Cabin Embarked  
+0                330911    7.8292   NaN        Q  
+1                363272    7.0000   NaN        S  
+2                240276    9.6875   NaN        Q  
+3                315154    8.6625   NaN        S  
+4               3101298   12.2875   NaN        S  
+..                  ...       ...   ...      ...  
+413           A.5. 3236    8.0500   NaN        S  
+414            PC 17758  108.9000  C105        C  
+415  SOTON/O.Q. 3101262    7.2500   NaN        S  
+416              359309    8.0500   NaN        S  
+417                2668   22.3583   NaN        C  
+
+[418 rows x 12 columns]
+</code></pre></div></div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2024/03/12/TitanicKaggle_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
