@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MCQ 2020 Frequently Missed Questions | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="MCQ 2020 Frequently Missed Questions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Questions and sample Python code to represent the most frequently missed questions on the 2020 AP Computer Science A Multiple Choice Exam." />
+<meta property="og:description" content="Questions and sample Python code to represent the most frequently missed questions on the 2020 AP Computer Science A Multiple Choice Exam." />
+<link rel="canonical" href="http://localhost:4200/student2/2024/03/12/CSP-MCQ-2020-missed_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2024/03/12/CSP-MCQ-2020-missed_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-12T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MCQ 2020 Frequently Missed Questions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-12T00:00:00-07:00","datePublished":"2024-03-12T00:00:00-07:00","description":"Questions and sample Python code to represent the most frequently missed questions on the 2020 AP Computer Science A Multiple Choice Exam.","headline":"MCQ 2020 Frequently Missed Questions","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/03/12/CSP-MCQ-2020-missed_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2024/03/12/CSP-MCQ-2020-missed_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=6e8aa8a0c7bfb400685abe8a9ad68aafe2d513dd">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">MCQ 2020 Frequently Missed Questions
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      70 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-03-12T00:00:00-07:00" itemprop="datePublished">
+        Mar 12, 2024
+      </time>
+    </p><h2>Description</h2><p class="page-description">Questions and sample Python code to represent the most frequently missed questions on the 2020 AP Computer Science A Multiple Choice Exam.</p></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="4-cause-of-overflow-error-1d-binary-math---tara-sehdave">4. Cause of overflow Error (1D, binary math) - Tara Sehdave</h2>
+
+<p>In a certain computer program, two positive integers are added together, resulting in an overflow error. Which of the following best explains why the error occurs?</p>
+
+<p>Responses
+A
+The program attempted to perform an operation that is considered an undecidable problem.</p>
+
+<p>B
+The precision of the result is limited due to the constraints of using a floating-point representation.</p>
+
+<p>C
+The program can only use a fixed number of bits to represent integers; the computed sum is greater than the maximum representable value.</p>
+
+<p>D
+The program cannot represent integers; the integers are converted into decimal approximations, leading to rounding errors.</p>
+
+<p>The correct answer is C because…</p>
+
+<ul>
+  <li>Overflow error occurs in a computer program when adding two positive integers.</li>
+  <li>The program uses a fixed number of bits to represent integers.</li>
+  <li>The sum of the two integers exceeds the maximum representable value within the fixed number of bits.</li>
+  <li>Due to this limitation, the program cannot accurately represent the result of the addition.</li>
+  <li>As a result, an overflow error is triggered to indicate that the computed sum is beyond the representable range.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># python overflow example
+# as a popcorn hack (binary challenge), describe an overflow in 8 binary digits
+# Add 1 to 11111111 (255)
+# Subtract 1 from 00000000 (0)
+# Try overflow and underflow here: https://nighthawkcoders.github.io/teacher_portfolio/c4.4/2023/09/14/javascript-binary-U2-1.html
+</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Maximum float
+</span><span class="n">max_float</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">float_info</span><span class="p">.</span><span class="nb">max</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Max float: </span><span class="si">{</span><span class="n">max_float</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># Attempt to overflow float
+</span><span class="n">overflow_float</span> <span class="o">=</span> <span class="n">max_float</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Overflow float to infinity: </span><span class="si">{</span><span class="n">overflow_float</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Max float: 1.7976931348623157e+308
+Overflow float to infinity: inf
+</code></pre></div></div>
+
+<h3 id="popcorn-hack-1">Popcorn Hack 1</h3>
+<p><strong>As a popcorn hack (binary challenge), describe an overflow in 8 binary digits</strong>
+<br />
+8 binary digits can have a maximum of 255, and if we try to fit more, an overflow will happen. Anything beyond 255 will loop back to 0.</p>
+
+<p><strong>Adding 1 to 11111111</strong>
+<br />
+This will result in 100000000 which is equal to zero in the 8-bit system.</p>
+
+<p><strong>Subtracting 1 from 00000000</strong>
+<br />
+This will result in -1.
+0 - 1 = -1 in both binary and decimal.</p>
+
+<h2 id="5-inputs-to-logic-circuit-2d-binary-logic---hanlun-li">5. Inputs to Logic Circuit (2D, binary logic) - Hanlun Li</h2>
+
+<p>The diagram below shows a circuit composed of three logic gates. Each gate takes two inputs and produces a single output. For which of the following input values will the circuit have an output of true ?</p>
+
+<p>The diagram in question shows a circuit composed of three logic gates. Each gate takes two inputs and produces a single output. <br /></p>
+
+<p>For which of the following input values will the circuit have an output of true ? <br /></p>
+
+<p>A) A = true,  B = true,  C = true,  D = false <br />
+B) A = true,  B = false, C = false, D = true <br />
+C) A = false, B = true,  C = true,  D = true <br />
+D) A = false, B = false, C = true,  D = true <br /></p>
+
+<p>A OR B = True, C AND D = True, and since True AND True = True, C is correct. <br />
+OR gate only returns true if one of the values is true, and the AND gate returns true if both values are true.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># represent gates and circuits
+# as a popcorn hack (coding challenge), create multiple new circuits and gates
+# NOT, NAND, NOR, XOR, XNOR
+# Create a hypothetical circuit, such as burglar alarm, decision tree for autonomous car, etc.
+</span>
+<span class="c1"># OR gate
+</span><span class="k">def</span> <span class="nf">OR_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">A</span> <span class="ow">or</span> <span class="n">B</span>
+
+<span class="c1"># AND gate
+</span><span class="k">def</span> <span class="nf">AND_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">A</span> <span class="ow">and</span> <span class="n">B</span>
+
+<span class="c1"># Theoritical circuit representing a Car starting
+# A and B could be security checks, such as key being inserted or a fob being present
+# C and D could be operational checks, such as a start button being pressed and safety belt being fastened
+# The enclosing AND gate ensures car only operates when both security and operational checks are met
+</span><span class="k">def</span> <span class="nf">circuit</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">AND_gate</span><span class="p">(</span><span class="n">OR_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">),</span> <span class="n">AND_gate</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">))</span>
+
+<span class="c1"># Print truth table for circuit
+</span><span class="k">print</span><span class="p">(</span><span class="s">'A'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">,</span> <span class="s">"--&gt;"</span><span class="p">,</span> <span class="s">'Output'</span><span class="p">)</span>
+<span class="c1"># nesting of loops for both the True, False combination of A, B, C, D 
+# this algorithm is 2 ^ 4 = 16, thus producing all 16 combinations 
+# each combination terminates with the output of the circuit
+</span><span class="k">for</span> <span class="n">A</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="s">"--&gt;"</span><span class="p">,</span> <span class="n">circuit</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A B C D --&gt; Output
+False False False False --&gt; False
+False False False True --&gt; False
+False False True False --&gt; False
+False False True True --&gt; False
+False True False False --&gt; False
+False True False True --&gt; False
+False True True False --&gt; False
+False True True True --&gt; True
+True False False False --&gt; False
+True False False True --&gt; False
+True False True False --&gt; False
+True False True True --&gt; True
+True True False False --&gt; False
+True True False True --&gt; False
+True True True False --&gt; False
+True True True True --&gt; True
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># NOT gate
+</span><span class="k">def</span> <span class="nf">NOT_gate</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="n">A</span>
+
+<span class="c1"># NAND gate
+</span><span class="k">def</span> <span class="nf">NAND_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="n">A</span> <span class="ow">and</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># NOR gate
+</span><span class="k">def</span> <span class="nf">NOR_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="p">(</span><span class="n">A</span> <span class="ow">or</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># XOR gate
+</span><span class="k">def</span> <span class="nf">XOR_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">A</span> <span class="ow">or</span> <span class="n">B</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">A</span> <span class="ow">and</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="c1"># XNOR gate
+</span><span class="k">def</span> <span class="nf">XNOR_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="ow">not</span> <span class="p">((</span><span class="n">A</span> <span class="ow">or</span> <span class="n">B</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">A</span> <span class="ow">and</span> <span class="n">B</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">burglar_alarm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
+    <span class="n">sensor_triggered</span> <span class="o">=</span> <span class="n">OR_gate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+    <span class="n">entry_point_breach</span> <span class="o">=</span> <span class="n">AND_gate</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">OR_gate</span><span class="p">(</span><span class="n">sensor_triggered</span><span class="p">,</span> <span class="n">entry_point_breach</span><span class="p">)</span>
+
+<span class="c1"># Print truth table for burglar alarm circuit
+</span><span class="k">print</span><span class="p">(</span><span class="s">'A'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">,</span> <span class="s">'D'</span><span class="p">,</span> <span class="s">"--&gt;"</span><span class="p">,</span> <span class="s">'Output'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">A</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">B</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">D</span> <span class="ow">in</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">True</span><span class="p">]:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="s">"--&gt;"</span><span class="p">,</span> <span class="n">burglar_alarm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A B C D --&gt; Output
+False False False False --&gt; False
+False False False True --&gt; False
+False False True False --&gt; False
+False False True True --&gt; True
+False True False False --&gt; True
+False True False True --&gt; True
+False True True False --&gt; True
+False True True True --&gt; True
+True False False False --&gt; True
+True False False True --&gt; True
+True False True False --&gt; True
+True False True True --&gt; True
+True True False False --&gt; True
+True True False True --&gt; True
+True True True False --&gt; True
+True True True True --&gt; True
+</code></pre></div></div>
+
+<h2 id="11-color-represented-by-binary-triplet-2d-binary---torin-wolff">11. Color represented by binary Triplet (2D, binary) - Torin Wolff</h2>
+
+<p>A color in a computing application is represented by an RGB triplet that describes the amount of red, green, and blue, respectively, used to create the desired color. A selection of colors and their corresponding RGB triplets are shown in the following table. Each value is represented in decimal (base 10).</p>
+
+<p>According to information in the table, what color is represented by the binary RGB triplet (11111111, 11111111, 11110000) ?</p>
+
+<h4 id="what-is-a-binary-triplet">What is a binary triplet?</h4>
+<p>A binary triplet is a set of three binary numbers. Binary numbers are numbers that are represented by a series of 1’s and 0’s. Binary numbers are used in computers because they are easy to represent with electrical signals. A binary triplet is a set of three binary numbers that are used to represent a color. The first number represents the amount of red in the color, the second number represents the amount of green in the color, and the third number represents the amount of blue in the color. The numbers are represented in binary because it is easy to represent with electrical signals. The numbers are represented in a triplet because it is easy to represent with electrical signals.</p>
+
+<h4 id="how-is-a-color-in-binary-represented">How is a color in binary represented?</h4>
+<p>A color in binary is represented by a set of three binary numbers. The first number represents the amount of red in the color, the second number represents the amount of green in the color, and the third number represents the amount of blue in the color. The numbers are represented in binary because it is easy to represent with electrical signals. The numbers are represented in a triplet because it is easy to represent with electrical signals. An example of this would be: (01101110, 11111111, 10010110), if you converted this binary triplet to a decimal number it would be 110, 255, 150. This would be a shade of the color green.</p>
+
+<h4 id="how-do-you-convert-a-binary-triplet-to-a-decimal-number">How do you convert a binary triplet to a decimal number?</h4>
+<p>To convert a binary string to a decimal number you need to multiply each digit by its place value. For example, if you have the binary string 1010 you would multiply the first digit by 2^3, the second digit by 2^2, the third digit by 2^1, and the fourth digit by 2^0. This would give you the decimal number 10. To convert a binary triplet to a decimal number you need to multiply each digit by its place value. For example, if you have the binary triplet (01101110, 11111111, 10010110) you would multiply the first digit by 2^7, the second digit by 2^6, the third digit by 2^5, the fourth digit by 2^4, the fifth digit by 2^3, the sixth digit by 2^2, the seventh digit by 2^1, and the eighth digit by 2^0. This would give you the decimal number 110, 255, 150.</p>
+
+<p>(0 * 2^7) + (1 * 2^6) + (1 * 2^5) + (0 * 2^4) + (1 * 2^3) + (1 * 2^2) + (1 * 2^1) + (0 * 2^0)</p>
+
+<p>= 0 + 64 + 32 + 0 + 8 + 4 + 2 + 0</p>
+
+<p>= 110</p>
+
+<p>(insert photo)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Convert binary RGB triplet to decimal
+# as a hack (binary challenge), make the rgb standard colors
+# as a 2nd hack, make your favorite color pattern 
+</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="n">patches</span>
+
+<span class="c1"># Function to convert binary to decimal
+</span><span class="k">def</span> <span class="nf">binary_to_decimal</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_colors</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">):</span>
+    <span class="c1"># Create a figure with one subplot per RGB triplet
+</span>    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+    
+    <span class="c1"># Ensure axs is always a list
+</span>    <span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">[</span><span class="n">axs</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="p">(</span><span class="n">red_binary</span><span class="p">,</span> <span class="n">green_binary</span><span class="p">,</span> <span class="n">blue_binary</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">rgb_triplets</span><span class="p">):</span>
+        <span class="c1"># Convert to binary strings to decimal
+</span>        <span class="n">red_decimal</span> <span class="o">=</span> <span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">red_binary</span><span class="p">)</span>
+        <span class="n">green_decimal</span> <span class="o">=</span> <span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">green_binary</span><span class="p">)</span>
+        <span class="n">blue_decimal</span> <span class="o">=</span> <span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">blue_binary</span><span class="p">)</span>
+
+        <span class="c1"># Normalize number to [0, 1] range, as it is expected by matplotlib 
+</span>        <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span> <span class="o">=</span> <span class="n">red_decimal</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">green_decimal</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">blue_decimal</span><span class="o">/</span><span class="mi">255</span>
+
+        <span class="c1"># Define a rectangle patch with the binary RGB triplet color and a black border
+</span>        <span class="n">rect</span> <span class="o">=</span> <span class="n">patches</span><span class="p">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="c1"># Add the rectangle to the plot which shows the color 
+</span>        <span class="n">ax</span><span class="p">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
+
+        <span class="c1"># Remove axis information, we just want to see the color
+</span>        <span class="n">ax</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+
+        <span class="c1"># Print the binary and decimal values
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"binary:"</span><span class="p">,</span> <span class="n">red_binary</span><span class="p">,</span> <span class="n">green_binary</span><span class="p">,</span> <span class="n">blue_binary</span><span class="p">)</span>    
+        <span class="k">print</span><span class="p">(</span><span class="s">"decimal"</span><span class="p">,</span> <span class="n">red_decimal</span><span class="p">,</span> <span class="n">green_decimal</span><span class="p">,</span> <span class="n">blue_decimal</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"proportion"</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+
+    <span class="c1"># Show the colors
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Test the function with a list of RGB triplets
+</span><span class="n">rgb_triplet</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'11111111'</span><span class="p">,</span> <span class="s">'11111111'</span><span class="p">,</span> <span class="s">'11110000'</span><span class="p">)]</span> <span class="c1"># College Board example
+</span><span class="n">plot_colors</span><span class="p">(</span><span class="n">rgb_triplet</span><span class="p">)</span>
+
+<span class="n">rgb_primary</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'11111111'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">),</span> 
+                <span class="p">(</span><span class="s">'11111111'</span><span class="p">,</span> <span class="s">'11111111'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">),</span>
+                <span class="p">(</span><span class="s">'00000000'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">,</span> <span class="s">'11111111'</span><span class="p">)]</span>
+<span class="n">plot_colors</span><span class="p">(</span><span class="n">rgb_primary</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>binary: 11111111 11111111 11110000
+decimal 255 255 240
+proportion 1.0 1.0 0.9411764705882353
+</code></pre></div></div>
+
+<p><img src="output_8_1.png" alt="png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>binary: 11111111 00000000 00000000
+decimal 255 0 0
+proportion 1.0 0.0 0.0
+binary: 11111111 11111111 00000000
+decimal 255 255 0
+proportion 1.0 1.0 0.0
+binary: 00000000 00000000 11111111
+decimal 0 0 255
+proportion 0.0 0.0 1.0
+</code></pre></div></div>
+
+<p><img src="output_8_3.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Popcorn #3
+</span><span class="k">def</span> <span class="nf">plot_colors</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">):</span>
+    <span class="c1"># Create a figure with one subplot per RGB triplet
+</span>    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+    
+    <span class="c1"># Ensure axs is always a list
+</span>    <span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rgb_triplets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">[</span><span class="n">axs</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="p">(</span><span class="n">red_binary</span><span class="p">,</span> <span class="n">green_binary</span><span class="p">,</span> <span class="n">blue_binary</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">rgb_triplets</span><span class="p">):</span>
+        <span class="c1"># Convert to binary strings to decimal
+</span>        <span class="n">red_decimal</span> <span class="o">=</span> <span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">red_binary</span><span class="p">)</span>
+        <span class="n">green_decimal</span> <span class="o">=</span> <span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">green_binary</span><span class="p">)</span>
+        <span class="n">blue_decimal</span> <span class="o">=</span> <span class="n">binary_to_decimal</span><span class="p">(</span><span class="n">blue_binary</span><span class="p">)</span>
+
+        <span class="c1"># Normalize number to [0, 1] range, as it is expected by matplotlib 
+</span>        <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span> <span class="o">=</span> <span class="n">red_decimal</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">green_decimal</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">blue_decimal</span><span class="o">/</span><span class="mi">255</span>
+
+        <span class="c1"># Define a rectangle patch with the binary RGB triplet color and a black border
+</span>        <span class="n">rect</span> <span class="o">=</span> <span class="n">patches</span><span class="p">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        
+        <span class="c1"># Add the rectangle to the plot which shows the color 
+</span>        <span class="n">ax</span><span class="p">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">rect</span><span class="p">)</span>
+
+        <span class="c1"># Remove axis information, we just want to see the color
+</span>        <span class="n">ax</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+
+        <span class="c1"># Print the binary and decimal values
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"binary:"</span><span class="p">,</span> <span class="n">red_binary</span><span class="p">,</span> <span class="n">green_binary</span><span class="p">,</span> <span class="n">blue_binary</span><span class="p">)</span>    
+        <span class="k">print</span><span class="p">(</span><span class="s">"decimal"</span><span class="p">,</span> <span class="n">red_decimal</span><span class="p">,</span> <span class="n">green_decimal</span><span class="p">,</span> <span class="n">blue_decimal</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"proportion"</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+
+    <span class="c1"># Show the colors
+</span>    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Test the function with a list of RGB triplets
+</span><span class="n">rgb_triplet</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'11111111'</span><span class="p">,</span> <span class="s">'11111111'</span><span class="p">,</span> <span class="s">'11110000'</span><span class="p">)]</span> <span class="c1"># College Board example
+</span><span class="n">plot_colors</span><span class="p">(</span><span class="n">rgb_triplet</span><span class="p">)</span>
+
+<span class="c1"># Modified color patterns
+</span><span class="n">rgb_primary</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'11111111'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">),</span>  <span class="c1"># Red
+</span>               <span class="p">(</span><span class="s">'00000000'</span><span class="p">,</span> <span class="s">'11111111'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">),</span>  <span class="c1"># Green
+</span>               <span class="p">(</span><span class="s">'00000000'</span><span class="p">,</span> <span class="s">'00000000'</span><span class="p">,</span> <span class="s">'11111111'</span><span class="p">)]</span>  <span class="c1"># Blue
+</span><span class="n">plot_colors</span><span class="p">(</span><span class="n">rgb_primary</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>binary: 11111111 11111111 11110000
+decimal 255 255 240
+proportion 1.0 1.0 0.9411764705882353
+</code></pre></div></div>
+
+<p><img src="output_9_1.png" alt="png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>binary: 11111111 00000000 00000000
+decimal 255 0 0
+proportion 1.0 0.0 0.0
+binary: 00000000 11111111 00000000
+decimal 0 255 0
+proportion 0.0 1.0 0.0
+binary: 00000000 00000000 11111111
+decimal 0 0 255
+proportion 0.0 0.0 1.0
+</code></pre></div></div>
+
+<p><img src="output_9_3.png" alt="png" /></p>
+
+<h2 id="50-reasonable-time-algorithms-1d-big-o---vance-reynolds">50. Reasonable time algorithms (1D, Big O) - Vance Reynolds</h2>
+
+<p>Consider the following algorithms. Each algorithm operates on a list containing n elements, where n is a very large integer.</p>
+
+<ul>
+  <li>An algorithm that accesses each element in the list twice</li>
+  <li>An algorithm that accesses each element in the list n times</li>
+  <li>An algorithm that accesses only the first 10 elements in the list, regardless of the size of the list</li>
+</ul>
+
+<p>Which of the algorithms run in reasonable time?
+Answer D is correct because in order for an algorithm to run in reasonable time, it must take a number of steps less than or equal to a polynomial function.</p>
+
+<ul>
+  <li>Algorithm I accesses elements times (twice for each of n elements), which is considered in time.</li>
+  <li>Algorithm II accesses elements (n times for each of n elements), which is in reasonable time.</li>
+  <li>Algorithm III accesses 10 elements, which is in reasonable time.</li>
+</ul>
+
+<p>Simple Explainations:</p>
+
+<p>Unreasonable time: Algorithms with exponential or factorial efficiencies are examples of algorithms that run in an unreasonable amount of time.</p>
+
+<p>Reasonable time: Algorithms with a polynomial efficiency or lower (constant, linear, square, cube, etc.) are said to run in a reasonable amount of time.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Big O notation example algorithms
+# as a popcorn hack (coding challenge), scale list of size by factor of 10 and measure the times
+# what do you think about college board's notion of reasonable time for an algorithm?
+# as a 2nd hack, create a slow algorithm and measure its time, which are considered slow algorithms... 
+#   O(n^3) which is three nested loops 
+#   O(2^n) which is a recursive algorithm with two recursive calls
+</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># O(n) Algorithm that accesses each element in the list twice, 2 * n times 
+</span><span class="k">def</span> <span class="nf">algorithm_2n</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="c1"># O(n^2) Algorithm that accesses each element in the list n times, n * n times
+</span><span class="k">def</span> <span class="nf">algorithm_nSquared</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+<span class="c1"># O(1) Algorithm that accesses only the first 10 elements in the list, 10 * 1 is constant 
+</span><span class="k">def</span> <span class="nf">algorithm_10times</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">[:</span><span class="mi">10</span><span class="p">]:</span>
+        <span class="k">pass</span>
+
+<span class="c1"># Create a large list
+</span><span class="n">n</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1"># Measure the time taken by algorithm1
+</span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">algorithm_2n</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Algorithm 2 * N took </span><span class="si">{</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> milliseconds"</span><span class="p">)</span>
+
+<span class="c1"># Measure the time taken by algorithm2
+</span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">algorithm_nSquared</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Algorithm N^2 took </span><span class="si">{</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> milliseconds"</span><span class="p">)</span>
+
+<span class="c1"># Measure the time taken by algorithm3
+</span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">algorithm_10times</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Algorithm 10 times took </span><span class="si">{</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span><span class="p">:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> milliseconds"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Algorithm 2 * N took 0.16 milliseconds
+Algorithm N^2 took 935.78 milliseconds
+Algorithm 10 times took 0.06 milliseconds
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Popcorn Hack #4
+</span>
+<span class="k">def</span> <span class="nf">slow_algorithm_n3</span><span class="p">(</span><span class="n">input_list</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+                <span class="n">result</span> <span class="o">+=</span> <span class="n">input_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">input_list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">input_list</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">def</span> <span class="nf">slow_algorithm_2n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">slow_algorithm_2n</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">slow_algorithm_2n</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">input_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">result_n3</span> <span class="o">=</span> <span class="n">slow_algorithm_n3</span><span class="p">(</span><span class="n">input_list</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Algorithm with O(n^3) took"</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s">"milliseconds"</span><span class="p">)</span>
+
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">result_2n</span> <span class="o">=</span> <span class="n">slow_algorithm_2n</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Algorithm with O(2^n) took"</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s">"milliseconds"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Algorithm with O(n^3) took 0.43 milliseconds
+Algorithm with O(2^n) took 0.19 milliseconds
+</code></pre></div></div>
+
+<h2 id="56-compare-execution-times-of-tow-version-1d-analysis---kayden-le">56. Compare execution times of tow version (1D analysis) - Kayden Le</h2>
+
+<p>An online game collects data about each player’s performance in the game. A program is used to analyze the data to make predictions about how players will perform in a new version of the game.</p>
+
+<p>The procedure GetPrediction (idNum) returns a predicted score for the player with ID number idNum. Assume that all predicted scores are positive. The GetPrediction procedure takes approximately 1 minute to return a result. All other operations happen nearly instantaneously.</p>
+
+<p>Two versions of the program are shown below.</p>
+
+<p>Which of the following best compares the execution times of the two versions of the program?</p>
+
+<p>Version I calls the GetPrediction procedure once for each element of idList, or four times total. Since each call requires 1 minute of execution time, version I requires approximately 4 minutes to execute. Version II calls the GetPrediction procedure twice for each element of idList, and then again in the final display statement. This results in the procedure being called nine times, requiring approximately 9 minutes of execution time.</p>
+
+<p>Both versions aim to achieve the same result, which is to find and display the highest predicted score among the players in idList. However, Version I directly updates the highest score (topScore), while Version II updates the ID of the player with the highest score (topID) and then retrieves the predicted score for that player. Version II essentially avoids calling GetPrediction multiple times for the same ID.</p>
+
+<p>The answer: D - Version II requires approximately 5 more minutes to execute than version I</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Simulate the time taken by GetPrediction, calling an expensive operation twice is slow
+# as a popcorn hack (coding challenge)
+#  measure the time to calulate fibonacci sequence at small and large numbers
+# `this task will require a code layout and a time measurement
+#  there are fast ways and slow ways to calculate fibonacci sequence`
+</span>
+<span class="s">'''
+The GetPrediction function is a simulation stand-in for a potentially expensive operation.
+In a real-world scenario, this could be a call to a;
+   - machine learning model
+   - a database query
+   - fibonacci sequence at a large number
+   - or any other algorithm that takes a significant amount of time.
+'''</span>
+<span class="k">def</span> <span class="nf">GetPrediction</span><span class="p">(</span><span class="n">idNum</span><span class="p">):</span>
+    <span class="c1"># time.sleep(60)  # Commented out to avoid actual delay
+</span>    <span class="k">return</span> <span class="n">idNum</span> <span class="o">*</span> <span class="mi">10</span>  <span class="c1"># Dummy prediction
+</span>
+<span class="c1"># Version I: makes a single call to GetPrediction for each element in idList
+</span><span class="k">def</span> <span class="nf">version_I</span><span class="p">(</span><span class="n">idList</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># Start timer
+</span>    <span class="n">topScore</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">idNum</span> <span class="ow">in</span> <span class="n">idList</span><span class="p">:</span>
+        <span class="n">predictedScore</span> <span class="o">=</span> <span class="n">GetPrediction</span><span class="p">(</span><span class="n">idNum</span><span class="p">)</span> <span class="c1"># calls GetPrediction once
+</span>        <span class="k">if</span> <span class="n">predictedScore</span> <span class="o">&gt;</span> <span class="n">topScore</span><span class="p">:</span> 
+            <span class="n">topScore</span> <span class="o">=</span> <span class="n">predictedScore</span> <span class="c1"># stores the topScore to avoid calling GetPrediction again
+</span>    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># End timer
+</span>    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Version I took </span><span class="si">{</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">idList</span><span class="p">)</span> <span class="o">*</span> <span class="mi">60</span><span class="p">:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> simulated seconds"</span><span class="p">)</span>  <span class="c1"># Add simulated delay
+</span>
+<span class="c1"># Version II: makes two calls to GetPrediction for each element in idList
+</span><span class="k">def</span> <span class="nf">version_II</span><span class="p">(</span><span class="n">idList</span><span class="p">):</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># Start timer
+</span>    <span class="n">topID</span> <span class="o">=</span> <span class="n">idList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">idNum</span> <span class="ow">in</span> <span class="n">idList</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">GetPrediction</span><span class="p">(</span><span class="n">idNum</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">GetPrediction</span><span class="p">(</span><span class="n">topID</span><span class="p">):</span> <span class="c1"># calls GetPrediction twice
+</span>            <span class="n">topID</span> <span class="o">=</span> <span class="n">idNum</span> <span class="c1"># stores the topID, but still calls GetPrediction with topID again
+</span>    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># End timer
+</span>    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Version II took </span><span class="si">{</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">idList</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="mi">60</span><span class="p">:.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> simulated seconds"</span><span class="p">)</span>  <span class="c1"># Add simulated delay
+</span>
+<span class="c1"># Test the functions
+</span><span class="n">idList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="c1"># Small list
+# idList = [i for i in range(1, 1000)] # Large list using list comprehension
+</span><span class="n">version_I</span><span class="p">(</span><span class="n">idList</span><span class="p">)</span>
+<span class="n">version_II</span><span class="p">(</span><span class="n">idList</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Version I took 240.00 simulated seconds
+Version II took 540.00 simulated seconds
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Popcorn Hack #5
+</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># Slow recursive Fibonacci function
+</span><span class="k">def</span> <span class="nf">fibonacci_slow</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="n">fibonacci_slow</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci_slow</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Fast Fibonacci function
+</span><span class="k">def</span> <span class="nf">fibonacci_memoization</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">memo</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">memo</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">fibonacci_memoization</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">memo</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci_memoization</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">memo</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">measure_fibonacci_time</span><span class="p">(</span><span class="n">fibonacci_func</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">fibonacci_func</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">time_slow</span> <span class="o">=</span> <span class="n">measure_fibonacci_time</span><span class="p">(</span><span class="n">fibonacci_slow</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">time_fast</span> <span class="o">=</span> <span class="n">measure_fibonacci_time</span><span class="p">(</span><span class="n">fibonacci_memoization</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Slow Fibonacci (n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s">) took </span><span class="si">{</span><span class="n">time_slow</span><span class="p">:.</span><span class="mi">6</span><span class="n">f</span><span class="si">}</span><span class="s"> seconds"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Fast Fibonacci (n=</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s">) took </span><span class="si">{</span><span class="n">time_fast</span><span class="p">:.</span><span class="mi">6</span><span class="n">f</span><span class="si">}</span><span class="s"> seconds"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Slow Fibonacci (n=30) took 0.319709 seconds
+Fast Fibonacci (n=30) took 0.000043 seconds
+</code></pre></div></div>
+
+<h2 id="64-error-with-multiplication-using-repeated-addition-4c-algorithms-and-programs---abdullah-khanani">64. Error with multiplication using repeated addition (4C algorithms and programs) - Abdullah Khanani</h2>
+
+<p>The following procedure is intended to return the value of x times y, where x and y are integers. Multiplication is implemented using repeated additions.</p>
+
+<p>For which of the following procedure calls does the procedure NOT return the intended value?</p>
+
+<p>Select two answers.</p>
+
+<h3 id="question-64">Question 64</h3>
+
+<p>PROCEDURE Multiply [x,y]
+    count &lt;– 0
+    result &lt;– 0
+    REPEAT UNTIL [count ≥ y]
+        result &lt;– result + x
+        count &lt;– count + 1
+    RETURN result</p>
+
+<h3 id="question">Question</h3>
+
+<h4 id="for-which-of-the-following-procedure-calls-does-the-procedure-not-return-the-intended-value-select-two-answers">For which of the following procedure calls does the procedure NOT return the intended value? Select two answers.</h4>
+
+<h3 id="options">Options</h3>
+
+<p>A. Multiply 2,5
+B. Multiply 2,-5
+C. Multiply -2,5
+D. Multiply -2,-5</p>
+
+<h3 id="answered">Answered</h3>
+
+<p>A and C</p>
+
+<h3 id="correct-answer">Correct Answer</h3>
+
+<p>B and D</p>
+
+<h3 id="explanation">Explanation</h3>
+
+<p>For procedures A, the procedure repeatedly adds 2 to result five times, resulting in the intended product 10. Vice versa for C. IF you want to return the result and get a correct answer, multiplying 2,-5 and -2,-5 will give you the wanted result. The following procedure is intended to return the value of x times y, where x and y are integers. Multiplication is implemented using repeated additions. A and C fit these requirements.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># flawed multiply function
+# as a popcorn hack (coding challenge), fix the multiply function to work with negative numbers
+</span>
+<span class="s">'''
+As you can see, the function fails when y is negative,
+because the while loop condition count &lt; y is never true in these cases.
+'''</span>
+
+<span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Test cases
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: 10
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: -10, Actual output: 0
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: -10
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: 10, Actual output: 0
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+0
+-10
+0
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="c1"># Determine the sign of the result
+</span>    <span class="n">sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">^</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
+    
+    <span class="c1"># Make both x and y positive for simplicity
+</span>    <span class="n">x</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">sign</span> <span class="o">*</span> <span class="n">result</span>
+
+<span class="c1"># Test cases
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>    <span class="c1"># Expected output: 10
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">))</span>   <span class="c1"># Expected output: -10
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>   <span class="c1"># Expected output: -10
+</span><span class="k">print</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># Expected output: 10
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10
+-10
+-10
+10
+</code></pre></div></div>
+
+<h2 id="65-call-to-concat-and-substring-4b-string-operations---ameer-hussain">65. Call to concat and substring (4B string operations) - Ameer Hussain</h2>
+
+<p>A program contains the following procedures for string manipulation.</p>
+
+<p>Which of the following can be used to store the string “jackalope” in the string variable animal ?</p>
+
+<p>Select two answers.</p>
+
+<h3 id="correct-answer-c">Correct Answer C:</h3>
+<p>animal ← Substring(“jackrabbit”, 1, 4) extracts “jack” from “jackrabbit”. animal ← Concat(animal, “a”) appends “a” to “jack”, resulting in “jacka”. animal ← Concat(animal, Substring(“antelope”, 5, 4)) extracts “lope” from “antelope” and appends it to “jacka”, resulting in “jackalope”.</p>
+
+<h3 id="incorrect-answer-d">Incorrect Answer D:</h3>
+<p>animal ← Substring(“jackrabbit”, 1, 4) extracts “jack” from “jackrabbit”. animal ← Concat(animal, “a”) appends “a” to “jack”, resulting in “jacka”. animal ← Concat(Substring(“antelope”, 5, 4), animal) is slightly misleading because it extracts “lope” from “antelope” and should prepend it to “jacka”, but this is incorrect because it would result in “lopejacka”. the operations in Answer D would not result in “jackalope”.</p>
+
+<p>animal ← Substring(“antelope”, 5, 4) would assign the substring “lope” from “antelope” to the variable animal. animal ← Concat(“a”, animal) would then prepend “a” to “lope”, resulting in “alope”. animal ← Concat(Substring(“jackrabbit”, 1, 4), animal) would take the substring “jack” from “jackrabbit” and then concatenate it with “alope” resulting in “jackalope”.</p>
+
+<p>The process outlined in Answer B does indeed result in the string “jackalope”, with the first step isolating “lope” from “antelope”, the second step creating the string “alope” by prepending “a” to “lope”, and the final step creating the correct string by prepending “jack” to “alope”.</p>
+
+<p>animal ← Substring(“antelope”, 5, 4) would assign the substring “lope” from “antelope” to the variable animal. animal ← Concat(“a”, animal) would then prepend “a” to “lope”, resulting in “alope”. animal ← Concat(Substring(“jackrabbit”, 1, 4), animal) would take the substring “jack” from “jackrabbit” and then concatenate it with “alope” resulting in “jackalope”.</p>
+
+<p>The process outlined in Answer B does indeed result in the string “jackalope”, with the first step isolating “lope” from “antelope”, the second step creating the string “alope” by prepending “a” to “lope”, and the final step creating the correct string by prepending “jack” to “alope”.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Incorrect Answer D
+# as a popcorn hack (binary challenge), create string and concatenation options for A, B, C
+</span> 
+<span class="n">animal</span> <span class="o">=</span> <span class="s">"jackrabbit"</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># Substring("jackrabbit", 1, 4)
+</span><span class="n">animal</span> <span class="o">+=</span> <span class="s">"a"</span>  <span class="c1"># Concat(animal, "a")
+</span><span class="n">animal</span> <span class="o">=</span> <span class="s">"antelope"</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span> <span class="o">+</span> <span class="n">animal</span>  <span class="c1"># Concat(Substring("antelope", 5, 4), animal)
+</span><span class="k">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>  <span class="c1"># Outputs: lopejacka
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lopejacka
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># OPTION A
+</span>
+<span class="c1"># Substring("jackrabbit", 1, 4)
+</span><span class="n">animal</span> <span class="o">=</span> <span class="s">"jackrabbit"</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># Concat(animal, "a")
+</span><span class="n">animal</span> <span class="o">+=</span> <span class="s">"a"</span>
+
+<span class="c1"># Concat(Substring("antelope", 5, 4), animal)
+</span><span class="n">animal</span> <span class="o">+=</span> <span class="s">"antelope"</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
+
+<span class="c1"># OPTION B
+</span>
+<span class="c1"># Substring("jackrabbit", 1, 4)
+</span><span class="n">animal</span> <span class="o">=</span> <span class="s">"jackrabbit"</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># Concat(animal, "a")
+</span><span class="n">animal</span> <span class="o">+=</span> <span class="s">"a"</span>
+
+<span class="c1"># Concat(Substring("antelope", 5, 4), animal)
+</span><span class="n">animal</span> <span class="o">+=</span> <span class="s">"antelope"</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
+
+<span class="c1"># OPTION C
+</span>
+<span class="c1"># Substring("jackrabbit", 1, 4)
+</span><span class="n">animal</span> <span class="o">=</span> <span class="s">"antelope"</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="c1"># Concat(animal, "a")
+</span><span class="n">animal</span> <span class="o">=</span> <span class="s">"a"</span> <span class="o">+</span> <span class="n">animal</span>
+
+<span class="c1"># Concat(Substring("antelope", 5, 4), animal)
+</span><span class="n">animal</span> <span class="o">=</span> <span class="s">"jackrabbit"</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">animal</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jackalope
+jackalope
+jackalope
+</code></pre></div></div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2024/03/12/CSP-MCQ-2020-missed_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>
