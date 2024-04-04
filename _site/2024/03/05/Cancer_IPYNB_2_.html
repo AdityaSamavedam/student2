@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ML, Cancer Data | CompSci Blogs</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="ML, Cancer Data" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Exploring the Titanic dataset with machine learning." />
+<meta property="og:description" content="Exploring the Titanic dataset with machine learning." />
+<link rel="canonical" href="http://localhost:4200/student2/2024/03/05/Cancer_IPYNB_2_.html" />
+<meta property="og:url" content="http://localhost:4200/student2/2024/03/05/Cancer_IPYNB_2_.html" />
+<meta property="og:site_name" content="CompSci Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-03-05T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ML, Cancer Data" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-05T00:00:00-08:00","datePublished":"2024-03-05T00:00:00-08:00","description":"Exploring the Titanic dataset with machine learning.","headline":"ML, Cancer Data","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/03/05/Cancer_IPYNB_2_.html"},"url":"http://localhost:4200/student2/2024/03/05/Cancer_IPYNB_2_.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=35c19e8c5ffdb40b5f50c6981a9db2f19e5f9ed8">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <script src="/student2/assets/js/respond.js"></script>
+
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#353535">
+<meta name="msapplication-navbutton-color" content="#353535">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/student2/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head><body>
+
+  <div class="wrapper">
+    <header><header class="site-header">
+
+  <div id="header">
+    <nav>
+      <ul>
+        <li class="fork"><a href="/student2/">Home</a></li>
+        <li class="fork"><a href="/student2/compsci">CompSci</a></li>
+        <li class="fork"><a href="/student2/blogs">Blogs</a></li>
+        <li class="title"><a href="/student2/help">Help</a></li>
+        <li class="title"><a href="https://github.com/AdityaSamavedam/student2#readme">View On GitHub</a></li>
+      </ul>
+    </nav>
+  </div><!-- end header -->
+</header></header>
+
+
+    <section>
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 
+      class="post-title p-name" itemprop="name headline">ML, Cancer Data
+      • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></h1>
+
+    <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-03-05T00:00:00-08:00" itemprop="datePublished">
+        Mar 5, 2024
+      </time>
+    </p><h2>Description</h2><p class="page-description">Exploring the Titanic dataset with machine learning.</p></header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+
+<span class="err">!</span><span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="o">--</span><span class="n">show</span><span class="o">-</span><span class="n">progress</span> <span class="s">"https://storage.googleapis.com/inspirit-ai-data-bucket-1/Data/AI%20Scholars/Sessions%201%20-%205/Session%202b%20-%20Logistic%20Regression/cancer.csv"</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'cancer.csv'</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s">'diagnosis'</span><span class="p">].</span><span class="n">replace</span><span class="p">({</span><span class="s">'M'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">data</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">'cancer.csv'</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">data</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version &gt;=1.17.3 and &lt;1.25.0 is required for this version of SciPy (detected version 1.26.1
+  warnings.warn(f"A NumPy version &gt;={np_minversion} and &lt;{np_maxversion}"
+
+
+cancer.csv          100%[===================&gt;] 122.27K  --.-KB/s    in 0.03s   
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># First, import helpful Python tools for loading/navigating data
+</span><span class="kn">import</span> <span class="nn">os</span>             <span class="c1"># Good for navigating your computer's files
+</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>    <span class="c1"># Great for lists (arrays) of numbers
+</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>   <span class="c1"># Great for tables (google spreadsheets, microsoft excel, csv)
+</span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>   <span class="c1"># Great for creating quick ML models
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This is the name of our data file, which was downloaded in the set up cell.
+# Check out the file explorer (folder on the left toolbar) to see where that lives!
+</span><span class="n">data_path</span> <span class="o">=</span> <span class="s">'cancer.csv'</span>
+
+<span class="c1"># Use the 'pd.read_csv(filepath)' function to read in read our data and store it
+# in a variable called 'dataframe'
+</span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
+
+<span class="c1"># Redefine `dataframe` to include only the columns discussed
+</span><span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[[</span><span class="s">'diagnosis'</span><span class="p">,</span> <span class="s">'perimeter_mean'</span><span class="p">,</span> <span class="s">'radius_mean'</span><span class="p">,</span> <span class="s">'texture_mean'</span><span class="p">,</span> <span class="s">'area_mean'</span><span class="p">,</span> <span class="s">'smoothness_mean'</span><span class="p">,</span> <span class="s">'concavity_mean'</span><span class="p">,</span> <span class="s">'symmetry_mean'</span><span class="p">]]</span>
+
+<span class="c1"># Define a new, more descriptive `diagnosis_cat` column
+</span><span class="n">dataframe</span><span class="p">[</span><span class="s">'diagnosis_cat'</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataframe</span><span class="p">[</span><span class="s">'diagnosis'</span><span class="p">].</span><span class="n">astype</span><span class="p">(</span><span class="s">'category'</span><span class="p">).</span><span class="nb">map</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span> <span class="s">'1 (malignant)'</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s">'0 (benign)'</span><span class="p">})</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dataframe</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>diagnosis</th>
+      <th>perimeter_mean</th>
+      <th>radius_mean</th>
+      <th>texture_mean</th>
+      <th>area_mean</th>
+      <th>smoothness_mean</th>
+      <th>concavity_mean</th>
+      <th>symmetry_mean</th>
+      <th>diagnosis_cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>122.80</td>
+      <td>17.99</td>
+      <td>10.38</td>
+      <td>1001.0</td>
+      <td>0.11840</td>
+      <td>0.3001</td>
+      <td>0.2419</td>
+      <td>1 (malignant)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>132.90</td>
+      <td>20.57</td>
+      <td>17.77</td>
+      <td>1326.0</td>
+      <td>0.08474</td>
+      <td>0.0869</td>
+      <td>0.1812</td>
+      <td>1 (malignant)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>130.00</td>
+      <td>19.69</td>
+      <td>21.25</td>
+      <td>1203.0</td>
+      <td>0.10960</td>
+      <td>0.1974</td>
+      <td>0.2069</td>
+      <td>1 (malignant)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>77.58</td>
+      <td>11.42</td>
+      <td>20.38</td>
+      <td>386.1</td>
+      <td>0.14250</td>
+      <td>0.2414</td>
+      <td>0.2597</td>
+      <td>1 (malignant)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>135.10</td>
+      <td>20.29</td>
+      <td>14.34</td>
+      <td>1297.0</td>
+      <td>0.10030</td>
+      <td>0.1980</td>
+      <td>0.1809</td>
+      <td>1 (malignant)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">train_df</span><span class="p">,</span> <span class="n">test_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">logreg_model</span> <span class="o">=</span> <span class="n">linear_model</span><span class="p">.</span><span class="n">LogisticRegression</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="s">'perimeter_mean'</span><span class="p">,</span><span class="s">'radius_mean'</span><span class="p">,</span><span class="s">'texture_mean'</span><span class="p">,</span><span class="s">'area_mean'</span><span class="p">,</span><span class="s">'smoothness_mean'</span><span class="p">,</span><span class="s">'concavity_mean'</span><span class="p">,</span><span class="s">'symmetry_mean'</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">'diagnosis_cat'</span>
+
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">train_df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'X_train, our input variables:'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">X_train</span><span class="p">.</span><span class="n">head</span><span class="p">())</span>
+<span class="k">print</span><span class="p">()</span>
+
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">train_df</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'y_train, our output variable:'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y_train</span><span class="p">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>X_train, our input variables:
+     perimeter_mean  radius_mean  texture_mean  area_mean  smoothness_mean  \
+408          117.80        17.99         20.66      991.7          0.10360   
+4            135.10        20.29         14.34     1297.0          0.10030   
+307           56.36         9.00         14.40      246.3          0.07005   
+386           78.78        12.21         14.09      462.0          0.08108   
+404           78.29        12.34         14.95      469.1          0.08682   
+
+     concavity_mean  symmetry_mean  
+408        0.120100         0.1992  
+4          0.198000         0.1809  
+307        0.003681         0.1788  
+386        0.068390         0.1646  
+404        0.021090         0.1571  
+
+y_train, our output variable:
+408    1 (malignant)
+4      1 (malignant)
+307       0 (benign)
+386       0 (benign)
+404       0 (benign)
+Name: diagnosis_cat, dtype: category
+Categories (2, object): ['0 (benign)', '1 (malignant)']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">logreg_model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div></div>
+
+<style>#sk-container-id-2 {color: black;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style>
+<div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked="" /><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">LogisticRegression</label><div class="sk-toggleable__content"><pre>LogisticRegression()</pre></div></div></div></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X_test</span> <span class="o">=</span> <span class="n">test_df</span><span class="p">[</span><span class="n">X</span><span class="p">]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">test_df</span><span class="p">[</span><span class="n">y</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y_pred</span> <span class="o">=</span> <span class="n">logreg_model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">test_df</span><span class="p">[</span><span class="s">'predicted'</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     perimeter_mean  radius_mean  texture_mean  area_mean  smoothness_mean  \
+421           98.22       14.690         13.98      656.1          0.10310   
+47            85.98       13.170         18.66      534.6          0.11580   
+292           83.14       12.950         16.02      513.7          0.10050   
+186          118.60       18.310         18.58     1041.0          0.08588   
+414           96.71       15.130         29.81      719.5          0.08320   
+..              ...          ...           ...        ...              ...   
+172          102.50       15.460         11.89      736.9          0.12570   
+3             77.58       11.420         20.38      386.1          0.14250   
+68            58.79        9.029         17.33      250.5          0.10660   
+448           94.25       14.530         19.34      659.7          0.08388   
+442           88.37       13.780         15.79      585.9          0.08817   
+
+     concavity_mean  symmetry_mean  
+421         0.14500         0.2086  
+47          0.12260         0.2128  
+292         0.06155         0.1730  
+186         0.08169         0.1621  
+414         0.04686         0.1852  
+..              ...            ...  
+172         0.20320         0.1966  
+3           0.24140         0.2597  
+68          0.31300         0.2111  
+448         0.08817         0.1473  
+442         0.01055         0.1405  
+
+[114 rows x 7 columns]
+['1 (malignant)' '0 (benign)' '0 (benign)' '1 (malignant)' '1 (malignant)'
+ '1 (malignant)' '1 (malignant)' '1 (malignant)' '0 (benign)' '0 (benign)'
+ '0 (benign)' '1 (malignant)' '1 (malignant)' '0 (benign)' '1 (malignant)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)' '1 (malignant)'
+ '0 (benign)' '0 (benign)' '1 (malignant)' '0 (benign)' '1 (malignant)'
+ '0 (benign)' '1 (malignant)' '1 (malignant)' '1 (malignant)'
+ '1 (malignant)' '1 (malignant)' '0 (benign)' '1 (malignant)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '1 (malignant)' '1 (malignant)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)'
+ '0 (benign)' '1 (malignant)' '0 (benign)' '0 (benign)' '0 (benign)'
+ '1 (malignant)' '1 (malignant)' '1 (malignant)' '0 (benign)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '1 (malignant)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '1 (malignant)' '1 (malignant)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '1 (malignant)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)' '1 (malignant)'
+ '0 (benign)' '1 (malignant)' '1 (malignant)' '0 (benign)' '0 (benign)'
+ '1 (malignant)' '0 (benign)' '1 (malignant)' '0 (benign)' '1 (malignant)'
+ '0 (benign)' '0 (benign)' '1 (malignant)' '0 (benign)' '1 (malignant)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)'
+ '1 (malignant)' '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)'
+ '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)'
+ '1 (malignant)' '0 (benign)' '0 (benign)' '0 (benign)' '1 (malignant)'
+ '1 (malignant)' '0 (benign)' '0 (benign)' '0 (benign)' '0 (benign)']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.8771929824561403
+</code></pre></div></div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="Aditya Samavedam/student2"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/student2/2024/03/05/Cancer_IPYNB_2_.html" hidden></a>
+</article>
+
+    </section>
+
+  </div>
+</body>
+
+
+</html>

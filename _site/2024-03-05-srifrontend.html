@@ -1,84 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Would You Survive the Titanic?</title>
 <style>
   body {
-    color: #fff;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1200px-RMS_Titanic_3.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-    background-size: cover; /* This property ensures that the background image covers the entire background */
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-image: ![]('/student/images/ocean1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
   }
-
   form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+      max-width: 400px;
+      margin: 0 auto;
   }
-
-  h1 {
-    text-align: center;
-    color: black;
-  }
-
   label {
-    display: block;
-    margin-bottom: 5px;
-    color: #000;
+      display: block;
+      margin-bottom: 5px;
+      color: #000; /* Changed label color to black */
   }
-
   input[type="text"],
   input[type="number"],
   select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    background-color: #f2f2f2; /* Light gray background color */
-    border: none;
-    border-radius: 4px;
-    color: #333; /* Dark gray text color */
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      background-color: #333;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
   }
-
   input[type="checkbox"] {
-    margin-bottom: 10px;
+      margin-bottom: 10px;
   }
-
   button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff5722; /* Orange button color */
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+      padding: 10px 20px;
+      background-color: #74C0FC;
+      border: none;
+      border-radius: 4px;
+      color: #1A1A1A;
+      cursor: pointer;
   }
-
   button:hover {
-    background-color: gray; /* Darker orange on hover */
+      background-color: #5AA6E5;
   }
-
   #result {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 12px;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 12px;
   }
-
   #result h2 {
-    color: orange; /* Teal color for result heading */
-    margin-bottom: 10px;
+      color: #74C0FC;
+      margin-bottom: 10px;
   }
-
   #result p {
-    margin-bottom: 5px;
-    color: black;
+      margin-bottom: 5px;
   }
 </style>
 </head>
@@ -112,7 +87,7 @@
       <option value="Q">Queenstown</option>
       <option value="S">Southampton</option>
   </select><br><br>
-  <label for="alone">Ready?</label>
+  <label for="alone">Alone:</label>
   <input type="checkbox" id="alone" name="alone"><br><br>
   <button type="button" onclick="predictSurvival()">Predict Survival</button>
 </form>
@@ -143,4 +118,3 @@
   }
 </script>
 </body>
-</html>
