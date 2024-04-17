@@ -126,7 +126,7 @@
     var concavity_mean = document.getElementById('concavity_mean').value;
     var symmetry_mean = document.getElementById('symmetry_mean').value;
 
-    fetch('http://localhost:8086/api/cancer/predict', {
+    fetch('http://127.0.0.1:8086/api/cancer/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
