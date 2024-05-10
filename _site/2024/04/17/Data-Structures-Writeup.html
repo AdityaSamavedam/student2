@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Data Structures Writeup" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Collections Blog Python Model code and SQLite Database." />
-<meta property="og:description" content="Collections Blog Python Model code and SQLite Database." />
+<meta name="description" content="Project Description The purpose of our project is to diagnose cancer based on the properties of the cell such as its area, perimeter, smoothness, concavity, etc. Numerical values are entered in these criteria and the probability of having cancer is determined with all the appropriate data entered. We integrated some of our Tri 2 CPT project features to create “Your Game Universe”, which is a game site with a bunch of simple and fun games, to relieve stress and cope if the person has cancer, based on the diagnosis. Some of our games include Tic-Tac-Toe, 2048, Drawing, Ping Pong, etc." />
+<meta property="og:description" content="Project Description The purpose of our project is to diagnose cancer based on the properties of the cell such as its area, perimeter, smoothness, concavity, etc. Numerical values are entered in these criteria and the probability of having cancer is determined with all the appropriate data entered. We integrated some of our Tri 2 CPT project features to create “Your Game Universe”, which is a game site with a bunch of simple and fun games, to relieve stress and cope if the person has cancer, based on the diagnosis. Some of our games include Tic-Tac-Toe, 2048, Drawing, Ping Pong, etc." />
 <link rel="canonical" href="http://localhost:4200/student2/2024/04/17/Data-Structures-Writeup.html" />
 <meta property="og:url" content="http://localhost:4200/student2/2024/04/17/Data-Structures-Writeup.html" />
 <meta property="og:site_name" content="CompSci Blogs" />
@@ -18,10 +18,10 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Data Structures Writeup" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-17T00:00:00-07:00","datePublished":"2024-04-17T00:00:00-07:00","description":"Collections Blog Python Model code and SQLite Database.","headline":"Data Structures Writeup","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/04/17/Data-Structures-Writeup.html"},"url":"http://localhost:4200/student2/2024/04/17/Data-Structures-Writeup.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-04-17T00:00:00-07:00","datePublished":"2024-04-17T00:00:00-07:00","description":"Project Description The purpose of our project is to diagnose cancer based on the properties of the cell such as its area, perimeter, smoothness, concavity, etc. Numerical values are entered in these criteria and the probability of having cancer is determined with all the appropriate data entered. We integrated some of our Tri 2 CPT project features to create “Your Game Universe”, which is a game site with a bunch of simple and fun games, to relieve stress and cope if the person has cancer, based on the diagnosis. Some of our games include Tic-Tac-Toe, 2048, Drawing, Ping Pong, etc.","headline":"Data Structures Writeup","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4200/student2/2024/04/17/Data-Structures-Writeup.html"},"url":"http://localhost:4200/student2/2024/04/17/Data-Structures-Writeup.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/student2/assets/css/style.css?v=6855940211ea5134450c34c5f81337104f072422">
+  <link rel="stylesheet" href="/student2/assets/css/style.css?v=fde40a8b3d10b58e081e73d6969e80a2d8e6ca31">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
   <script src="/student2/assets/js/respond.js"></script>
@@ -75,28 +75,33 @@
       • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      30 min read
     
 </span></h1>
 
     <p class="post-meta post-meta-title"><time class="dt-published" datetime="2024-04-17T00:00:00-07:00" itemprop="datePublished">
         Apr 17, 2024
       </time>
-    </p><ul><li><a href="#collections"><strong><em>Collections</em></strong></a></li><li><a href="#lists-and-dictionaries"><strong><em>Lists and Dictionaries</em></strong></a></li><li><a href="#apis-and-json"><strong><em>APIs and JSON</em></strong></a></li><li><a href="#frontend"><strong><em>Frontend</em></strong></a></li><li><a href="#optionalextra-algorithm-analysis"><strong><em>Optional/Extra, Algorithm Analysis</em></strong></a></li></ul></header>
+    </p><ul><li><a href="#project-description"><strong><em>Project Description</em></strong></a></li><li><a href="#collections"><strong><em>Collections</em></strong></a></li><li><a href="#lists-and-dictionaries"><strong><em>Lists and Dictionaries</em></strong></a></li><li><a href="#apis-and-json"><strong><em>APIs and JSON</em></strong></a></li><li><a href="#frontend"><strong><em>Frontend</em></strong></a></li><li><a href="#optionalextra-algorithm-analysis"><strong><em>Optional/Extra, Algorithm Analysis</em></strong></a></li></ul></header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h3 id="collections"><strong><em>Collections</em></strong></h3>
+    <h3 id="project-description"><strong><em>Project Description</em></strong></h3>
+<p>The purpose of our project is to diagnose cancer based on the properties of the cell such as its area, perimeter, smoothness, concavity, etc. Numerical values are entered in these criteria and the probability of having cancer is determined with all the appropriate data entered. We integrated some of our Tri 2 CPT project features to create “Your Game Universe”, which is a game site with a bunch of simple and fun games, to relieve stress and cope if the person has cancer, based on the diagnosis. Some of our games include Tic-Tac-Toe, 2048, Drawing, Ping Pong, etc.</p>
+
+<h3 id="collections"><strong><em>Collections</em></strong></h3>
 <p><em>Blog Python Model code and SQLite Database.</em></p>
 
 <ul>
   <li>
     <p><strong>From VSCode using SQLite3 Editor, show your unique collection/table in database, display rows and columns in the table of the SQLite database.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/90d3b94c-1b55-4c83-ade8-50335e3c6196" alt="image" /></p>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/90d3b94c-1b55-4c83-ade8-50335e3c6196" alt="image" />
+This is my unique collection/table in the database and there are 6 rows (6 different users) and 8 columns. This is the database that data is being fetched from in our login page.</p>
   </li>
   <li>
     <p><strong>From VSCode model, show your unique code that was created to initialize table and create test data.</strong>
 <img src="https://github.com/AdityaSamavedam/student2/assets/114468365/42527fe3-1761-42b2-b3f4-2afda10fb650" alt="image" />
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/b1cfb8c5-f15c-499f-95a3-d2a0513f7cd8" alt="image" /></p>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/b1cfb8c5-f15c-499f-95a3-d2a0513f7cd8" alt="image" />
+This is the code that is used to define the Users and their corresponding personal data. This is where all the login page usernames and passwords can be found.</p>
   </li>
 </ul>
 
@@ -108,6 +113,8 @@
 </ul>
 
 <p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/b927ef4e-7fed-4acf-ae5c-ea99a7d971ed" alt="image" /></p>
+
+<p>This is the list “users” which is the list of all the users extracted from the database.</p>
 
 <ul>
   <li><strong>In VSCode use Debugger and list, show two distinct example examples of dictionaries, show Keys/Values using debugger.</strong></li>
@@ -131,46 +138,66 @@
 <img src="https://github.com/AdityaSamavedam/student2/assets/114468365/023ec81e-5b8e-48ba-8991-6ccd1deef093" alt="image" /></li>
 </ul>
 
-<p>In the update function, we check that the number of characters in each name, uid, and password are greater than one character in order to update the database.</p>
+<p>In the update function, we check that the number of characters in each name, uid, and password are greater than zero characters in order to update the database.</p>
 
 <ul>
-  <li>
-    <p><strong>In VSCode, show algorithmic conditions used to validate data on a POST condition.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/8751211b-25dd-4a42-bd84-33db2a6b63dd" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>In Postman, show URL request and Body requirements for GET, POST, and UPDATE methods.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/cb7c1b4b-b497-4a36-9c90-dbb34f373757" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>In Postman, show the JSON response data for 200 success conditions on GET, POST, and UPDATE methods.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/90df04f2-efd8-40e7-b3c2-24340d3a44bd" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>In Postman, show the JSON response for error for 400 when missing body on a POST request.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/0b150bfa-507a-41a6-9267-622f94da0947" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>In Postman, show the JSON response for error for 404 when providing an unknown user ID to a UPDATE request.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/39122fbc-a3e3-4bd2-b975-6a2cbbda00ad" alt="image" /></p>
-  </li>
+  <li><strong>In VSCode, show algorithmic conditions used to validate data on a POST condition.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/8751211b-25dd-4a42-bd84-33db2a6b63dd" alt="image" /></li>
 </ul>
+
+<p>The conditions fail if the length of name/uid is less than 2 characters. It correspondingly returns the appropriate error message that it is missing or less than 2 characters.</p>
+
+<ul>
+  <li><strong>In Postman, show URL request and Body requirements for GET, POST, and UPDATE methods.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/cb7c1b4b-b497-4a36-9c90-dbb34f373757" alt="image" /></li>
+</ul>
+
+<p>The URL for GET and UPDATE is http://127.0.0.1:8088/api/users/
+<br />
+The URL for POST is the same thing but with an authenticate added at the end: http://127.0.0.1:8088/api/users/authenticate
+<br />
+The body requires a correct uid and password for it to work.</p>
+
+<ul>
+  <li><strong>In Postman, show the JSON response data for 200 success conditions on GET, POST, and UPDATE methods.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/90df04f2-efd8-40e7-b3c2-24340d3a44bd" alt="image" /></li>
+</ul>
+
+<p>The success condition displays the info about all the users from the database initially shown. It is formatted into JSON data.</p>
+
+<ul>
+  <li><strong>In Postman, show the JSON response for error for 400 when missing body on a POST request.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/0b150bfa-507a-41a6-9267-622f94da0947" alt="image" /></li>
+</ul>
+
+<p>If the body provided is missing on the POST request, a message “Something went wrong” is displayed. The error shows “400” and the data shows “null” meaning that no body was provided.</p>
+
+<ul>
+  <li><strong>In Postman, show the JSON response for error for 404 when providing an unknown user ID to a UPDATE request.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/39122fbc-a3e3-4bd2-b975-6a2cbbda00ad" alt="image" /></li>
+</ul>
+
+<p>Here, when I type the username “gdis” the message “Invalid user id or password” is outputted because the username is wrong. It should be “adis” instead of “gdis”.</p>
 
 <h3 id="frontend"><strong><em>Frontend</em></strong></h3>
 <p><em>Blog JavaScript API fetch code and formatting code to display JSON.</em></p>
 
 <ul>
-  <li>
-    <p><strong>In Chrome inspect, show response of JSON objects from fetch of GET, POST, and UPDATE methods.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/e9c2fbeb-6419-4e27-9da0-8f1491eae731" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>In the Chrome browser, show a demo (GET) of obtaining an Array of JSON objects that are formatted into the browsers screen.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/23efae81-0c9c-43ab-b9d0-c6651151d4d5" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>In JavaScript code, describe fetch and method that obtained the Array of JSON objects.</strong></p>
-  </li>
+  <li><strong>In Chrome inspect, show response of JSON objects from fetch of GET, POST, and UPDATE methods.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/e9c2fbeb-6419-4e27-9da0-8f1491eae731" alt="image" /></li>
+</ul>
+
+<p>In the inspect code, the body can be seen, which matches what exactly I entered in the UID and Password fields prior to hitting the breakpoint.</p>
+
+<ul>
+  <li><strong>In the Chrome browser, show a demo (GET) of obtaining an Array of JSON objects that are formatted into the browsers screen.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/23efae81-0c9c-43ab-b9d0-c6651151d4d5" alt="image" /></li>
+</ul>
+
+<p>This uses a GET method to get the JSON data from the database, which is exactly what happened when I ran the GET method in Postman with the 200 success. We then used JavaScript to format the data into a simple table as shown above.</p>
+
+<ul>
+  <li><strong>In JavaScript code, describe fetch and method that obtained the Array of JSON objects.</strong></li>
 </ul>
 
 <p>“fetch(url, authOptions)” gets the url from the backend server (http://127.0.0.1:8088) followed by the suffix “/api/users/authenticate”. This is first done to authenticate the user, before they gain access to the array of JSON objects that are formatted into the browser’s screen. When the login is successful, the page is redirected to the Database of users that was formatted in the browser.  Next, the url is passed as “http://127.0.0.1:8088/api/users/” since we want to obtain the actual JSON data of the users in the database.  Another fetch is done with the url and when the data is fetched, HTML formats all of it into a table, to make it resemble the SQLite database.</p>
@@ -181,6 +208,14 @@
 
 <p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/40f5e276-db6d-4c14-9a6c-c50336aaf5f1" alt="image" /></p>
 
+<p><code class="language-plaintext highlighter-rouge">const headerRow = document.createElement("tr")</code> creates a header row for the column names</p>
+
+<p><code class="language-plaintext highlighter-rouge">const th = document.createElement("th");</code> creates a header for each attribute of the user</p>
+
+<p><code class="language-plaintext highlighter-rouge">const tr = document.createElement("tr");</code> creates a row for each of the users</p>
+
+<p><code class="language-plaintext highlighter-rouge">const td = document.createElement("td");</code> formats the data into the corresponding cells of the table</p>
+
 <ul>
   <li><strong>In the Chrome browser, show a demo (POST or UPDATE) gathering and sending input and receiving a response that show update. Repeat this demo showing both success and failure.</strong></li>
 </ul>
@@ -188,8 +223,12 @@
 <p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/df927acd-8b89-48ea-99d9-9ba84708ae8b" alt="image" />
 <img src="https://github.com/AdityaSamavedam/student2/assets/114468365/508657cd-d714-4a4b-9708-7cbb2c49e7dd" alt="image" /></p>
 
+<p>This is the result for 200 success when the UID and password provided in the login are correct and match the UID and password from the database. It redirects the user to the database table that was formatted into the browser screen.</p>
+
 <p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/a6e1c78f-965d-4cef-8ff6-35a114e06b52" alt="image" />
 <img src="https://github.com/AdityaSamavedam/student2/assets/114468365/b94a031d-78a5-4c22-8cda-83bb64f5d752" alt="image" /></p>
+
+<p>As you can see, I’ve entered <code class="language-plaintext highlighter-rouge">"adiw"</code> instead of <code class="language-plaintext highlighter-rouge">"adis"</code>, which is incorrect. Hence it takes the user to the 401 Unauthorized page in order to prevent them from seeing the data.</p>
 
 <ul>
   <li><strong>In JavaScript code, show and describe code that handles success. Describe how code shows success to the user in the Chrome Browser screen.</strong></li>
@@ -197,7 +236,8 @@
 
 <p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/aaadf735-e31a-4f9b-9b05-90eb961316fe" alt="image" /></p>
 
-<p>If the user’s username and password match correctly, the user will be redirected to the formatted HTML database table.</p>
+<p>If the user’s username and password match correctly, the user will be redirected to the formatted HTML database table.
+Redirecting the user is done with <code class="language-plaintext highlighter-rouge">window.location.href = "http://127.0.0.1:5500/_posts/2024-02-06-DataBase.html"</code></p>
 
 <ul>
   <li><strong>In JavaScript code, show and describe code that handles failure. Describe how the code shows failure to the user in the Chrome Browser screen.</strong></li>
@@ -205,28 +245,42 @@
 
 <p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/b6e9cccb-2ff0-48d0-81f6-130ffa949982" alt="image" /></p>
 
-<p>If the user’s username or password do not match correctly, or if an error is caught, then the user will not be able to access the database table, which redirects them to the 401 page, saying that they are “Unauthorized”. The console logs that there was an error.</p>
+<p>If the user’s username or password do not match correctly, or if an error is caught, then the user will not be able to access the database table, which redirects them to the 401 page, saying that they are “Unauthorized”. The console logs that there was an error. Again, redirecting is done with <code class="language-plaintext highlighter-rouge">window.location.href = "http://127.0.0.1:5500/_posts/2024-02-07-401error.html"</code>but with the 401 error page instead of the Database page.</p>
 
 <h3 id="optionalextra-algorithm-analysis"><strong><em>Optional/Extra, Algorithm Analysis</em></strong></h3>
 <p><em>In the ML projects, there is a great deal of algorithm analysis. Think about preparing data and predictions.</em></p>
 
 <ul>
-  <li>
-    <p><strong>Show algorithms and preparation of data for analysis. This includes cleaning, encoding, and one-hot encoding.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/82dba5d9-4192-4f94-981b-2e74f64a40ac" alt="image" />
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/aaf6005d-fc6c-40d5-84db-ed17794fc1d5" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>Show algorithms and preparation for predictions.</strong>
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/2b3110ec-f111-45c7-a685-fd11ffa39929" alt="image" />
-<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/2b906d61-ae24-44bf-b0b0-083859e9548b" alt="image" /></p>
-  </li>
-  <li>
-    <p><strong>Discuss concepts and understanding of Linear Regression algorithms.</strong></p>
-  </li>
+  <li><strong>Show algorithms and preparation of data for analysis. This includes cleaning, encoding, and one-hot encoding.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/82dba5d9-4192-4f94-981b-2e74f64a40ac" alt="image" /></li>
 </ul>
 
-<p>Linear regression involves the relationship between two variables (x and y). Given a large dataset (pandas dataframe) of x and y values, the linear regression algorithm will try to find a correlation in the scatterplot and plot the line of best fit. Usually, 80% of the data is the training data, and the rest 20% is the test data. This is done so that the maximum possible accuracy is achieved. After the model is trained, it is tested with the test data. Given test x values, we get our y prediction values based on the line of best fit that was calculated during training. Linear regression is an example of supervised learning because the machine trains off  data that is labeled.</p>
+<p>Over here, I am cleaning the data by dropping an unnecessary column”diagnosis_cat”. I don’t really need it because I already have a column called “diagnosis” that outputs 0 or 1 based on whether the cell is malignant or benign.</p>
+
+<p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/aaf6005d-fc6c-40d5-84db-ed17794fc1d5" alt="image" /></p>
+
+<p>One-hot encoding is shown in the line <code class="language-plaintext highlighter-rouge">self.encoder = OneHotEncoder(handle_unknown='ignore')</code></p>
+
+<ul>
+  <li><strong>Show algorithms and preparation for predictions.</strong>
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/2b3110ec-f111-45c7-a685-fd11ffa39929" alt="image" /></li>
+</ul>
+
+<p>The data is being prepared by splitting the data into features (X variables) and target (y variable). It performs the train, test, and split in <code class="language-plaintext highlighter-rouge">self.model = LogisticRegression(max_iter=1000)</code>. It actually trains the data in the line <code class="language-plaintext highlighter-rouge">self.model.fit(X,y)</code> which fits the model and passes the X and y values.</p>
+
+<p><img src="https://github.com/AdityaSamavedam/student2/assets/114468365/2b906d61-ae24-44bf-b0b0-083859e9548b" alt="image" /></p>
+
+<ul>
+  <li><strong>Discuss concepts and understanding of Linear Regression algorithms.</strong></li>
+</ul>
+
+<p>Linear regression involves the relationship between two variables (x and y). Given a large dataset (pandas dataframe) of x and y values, the linear regression algorithm will try to find a correlation in the scatterplot and plot the line of best fit. Usually, 80% of the data is the training data, and the rest 20% is the test data. This is done so that the maximum possible accuracy is achieved. After the model is trained, it is tested with the test data. Given test x values, we get our y prediction values based on the line of best fit that was calculated during training. Linear regression is an example of supervised learning because the machine trains off of data that is labeled.</p>
+
+<p>Our project is similar to Linear Regression, but it does not exactly use it. It uses Logistic Regression because there are multiple x-variables being provided and there is only one y-variable.</p>
+
+<p>Here is a comparison of the two:
+<img src="https://github.com/AdityaSamavedam/student2/assets/114468365/01b4a92d-0008-4027-af29-474cd5999b6e" alt="image" />
+Logistic Regression aims to output discrete values like 0 or 1, unlike Linear Regression which just finds a correlation between x and y/</p>
 
 <ul>
   <li><strong>Discuss concepts and understanding of Decision Tree analysis algorithms.</strong>
@@ -253,6 +307,14 @@
     </ul>
   </li>
 </ul>
+
+<p>Our project used a decision tree classifier for our model, as shown in the code lines:
+<br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">self.dt = DecisionTreeClassifier</code>
+ <br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">self.dt.fit(X,y)</code></p>
 
 <script src="https://utteranc.es/client.js" repo="adityasamavedam/student2" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async="">
 </script>
